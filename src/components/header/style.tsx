@@ -21,11 +21,6 @@ export const Logo = styled.div`
   margin-left: 20px;
 `
 
-export const LoginContainer = styled.p`
-  cursor: pointer;
-  margin-right: 12px;
-`
-
 export const ListContainer = styled.div`
   width: 24px;
   height: 24px;
