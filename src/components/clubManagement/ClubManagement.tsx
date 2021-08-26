@@ -18,7 +18,14 @@ const ClubManagement = () => {
           </ul>
         </S.ClubManageList>
         <S.MatchingList>
-          
+          <div>
+            <h3>수락 대기중인 매치</h3>
+            <S.WaitAcceptList>
+              <S.MatchingCardContainer>
+                <p>asdas</p>
+              </S.MatchingCardContainer>
+            </S.WaitAcceptList>
+          </div>
         </S.MatchingList>
       </section>
     </>
