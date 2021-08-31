@@ -37,24 +37,30 @@ export const ClubManageList = styled.div`
 `
 
 export const MatchingList = styled.div`
-  width: 90%;
+  width: 100%;
   position: relative;
-  margin: auto;
 
   & h3{
     font-size: 16px;
-    margin: 0;
-    margin-top: 24px;
+    margin: 20px;
   }
 `
 
-export const WaitAcceptList = styled.div`
-  width: 100%;
-  overflow-x: scroll;
+export const MatchRequest = styled.div`
+  border-bottom: 10px solid #F0F0F0;
 `
 
-export const MatchingCardContainer = styled.div`
-  width: 187px;
-  height: 166px;
-  background-color: #F0F0F0;
+export const MatchingApplicationList = styled.div`
+  width: 320px;
+  height: 150px;
+  overflow-y: scroll;
+  margin: auto;
+  margin-bottom: 17px;
+  
+  ::-webkit-scrollbar{
+    display: none;
+  }
 `
+
+
+

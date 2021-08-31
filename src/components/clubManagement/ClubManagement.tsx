@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "../header/Header";
+import ApllicationMatching from "./matchRequst/ApplicationMatching";
 import * as S from "./style";
 
 const ClubManagement = () => {
@@ -18,14 +19,15 @@ const ClubManagement = () => {
           </ul>
         </S.ClubManageList>
         <S.MatchingList>
-          <div>
-            <h3>수락 대기중인 매치</h3>
-            <S.WaitAcceptList>
-              <S.MatchingCardContainer>
-                <p>asdas</p>
-              </S.MatchingCardContainer>
-            </S.WaitAcceptList>
-          </div>
+          <S.MatchRequest>
+            <h3>매치 요청</h3>
+            <S.MatchingApplicationList>
+              <ApllicationMatching/>
+              <ApllicationMatching/>
+              <ApllicationMatching/>
+              <ApllicationMatching/>
+            </S.MatchingApplicationList>
+          </S.MatchRequest>
         </S.MatchingList>
       </section>
     </>
