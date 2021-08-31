@@ -5,7 +5,10 @@ const Header = () => {
   return(
     <>
       <S.HeaderWrapper>
-        <p>adsd</p>
+        <S.Logo>로고 자리</S.Logo>
+        <div>
+          <S.ListContainer />
+        </div>
       </S.HeaderWrapper>
     </>
   );
