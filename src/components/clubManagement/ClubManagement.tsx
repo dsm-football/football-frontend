@@ -1,6 +1,7 @@
 import React from "react";
-import Header from "../header/Header";
+import { Header, MatchCard } from "../common";
 import ApllicationMatching from "./matchRequst/ApplicationMatching";
+import { ScrollMenu } from "react-horizontal-scrolling-menu";
 import * as S from "./style";
 
 const ClubManagement = () => {
@@ -19,15 +20,24 @@ const ClubManagement = () => {
           </ul>
         </S.ClubManageList>
         <S.MatchingList>
-          <S.MatchRequest>
+          <S.MatchContainer>
             <h3>매치 요청</h3>
             <S.MatchingApplicationList>
-              <ApllicationMatching/>
-              <ApllicationMatching/>
-              <ApllicationMatching/>
-              <ApllicationMatching/>
+              <ApllicationMatching />
+              <ApllicationMatching />
+              <ApllicationMatching />
+              <ApllicationMatching />
             </S.MatchingApplicationList>
-          </S.MatchRequest>
+          </S.MatchContainer>
+          <S.MatchContainer>
+            <h3>작성한 매치</h3>
+            <S.CreatedMatchList>
+              <ScrollMenu>
+                <MatchCard />
+                <MatchCard />
+              </ScrollMenu>
+            </S.CreatedMatchList>
+          </S.MatchContainer>
         </S.MatchingList>
       </section>
     </>
