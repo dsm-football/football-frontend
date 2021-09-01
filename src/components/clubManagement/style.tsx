@@ -46,7 +46,7 @@ export const MatchingList = styled.div`
   }
 `
 
-export const MatchRequest = styled.div`
+export const MatchContainer = styled.div`
   border-bottom: 10px solid #F0F0F0;
 `
 
@@ -62,5 +62,13 @@ export const MatchingApplicationList = styled.div`
   }
 `
 
+export const CreatedMatchList = styled.div`
+  width: 340px;
+  height: 140px;
+  margin-left: 20px;
+  margin-bottom: 20px;
 
-
+  & div::-webkit-scrollbar{
+    display: none;
+  }
+`
