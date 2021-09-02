@@ -1,6 +1,5 @@
 import React from 'react'
-import Header from '../header/Header'
-import PageMoveHeader from '../header/PageMoveHeader'
+import { Header, PageMoveHeader } from '../common';
 
 const ClubEstbl = () => {
     return(
