@@ -8,7 +8,7 @@ import {
 function App() {
   return (
     <BrowserRouter>
-      <Route exact path="/club/managment" component={ClubManagement} />
+      <Route exact path="/club/management" component={ClubManagement} />
       <Route exact path="/clubEstbl" component={ClubEstbl} />
     </BrowserRouter>
   );

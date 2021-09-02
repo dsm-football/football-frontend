@@ -31,12 +31,25 @@ const ClubManagement = () => {
           </S.MatchContainer>
           <S.MatchContainer>
             <h3>작성한 매치</h3>
-            <S.CreatedMatchList>
+            <S.MatchSlideList>
               <ScrollMenu>
                 <MatchCard />
                 <MatchCard />
+                <MatchCard />
+                <MatchCard />
               </ScrollMenu>
-            </S.CreatedMatchList>
+            </S.MatchSlideList>
+          </S.MatchContainer>
+          <S.MatchContainer>
+            <h3>신청한 매치</h3>
+            <S.MatchSlideList>
+              <ScrollMenu>
+                <MatchCard />
+                <MatchCard />
+                <MatchCard />
+                <MatchCard />
+              </ScrollMenu>
+            </S.MatchSlideList>
           </S.MatchContainer>
         </S.MatchingList>
       </section>
