@@ -62,7 +62,7 @@ export const MatchingApplicationList = styled.div`
   }
 `
 
-export const CreatedMatchList = styled.div`
+export const MatchSlideList = styled.div`
   width: 340px;
   height: 140px;
   margin-left: 20px;
