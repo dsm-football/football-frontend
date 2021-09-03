@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import * as S from "./style";
+import AppliedMember from "./appliedMember/AppliedMember";
 
 const MemberManagement = () => {
   const [applicationStatus, setApplicationStatus] = useState<boolean>(false);
@@ -18,10 +19,23 @@ const MemberManagement = () => {
             <S.Switch applicationStatus={applicationStatus} />
           </S.SwitchContainer>
         </S.AllowSubscription>
-        <S.AppliedMember>
-          <span>가입을 요청한 회원</span>
-          
-        </S.AppliedMember>
+        <S.AppliedMemberContainer>
+          <b><span>가입을 요청한 회원</span></b>
+          <S.AppliedMemberList>
+            <AppliedMember />
+            <AppliedMember />
+          </S.AppliedMemberList>
+        </S.AppliedMemberContainer>
+        <S.MemberListContainer>
+          <b><span>회원목록(20)</span></b>
+          <S.MemberListTable>
+            <S.MemberAttribute>
+              <td>회원정보</td>
+              <td>등번호</td>
+              <td>포지션</td>
+            </S.MemberAttribute>
+          </S.MemberListTable>
+        </S.MemberListContainer>
       </S.MainContainer>
     </>
   );
