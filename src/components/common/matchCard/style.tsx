@@ -32,7 +32,7 @@ export const EditText = styled.p`
 export const MatchingContainer = styled.div`
   width: 80%;
   height: 73px;
-  margin: auto;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
