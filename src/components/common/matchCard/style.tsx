@@ -31,7 +31,7 @@ export const EditText = styled.p`
 
 export const MatchingContainer = styled.div`
   width: 80%;
-  height: 73px;
+  height: 70px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -52,7 +52,7 @@ export const ClubIntro = styled.div`
 
   & span {
     display: inline-block;
-    width: 47px;
+    width: 50px;
     font-size: 11px;
     text-align: center;
     margin: auto;
@@ -60,7 +60,7 @@ export const ClubIntro = styled.div`
 `;
 
 export const MatchInfo = styled.div`
-  width: 51px;
+  width: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -81,7 +81,7 @@ export const MatchInfo = styled.div`
 `
 
 export const MatchStatus = styled.span`
-  height: 16px;
+  height: 15px;
   background-color: #E1E1E1;
   border-radius: 8px;
 `

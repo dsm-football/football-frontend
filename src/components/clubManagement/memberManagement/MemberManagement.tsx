@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import * as S from "./style";
 import AppliedMember from "./appliedMember/AppliedMember";
 import MemberTr from "./memberTr/MemberTr";
+import internal from "stream";
 
 const MemberManagement = () => {
   const [applicationStatus, setApplicationStatus] = useState<boolean>(false);
+  let arr = [1, 2, 3];
 
   return (
     <>
@@ -21,21 +23,32 @@ const MemberManagement = () => {
           </S.SwitchContainer>
         </S.AllowSubscription>
         <S.AppliedMemberContainer>
-          <b><span>가입을 요청한 회원</span></b>
+          <b>
+            <span>가입을 요청한 회원</span>
+          </b>
           <S.AppliedMemberList>
-            <AppliedMember />
-            <AppliedMember />
+            {Array(3)
+              .fill(0)
+              .map((v, i) => {
+                return <AppliedMember key={i} />;
+              })}
           </S.AppliedMemberList>
         </S.AppliedMemberContainer>
         <S.MemberListContainer>
-          <b><span>회원목록(20)</span></b>
+          <b>
+            <span>회원목록(20)</span>
+          </b>
           <S.MemberListTable>
-            <S.MemberAttribute>
-              <td>회원정보</td>
-              <td>등번호</td>
-              <td>포지션</td>
-            </S.MemberAttribute>
-            <MemberTr></MemberTr>
+            <thead>
+              <S.MemberAttribute>
+                <td>회원정보</td>
+                <td>등번호</td>
+                <td>포지션</td>
+              </S.MemberAttribute>
+            </thead>
+            <tbody>
+              <MemberTr></MemberTr>
+            </tbody>
           </S.MemberListTable>
         </S.MemberListContainer>
       </S.MainContainer>
