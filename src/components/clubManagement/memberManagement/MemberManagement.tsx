@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import * as S from "./style";
 import AppliedMember from "./appliedMember/AppliedMember";
+import MemberTr from "./memberTr/MemberTr";
 
 const MemberManagement = () => {
   const [applicationStatus, setApplicationStatus] = useState<boolean>(false);
@@ -34,6 +35,7 @@ const MemberManagement = () => {
               <td>등번호</td>
               <td>포지션</td>
             </S.MemberAttribute>
+            <MemberTr></MemberTr>
           </S.MemberListTable>
         </S.MemberListContainer>
       </S.MainContainer>

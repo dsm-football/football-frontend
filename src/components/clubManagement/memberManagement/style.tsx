@@ -72,6 +72,7 @@ export const MemberListTable = styled.table`
 `
 
 export const MemberAttribute = styled.tr`
+  height: 21px;
   & td{
     font-size: 10px;
   }
