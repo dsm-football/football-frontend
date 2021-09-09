@@ -1,16 +1,9 @@
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
-import {
-  ClubManagement,
-  ClubEstbl
-} from './components'
+import RootRouter from './route';
 
 function App() {
   return (
-    <BrowserRouter>
-      <Route exact path="/club/management" component={ClubManagement} />
-      <Route exact path="/clubEstbl" component={ClubEstbl} />
-    </BrowserRouter>
+    <RootRouter/>
   );
 }
 
