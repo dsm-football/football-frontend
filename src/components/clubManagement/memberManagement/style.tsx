@@ -60,20 +60,22 @@ export const MemberListContainer = styled.div`
   margin-top: 30px;
 `
 
-export const MemberListTable = styled.table`
+export const MemberList = styled.ul`
   width: 100%;
   border-collapse: collapse;
+  margin: 0;
+  padding: 0;
   margin-top: 15px;
   
-  & tr{
-    width: 100%;
-    border-bottom: 1px solid #F3F3F3;
-  }
 `
 
-export const MemberAttribute = styled.tr`
+export const MemberAttribute = styled.li`
   height: 20px;
-  & td{
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+
+  & span{
     font-size: 10px;
   }
 `

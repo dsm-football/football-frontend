@@ -6,7 +6,6 @@ import internal from "stream";
 
 const MemberManagement = () => {
   const [applicationStatus, setApplicationStatus] = useState<boolean>(false);
-  let arr = [1, 2, 3];
 
   return (
     <>
@@ -38,18 +37,14 @@ const MemberManagement = () => {
           <b>
             <span>회원목록(20)</span>
           </b>
-          <S.MemberListTable>
-            <thead>
-              <S.MemberAttribute>
-                <td>회원정보</td>
-                <td>등번호</td>
-                <td>포지션</td>
-              </S.MemberAttribute>
-            </thead>
-            <tbody>
-              <MemberTr></MemberTr>
-            </tbody>
-          </S.MemberListTable>
+          <S.MemberList>
+            <S.MemberAttribute>
+              <span>회원정보</span>
+              <span>등번호</span>
+              <span>포지션</span>
+            </S.MemberAttribute>
+            <MemberTr></MemberTr>
+          </S.MemberList>
         </S.MemberListContainer>
       </S.MainContainer>
     </>
