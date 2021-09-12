@@ -72,10 +72,16 @@ export const MemberList = styled.ul`
 export const MemberAttribute = styled.li`
   height: 20px;
   list-style: none;
-  display: flex;
-  justify-content: space-between;
 
   & span{
     font-size: 10px;
   }
+`
+
+export const MemeberInfo = styled.span`
+  margin-right: 70px;
+`
+
+export const MemberBackNumber = styled.span`
+  margin-right: 40px;
 `
