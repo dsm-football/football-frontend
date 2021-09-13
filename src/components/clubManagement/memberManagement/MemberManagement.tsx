@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import * as S from "./style";
 import AppliedMember from "./appliedMember/AppliedMember";
-import MemberContainer from './memberContainer/MemberContainer';
+import MemberContainer from "./memberContainer/MemberContainer";
 
 const MemberManagement = () => {
   const [applicationStatus, setApplicationStatus] = useState<boolean>(false);
@@ -38,14 +38,16 @@ const MemberManagement = () => {
           </b>
           <S.MemberList>
             <S.MemberAttribute>
-              <S.MemeberInfo>회원정보</S.MemeberInfo>
-              <S.MemberBackNumber>등번호</S.MemberBackNumber>
-              <span>포지션</span>
+              <span>회원정보</span>
+              <div>
+                <S.MemberBackNumber>등번호</S.MemberBackNumber>
+                <S.MemberPosition>포지션</S.MemberPosition>
+              </div>
             </S.MemberAttribute>
             {Array(3)
               .fill(0)
               .map((v, i) => {
-                return <MemberContainer key={i}/>;
+                return <MemberContainer key={i} />;
               })}
           </S.MemberList>
         </S.MemberListContainer>

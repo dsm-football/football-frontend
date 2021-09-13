@@ -67,21 +67,32 @@ export const MemberList = styled.ul`
   padding: 0;
   margin-top: 15px;
   
+  & li{
+    border-bottom: 1px solid #F3F3F3;
+  }
 `
 
 export const MemberAttribute = styled.li`
   height: 20px;
   list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
   & span{
     font-size: 10px;
   }
-`
 
-export const MemeberInfo = styled.span`
-  margin-right: 70px;
+  & div{
+    display: flex;
+    align-items: center;
+  }
 `
 
 export const MemberBackNumber = styled.span`
   margin-right: 40px;
+`
+
+export const MemberPosition = styled.span`
+  margin-right: 95px;
 `
