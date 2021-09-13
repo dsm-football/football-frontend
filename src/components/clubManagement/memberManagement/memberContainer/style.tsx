@@ -35,6 +35,8 @@ export const MemberName = styled.span`
 
 export const MemberInfo = styled.span`
   font-size: 10px;
+  display: flex;
+  justify-content: center;
   color: #545454;
 `;
 
