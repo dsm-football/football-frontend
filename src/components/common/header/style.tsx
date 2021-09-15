@@ -31,7 +31,7 @@ export const ListContainer = styled.div`
 // pageMoveHeader
 
 export const PageMoveHeaderWrapper = styled(HeaderWrapper)`
-  height: 52px;
+  height: 50px;
   background-color: #ECECEC;
   box-sizing: border-box;
   padding: 0 7%;
