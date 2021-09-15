@@ -36,39 +36,3 @@ export const ClubManageList = styled.div`
   }
 `
 
-export const MatchingList = styled.div`
-  width: 100%;
-  position: relative;
-
-  & h3{
-    font-size: 16px;
-    margin: 20px;
-  }
-`
-
-export const MatchContainer = styled.div`
-  border-bottom: 10px solid #F0F0F0;
-`
-
-export const MatchingApplicationList = styled.div`
-  width: 320px;
-  height: 150px;
-  overflow-y: scroll;
-  margin: auto;
-  margin-bottom: 17px;
-  
-  ::-webkit-scrollbar{
-    display: none;
-  }
-`
-
-export const CreatedMatchList = styled.div`
-  width: 340px;
-  height: 140px;
-  margin-left: 20px;
-  margin-bottom: 20px;
-
-  & div::-webkit-scrollbar{
-    display: none;
-  }
-`
