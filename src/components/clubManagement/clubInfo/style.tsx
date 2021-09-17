@@ -46,6 +46,7 @@ export const FixBox = styled.div`
   flex-direction: column;
   justify-content: center;
   margin-bottom: 25px;
+
 `
 
 export const TitleFont = styled.span`
@@ -83,8 +84,23 @@ export const IntroFixInput = styled.span`
   font-size: 12px;
 `
 
+export const LocationGpsContainer = styled.div`
+  width: 95%;
+  height: 45px;
+  background-color: #C4C4C4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 15px;
+
+  & span{
+    font-size: 16px;
+  }
+`
+
 export const GpsImg = styled.div`
   width: 25px;
   height: 25px;
   background-color: black;
+  margin-right: 10px;
 `

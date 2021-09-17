@@ -1,6 +1,22 @@
 import * as S from "./style";
+import Select from "react-select";
+
+const ageOptions = [
+  {value: '전체', label: '전체'},
+  {value: '10대', label: '10대'},
+  {value: '20대', label: '20대'},
+  {value: '30대', label: '30대'},
+  {value: '40대', label: '40대'}
+]
+
+const genderOptions = [
+  {value: '전체', label: '전체'},
+  {value: '남자', label: '남자'},
+  {value: '여자', label: '여자'}
+]
 
 const ClubInfo = () => {
+
   return (
     <>
       <S.ProfileContainer>
@@ -30,11 +46,38 @@ const ClubInfo = () => {
         </S.FixBox>
         <S.FixBox>
           <S.TitleFont>동호회 지역</S.TitleFont>
-          <S.BoldFixInput>서울시 노원구 하계동</S.BoldFixInput>
+          <S.LocationGpsContainer>
+          <span>서울시 노원구 하계동</span>
+          <S.GpsImg/>
+          </S.LocationGpsContainer>
         </S.FixBox>
         <S.FixBox>
           <S.TitleFont>동호회 정원(현재 정원:25)</S.TitleFont>
-          <S.BoldFixInput>FC어쩌구 <S.GpsImg/></S.BoldFixInput>
+          <S.BoldFixInput>50</S.BoldFixInput>
+        </S.FixBox>
+        <S.FixBox>
+          <S.TitleFont>시합주기(선택)</S.TitleFont>
+          <S.BoldFixInput>한달에 4번</S.BoldFixInput>
+        </S.FixBox>
+        <S.FixBox>
+          <S.TitleFont>나이대 설정(선택)</S.TitleFont>
+          <Select
+            placeholder="전체"
+            options={ageOptions}
+            className="react-select-container"
+            isSearchable={false}
+            maxMenuHeight={100}
+          />
+        </S.FixBox>
+        <S.FixBox>
+          <S.TitleFont>나이대 설정(선택)</S.TitleFont>
+          <Select
+            placeholder="전체"
+            options={genderOptions}
+            className="selectBox"
+            isSearchable={false}
+            maxMenuHeight={100}
+          />
         </S.FixBox>
       </S.ClubInfoFixContainer>
     </>
