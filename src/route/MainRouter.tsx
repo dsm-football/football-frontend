@@ -1,15 +1,15 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 import {
-  ClubManagement,
   ClubEstbl
 } from '../components';
+import { ClubManagementContainer } from "../containers";
 
 const MainRouter = () => {
   return (
     <>
       <Switch>
-        <Route exact path="/club/management" component={ClubManagement} />
+        <Route exact path="/club/management" component={ClubManagementContainer} />
         <Route exact path="/clubEstbl" component={ClubEstbl} />
       </Switch>
     </>
