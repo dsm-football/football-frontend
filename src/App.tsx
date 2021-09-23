@@ -1,9 +1,13 @@
-import React from 'react';
-import RootRouter from './route';
+import React from "react";
+import GlobalStyle from './style/globalStyle';
+import RootRouter from "./route";
 
 function App() {
   return (
-    <RootRouter/>
+    <>
+      <GlobalStyle/>
+      <RootRouter />
+    </>
   );
 }
 

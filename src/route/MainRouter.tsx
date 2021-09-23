@@ -5,12 +5,13 @@ import {
   ClubEstbl,
   Login
 } from '../components';
+import { ClubManagementContainer } from "../containers";
 
 const MainRouter = () => {
   return (
     <>
       <Switch>
-        <Route exact path="/club/management" component={ClubManagement} />
+        <Route exact path="/club/management" component={ClubManagementContainer} />
         <Route exact path="/clubEstbl" component={ClubEstbl} />
         <Route exact path="/Login" component={Login} />
       </Switch>
