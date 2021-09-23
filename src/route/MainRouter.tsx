@@ -2,7 +2,8 @@ import React from "react";
 import { Switch, Route } from "react-router-dom";
 import {
   ClubManagement,
-  ClubEstbl
+  ClubEstbl,
+  Login
 } from '../components';
 
 const MainRouter = () => {
@@ -11,6 +12,7 @@ const MainRouter = () => {
       <Switch>
         <Route exact path="/club/management" component={ClubManagement} />
         <Route exact path="/clubEstbl" component={ClubEstbl} />
+        <Route exact path="/Login" component={Login} />
       </Switch>
     </>
   );
