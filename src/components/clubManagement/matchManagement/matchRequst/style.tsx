@@ -2,14 +2,14 @@ import styled from 'styled-components';
 
 export const ApplicationMatch = styled.div`
   width: 100%;
-  height: 32px;
+  height: 30px;
   display: flex;
   align-items: center;
   margin-bottom: 17px;
 
   & div{
-    width: 32px;
-    height: 32px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     background-color: #C4C4C4;
   }
@@ -24,7 +24,7 @@ export const ApplicationMatch = styled.div`
 
   & button{
     width: 60px;
-    height: 24px;
+    height: 25px;
     background-color: #C4C4C4;
     margin-left: 12px;
     border: none;

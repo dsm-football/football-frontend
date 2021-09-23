@@ -1,13 +1,12 @@
 import React from "react";
-import { Header, MatchCard } from "../common";
-import ApllicationMatching from "./matchRequst/ApplicationMatching";
-import { ScrollMenu } from "react-horizontal-scrolling-menu";
+import ClubInfo from "./clubInfo/ClubInfo";
+import MatchManagement from "./matchManagement/MatchManagement";
+import MemberManagement from "./memberManagement/MemberManagement";
 import * as S from "./style";
 
 const ClubManagement = () => {
   return (
     <>
-      <Header></Header>
       <section>
         <S.ClubManageBanner>
           <b>동호회 관리</b>
@@ -19,26 +18,9 @@ const ClubManagement = () => {
             <li>동호회정보</li>
           </ul>
         </S.ClubManageList>
-        <S.MatchingList>
-          <S.MatchContainer>
-            <h3>매치 요청</h3>
-            <S.MatchingApplicationList>
-              <ApllicationMatching />
-              <ApllicationMatching />
-              <ApllicationMatching />
-              <ApllicationMatching />
-            </S.MatchingApplicationList>
-          </S.MatchContainer>
-          <S.MatchContainer>
-            <h3>작성한 매치</h3>
-            <S.CreatedMatchList>
-              <ScrollMenu>
-                <MatchCard />
-                <MatchCard />
-              </ScrollMenu>
-            </S.CreatedMatchList>
-          </S.MatchContainer>
-        </S.MatchingList>
+        {/* <MatchManagement/> */}
+        {/* <MemberManagement/> */}
+        <ClubInfo/>
       </section>
     </>
   );
