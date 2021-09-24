@@ -23,10 +23,14 @@ export const AreaText = styled.p`
   padding: 5px 10px;
   background-color: #f0f0f0;
   border-radius: 2px;
+  margin-top: 11px;
+  margin-bottom: 11px;
 `;
 
 export const EditText = styled.p`
   color: #6c6c6c;
+  margin-bottom: 11px;
+  margin-top: 11px;
 `;
 
 export const MatchingContainer = styled.div`
