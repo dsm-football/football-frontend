@@ -1,1 +1,0 @@
-export { default as CameraImg } from './clubEstbl/Camera.svg'

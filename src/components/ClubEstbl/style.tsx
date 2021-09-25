@@ -35,6 +35,43 @@ export const ClubEstblInputDescription = styled.textarea`
   border: none;
   font-size: 14px;
 `;
+
+// ClubEstblAdditional
 export const ClubEstblAdditionalWrapper = styled(ClubEstblItemWrapper)`
   padding-bottom: 20%;
+`;
+
+// ClubEstblImage
+export const ClubEstblImageWrapper = styled(ClubEstblItemWrapper)`
+  height: 400px;
+  padding: 10px 4%;
+`;
+export const LogoImageWrapper = styled.div`
+  width: 100px;
+  height: 100px;
+  background-color: #c4c4c4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+export const BackgroundImageWrapper = styled(LogoImageWrapper)`
+  width: 320px;
+  height: 200px;
+`;
+
+//ClubEstblCompletion
+export const ClubEstblCompletionWrapper = styled(ClubEstblItemWrapper)`
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 16px;
+  & span {
+    margin-bottom: 20px;
+  }
+`;
+export const ClubEstblCompletionLogo = styled(LogoImageWrapper)`
+  width: 200px;
+  height: 200px;
+  margin-bottom: 120px;
 `;
