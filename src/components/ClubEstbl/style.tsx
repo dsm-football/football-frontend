@@ -58,3 +58,20 @@ export const BackgroundImageWrapper = styled(LogoImageWrapper)`
   width: 320px;
   height: 200px;
 `;
+
+//ClubEstblCompletion
+export const ClubEstblCompletionWrapper = styled(ClubEstblItemWrapper)`
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 16px;
+  & span {
+    margin-bottom: 20px;
+  }
+`;
+export const ClubEstblCompletionLogo = styled(LogoImageWrapper)`
+  width: 200px;
+  height: 200px;
+  margin-bottom: 120px;
+`;
