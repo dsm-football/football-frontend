@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+const mainColor = "#c4c4c4";
 export const ClubEstblItemWrapper = styled.div`
   width: 100%;
   height: 540px;
@@ -22,7 +22,7 @@ export const InputTitle = styled.div`
   font-weight: 600;
 `;
 export const ClubEstblInput = styled.input`
-  background-color: #c4c4c4;
+  background-color: ${mainColor};
   width: 320px;
   height: 44px;
   border: none;
@@ -30,7 +30,7 @@ export const ClubEstblInput = styled.input`
 `;
 export const ClubEstblInputDescription = styled.textarea`
   height: 95px;
-  background-color: #c4c4c4;
+  background-color: ${mainColor};
   width: 320px;
   border: none;
   font-size: 14px;
@@ -49,7 +49,7 @@ export const ClubEstblImageWrapper = styled(ClubEstblItemWrapper)`
 export const LogoImageWrapper = styled.div`
   width: 100px;
   height: 100px;
-  background-color: #c4c4c4;
+  background-color: ${mainColor};
   display: flex;
   justify-content: center;
   align-items: center;
