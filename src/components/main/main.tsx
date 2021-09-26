@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "./header/Header";
+import Header from "../common/header/Header";
 import Near from "./nearmatching/NearMatching";
 import Area from "./areamatching/AreaMatching";
 import Rank from "./ranking/Raking";

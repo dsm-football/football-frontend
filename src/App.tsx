@@ -1,12 +1,13 @@
-import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
-import { ClubManagement } from './components';
+import React from "react";
+import GlobalStyle from './style/globalStyle';
+import RootRouter from "./route";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Route exact path="/club/management" component={ClubManagement}/>
-    </BrowserRouter>
+    <>
+      <GlobalStyle/>
+      <RootRouter />
+    </>
   );
 }
 

@@ -1,7 +1,4 @@
 import React from "react";
-import Header from "../header/Header";
-import Area from "../areamatching/AreaMatching";
-import Rank from "../ranking/Raking";
 import * as S from "./style";
 
 const Near = () => {
