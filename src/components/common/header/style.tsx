@@ -33,8 +33,7 @@ export const ListContainer = styled.div`
 export const PageMoveHeaderWrapper = styled(HeaderWrapper)`
   height: 50px;
   background-color: #1e201d;
-  box-sizing: border-box;
-  padding: 0 7%;
+  justify-content: center;
 `;
 export const PageMoveTitle = styled.div`
   height: 25px;
@@ -42,10 +41,4 @@ export const PageMoveTitle = styled.div`
   font-weight: 700;
   color: #0bff0b;
   margin: 0 5%;
-`;
-
-export const PageMove = styled(PageMoveTitle)`
-  font-weight: 500;
-  color: white;
-  margin: 0;
 `;
