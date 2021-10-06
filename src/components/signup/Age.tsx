@@ -1,11 +1,8 @@
 import React from "react";
-import { Header, PageMoveHeader } from "../common";
 import * as S from "./style";
 const Age = () => {
   return (
     <>
-      <Header />
-      <PageMoveHeader />
       <S.InputSignupWrapper>
         <S.InputWrapper>
           <S.Input type="number" />

@@ -14,7 +14,7 @@ export const SignupWrapper = styled.div`
 `;
 export const InputSignupWrapper = styled(SignupWrapper)`
   box-sizing: border-box;
-  padding-top: 80px;
+  padding-top: 100px;
   height: 510px;
   justify-content: space-between;
 `;
