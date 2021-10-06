@@ -11,7 +11,7 @@ export const ClubManageBanner = styled.div`
 
 export const ClubManageList = styled.div`
   width: 100%;
-  height: 42px;
+  height: 40px;
   background-color: #ECECEC;
 
   & ul{

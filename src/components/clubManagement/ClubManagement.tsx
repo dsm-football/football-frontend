@@ -1,5 +1,5 @@
 import React from "react";
-import { Header } from "../common";
+import ClubInfo from "./clubInfo/ClubInfo";
 import MatchManagement from "./matchManagement/MatchManagement";
 import MemberManagement from "./memberManagement/MemberManagement";
 import * as S from "./style";
@@ -7,7 +7,6 @@ import * as S from "./style";
 const ClubManagement = () => {
   return (
     <>
-      <Header></Header>
       <section>
         <S.ClubManageBanner>
           <b>동호회 관리</b>
@@ -20,7 +19,8 @@ const ClubManagement = () => {
           </ul>
         </S.ClubManageList>
         {/* <MatchManagement/> */}
-        <MemberManagement/>
+        {/* <MemberManagement/> */}
+        <ClubInfo/>
       </section>
     </>
   );

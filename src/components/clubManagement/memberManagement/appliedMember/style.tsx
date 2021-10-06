@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const MemberContainer = styled.div`
   width: 100%;
-  height: 64px;
+  height: 65px;
   background-color: #dedede;
   border-radius: 5px;
   display: flex;
@@ -25,7 +25,7 @@ export const ProfileImg = styled.div`
 `;
 
 export const MemberInfo = styled.div`
-  height: 37px;
+  height: 35px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -43,7 +43,7 @@ export const MemberInfoFont = styled.span`
 export const AceeptContainer = styled.div`
   & button {
     width: 60px;
-    height: 22px;
+    height: 20px;
     background-color: #c4c4c4;
     border-radius: 2px;
     border: none;

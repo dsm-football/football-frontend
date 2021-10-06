@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import * as S from "./style";
 import AppliedMember from "./appliedMember/AppliedMember";
-import MemberTr from "./memberTr/MemberTr";
+import MemberContainer from "./memberContainer/MemberContainer";
 
 const MemberManagement = () => {
   const [applicationStatus, setApplicationStatus] = useState<boolean>(false);
@@ -21,22 +21,35 @@ const MemberManagement = () => {
           </S.SwitchContainer>
         </S.AllowSubscription>
         <S.AppliedMemberContainer>
-          <b><span>가입을 요청한 회원</span></b>
+          <b>
+            <span>가입을 요청한 회원</span>
+          </b>
           <S.AppliedMemberList>
-            <AppliedMember />
-            <AppliedMember />
+            {Array(3)
+              .fill(0)
+              .map((v, i) => {
+                return <AppliedMember key={i} />;
+              })}
           </S.AppliedMemberList>
         </S.AppliedMemberContainer>
         <S.MemberListContainer>
-          <b><span>회원목록(20)</span></b>
-          <S.MemberListTable>
+          <b>
+            <span>회원목록(20)</span>
+          </b>
+          <S.MemberList>
             <S.MemberAttribute>
-              <td>회원정보</td>
-              <td>등번호</td>
-              <td>포지션</td>
+              <span>회원정보</span>
+              <div>
+                <S.MemberBackNumber>등번호</S.MemberBackNumber>
+                <S.MemberPosition>포지션</S.MemberPosition>
+              </div>
             </S.MemberAttribute>
-            <MemberTr></MemberTr>
-          </S.MemberListTable>
+            {Array(3)
+              .fill(0)
+              .map((v, i) => {
+                return <MemberContainer key={i} />;
+              })}
+          </S.MemberList>
         </S.MemberListContainer>
       </S.MainContainer>
     </>

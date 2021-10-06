@@ -18,7 +18,7 @@ export const AllowSubscription = styled.div`
 `;
 
 export const SwitchContainer = styled.div`
-  width: 64px;
+  width: 65px;
   height: 30px;
   background-color: ${({ applicationStatus }: Props) =>
     applicationStatus ? "#C4C4C4" : "#008800"};
@@ -29,8 +29,8 @@ export const SwitchContainer = styled.div`
 `;
 
 export const Switch = styled.div`
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   background-color: white;
   border-radius: 50%;
   margin-left: ${({ applicationStatus }: Props) =>
@@ -40,14 +40,14 @@ export const Switch = styled.div`
 
 export const AppliedMemberContainer = styled.div`
   width: 100%;
-  margin-top: 33px;
+  margin-top: 35px;
 
 `;
 
 export const AppliedMemberList = styled.div`
   width: 100%;
   height: 110px;
-  margin-top: 14px;
+  margin-top: 15px;
   overflow-y: scroll;
 
   ::-webkit-scrollbar{
@@ -57,23 +57,42 @@ export const AppliedMemberList = styled.div`
 
 export const MemberListContainer = styled.div`
   width: 100%;
-  margin-top: 28px;
+  margin-top: 30px;
 `
 
-export const MemberListTable = styled.table`
+export const MemberList = styled.ul`
   width: 100%;
   border-collapse: collapse;
-  margin-top: 14px;
+  margin: 0;
+  padding: 0;
+  margin-top: 15px;
   
-  & tr{
-    width: 100%;
+  & li{
     border-bottom: 1px solid #F3F3F3;
   }
 `
 
-export const MemberAttribute = styled.tr`
-  height: 21px;
-  & td{
+export const MemberAttribute = styled.li`
+  height: 20px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  & span{
     font-size: 10px;
   }
+
+  & div{
+    display: flex;
+    align-items: center;
+  }
+`
+
+export const MemberBackNumber = styled.span`
+  margin-right: 40px;
+`
+
+export const MemberPosition = styled.span`
+  margin-right: 95px;
 `
