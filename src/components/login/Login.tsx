@@ -1,12 +1,13 @@
 import React from "react";
 import * as S from "./style";
+import { Google } from "../../assets";
 
 const ClubEstbl = () => {
   return (
     <S.Container>
       <S.LoginHeader>로그인</S.LoginHeader>
       <S.LoginBox>
-        <div className="google-img"></div>
+        <img src={Google} alt="" />
         <span>구글 계정으로 로그인</span>
       </S.LoginBox>
       <S.LoginExplanation>
