@@ -1,11 +1,8 @@
 import React from "react";
-import { Header, PageMoveHeader } from "../common";
 import * as S from "./style";
 const Position = () => {
   return (
     <>
-      <Header />
-      <PageMoveHeader />
       <S.SignupWrapper>
         <S.CardWrapper>
           <S.SignupCard>골키퍼</S.SignupCard>
