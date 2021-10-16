@@ -47,6 +47,38 @@ export const DescriptionFont = styled.p`
   margin-top: 75px;
 `;
 
+export const MatchingInfoList = styled.div`
+  width: 100%;
+  margin-top: 65px;
+`;
+
 export const MatchingInfoWrapper = styled.div`
   width: 100%;
+  height: 40px;
+  border-bottom: 1px solid #f3f3f3;
+
+  & + & {
+    margin-top: 18px;
+  }
+`;
+
+export const MatchingInfo = styled.div`
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+`;
+
+export const MatchingInfoTitleFont = styled.span`
+  font-size: 16px;
+  font-weight: bolder;
+`;
+
+export const MathcingInfoSelect = styled.select`
+  width: 150px;
+  height: 25px;
+  border: none;
+  text-align: right;
+  padding-right: 16px;
+  font-size: 16px;
 `;
