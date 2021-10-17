@@ -34,7 +34,9 @@ const MatchingInfo = () => {
           <S.MatchingInfoWrapper>
             <S.MatchingInfo>
               <S.MatchingInfoTitleFont>경기 날짜</S.MatchingInfoTitleFont>
-              <Calendar />
+              <S.CalendarInput>
+                <Calendar />
+              </S.CalendarInput>
             </S.MatchingInfo>
           </S.MatchingInfoWrapper>
         </S.MatchingInfoList>

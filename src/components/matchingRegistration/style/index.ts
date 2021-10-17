@@ -82,3 +82,18 @@ export const MathcingInfoSelect = styled.select`
   padding-right: 16px;
   font-size: 16px;
 `;
+
+export const CalendarInput = styled.button`
+  border: none;
+
+  input {
+    width: 125px;
+    height: 25px;
+    border: none;
+    font-size: 16px;
+  }
+
+  & .react-datepicker__day {
+    background-image: ;
+  }
+`;
