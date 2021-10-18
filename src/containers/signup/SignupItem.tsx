@@ -1,4 +1,11 @@
-import { Age, Athlete, Gender, Name, Position } from "../../components";
+import {
+  Age,
+  Athlete,
+  Gender,
+  Name,
+  Position,
+  Introduce,
+} from "../../components";
 import React, { FC, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { reducerType } from "../../modules/redux/reducer";
@@ -14,7 +21,7 @@ const SignupItem: FC = () => {
   const dispatch = useDispatch();
   const history = useHistory();
   useEffect(() => {
-    if (userInfo.pageIndex === 5) {
+    if (userInfo.pageIndex === 6) {
       postUserInfo();
       history.push("/");
     }
@@ -37,7 +44,7 @@ const SignupItem: FC = () => {
     case 4:
       return <Athlete />;
     case 5:
-      return <></>;
+      return <Introduce></Introduce>;
     default:
       return <Name />;
   }

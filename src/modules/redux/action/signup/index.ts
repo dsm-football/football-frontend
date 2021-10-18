@@ -6,6 +6,7 @@ export const GET_ATHLETE = 'GET_ATHLETE' as const;
 export const GET_AREA = 'GET_AREA' as const;
 export const GET_PAGE = 'GET_PAGE' as const;
 export const GET_CODE = 'GET_CODE' as const;
+export const GET_INTRODUCE = 'GET_INTRODUCE' as const;
 export const setUserName = (name:string) => ({
   type: GET_USERNAME,
   name
@@ -38,6 +39,10 @@ export const setArea = (area: string) => ({
     type: GET_AREA,
     area
 })
+export const setIntroduce = (introduce:string) => ({
+    type: GET_INTRODUCE,
+    introduce
+})
 export type UserInfoAction =
   | ReturnType<typeof setUserName>
   | ReturnType<typeof setUserAge>
@@ -46,4 +51,5 @@ export type UserInfoAction =
   | ReturnType<typeof setPage>
   | ReturnType<typeof setAthlete>
   | ReturnType<typeof setCode>
-  | ReturnType<typeof setArea>;
+  | ReturnType<typeof setArea>
+  | ReturnType<typeof setIntroduce>;

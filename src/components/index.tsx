@@ -9,3 +9,4 @@ export { default as Athlete } from "./signup/Athlete";
 export { default as Gender } from "./signup/Gender";
 export { default as Name } from "./signup/Name";
 export { default as Position } from "./signup/Position";
+export { default as Introduce } from "./signup/Introduce";

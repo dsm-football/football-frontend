@@ -7,7 +7,8 @@ import {
     GET_ATHLETE,
     GET_PAGE,
     GET_CODE,
-    GET_AREA } from "../../action/signup";
+    GET_AREA,
+    GET_INTRODUCE } from "../../action/signup";
 export const initialState = {
   code: "",
   name: "",
@@ -17,6 +18,7 @@ export const initialState = {
   athlete: true,
   area: "",
   pageIndex: 0,
+  introduce: "",
 };
 
 export function userSignupreducer(state=initialState, action: UserInfoAction){
@@ -60,6 +62,11 @@ export function userSignupreducer(state=initialState, action: UserInfoAction){
             return{
                 ...state,
                 area: action.area
+            }
+        case GET_INTRODUCE:
+            return{
+                ...state,
+                introduce:action.introduce
             }
         default:
             return 0;
