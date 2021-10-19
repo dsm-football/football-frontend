@@ -11,14 +11,14 @@ const Position = () => {
   return (
     <>
       <S.SignupWrapper>
-        <S.BigCardWrapper>
+        <S.ProCardWrapper>
           <S.SignupCard onClick={() => dispatchAthlete(true)}>
             선수출신
           </S.SignupCard>
           <S.SignupCard onClick={() => dispatchAthlete(false)}>
             비선수출신
           </S.SignupCard>
-        </S.BigCardWrapper>
+        </S.ProCardWrapper>
       </S.SignupWrapper>
     </>
   );

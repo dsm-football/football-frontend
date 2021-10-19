@@ -7,7 +7,7 @@ const Introduce = () => {
   const dispatch = useDispatch();
   const dispatchIntroduce = () => {
     dispatch(setIntroduce("A"));
-    dispatch(setPage(6));
+    dispatch(setPage(7));
   };
 
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
