@@ -5,6 +5,7 @@ import * as S from "./style";
 const MatchingInfo = () => {
   return (
     <>
+      <Calendar />
       <S.MainWrapper>
         <S.MatchingInfoList>
           <S.MatchingInfoWrapper>
@@ -34,9 +35,6 @@ const MatchingInfo = () => {
           <S.MatchingInfoWrapper>
             <S.MatchingInfo>
               <S.MatchingInfoTitleFont>경기 날짜</S.MatchingInfoTitleFont>
-              <S.CalendarInput>
-                <Calendar />
-              </S.CalendarInput>
             </S.MatchingInfo>
           </S.MatchingInfoWrapper>
         </S.MatchingInfoList>
