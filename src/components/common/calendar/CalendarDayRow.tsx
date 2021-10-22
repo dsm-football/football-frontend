@@ -1,18 +1,16 @@
 import React from "react";
 import * as S from "./style";
 import moment from "moment";
-import { color } from "../../../style";
+import CalendarDay from "./CalendarDay";
 
 type PropsType = {
   today: moment.Moment;
   week: number;
-  setDate: React.Dispatch<React.SetStateAction<moment.Moment>>;
+  setDate: (payload: moment.Moment) => void;
 };
 
 const CalendarDayRow = (props: PropsType) => {
   const { today, week, setDate } = props;
-
-  const dayClick = (current: moment.Moment) => setDate(current);
 
   return (
     <>
@@ -26,28 +24,18 @@ const CalendarDayRow = (props: PropsType) => {
               .startOf("week")
               .add(n + i, "day");
 
-            let isSelected =
-              today.format("YYYYMMDD") === current.format("YYYYMMDD")
-                ? true
-                : false;
-
             let isOtherMonth =
               current.format("MM") !== today.format("MM") ? true : false;
 
             if (!isOtherMonth) {
               return (
-                <span
-                  style={{
-                    background: isSelected ? `${color.main}` : "white",
-                    color: i === 0 ? "red" : "black",
-                  }}
+                <CalendarDay
                   key={i}
-                  onClick={() => {
-                    dayClick(current);
-                  }}
-                >
-                  {current.format("D")}
-                </span>
+                  setDate={setDate}
+                  today={today}
+                  current={current}
+                  i={i}
+                />
               );
             } else return <span key={i}></span>;
           })}

@@ -1,21 +1,24 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { NextIcon, PrevIcon } from "../../../assets";
 import * as S from "./style";
-import moment from "moment";
 import CalendarDayRow from "./CalendarDayRow";
+import useCalendar from "../../../util/hooks/calendar/useCalendar";
+import moment from "moment";
 
 const WEEK = ["일", "월", "화", "수", "목", "금", "토"];
 
 const Calendar = () => {
-  const [date, setDate] = useState<moment.Moment>(() => moment());
+  const [calendarDate, setCalendarDate] = useState<moment.Moment>(moment());
+  const { state, setState } = useCalendar();
+  const { setDate, setCalendar } = setState;
 
   const setMonth = (next: boolean) =>
     next
-      ? setDate(date.clone().add(1, "month"))
-      : setDate(date.clone().subtract(1, "month"));
+      ? setCalendarDate(calendarDate.clone().add(1, "month"))
+      : setCalendarDate(calendarDate.clone().subtract(1, "month"));
 
   const makeCalendar = () => {
-    const today = date;
+    const today = calendarDate;
 
     const startWeek = today.clone().startOf("month").week();
     const endWeek =
@@ -26,11 +29,17 @@ const Calendar = () => {
 
     for (let week = startWeek; week <= endWeek; week++) {
       calendar.push(
-        <CalendarDayRow today={today} week={week} setDate={setDate} />
+        <CalendarDayRow today={today} week={week} setDate={setCalendarDate} />
       );
     }
     return calendar;
   };
+
+  const closeCalendar = () => {
+    setState.setCalendar(false);
+  };
+
+  const checkCalendar = () => {};
 
   return (
     <>
@@ -39,11 +48,11 @@ const Calendar = () => {
           <S.CalendarHeader>
             <div>
               <S.CalendarHeaderYear>
-                {date.format("YYYY년")}
+                {calendarDate.format("YYYY년")}
               </S.CalendarHeaderYear>
               <S.CalendarHeaderDate>
-                {date.format("MM월 DD일 ")}
-                {WEEK[date.day()]}
+                {calendarDate.format("MM월 DD일 ")}
+                {WEEK[calendarDate.day()]}
               </S.CalendarHeaderDate>
             </div>
           </S.CalendarHeader>
@@ -57,7 +66,7 @@ const Calendar = () => {
                 }}
               />
               <span>
-                {date.format("YYYY")}년 {date.format("MM")}월
+                {calendarDate.format("YYYY")}년 {calendarDate.format("MM")}월
               </span>
               <img
                 src={NextIcon}
@@ -74,8 +83,8 @@ const Calendar = () => {
             </S.CalendarWeek>
             <S.CalendarDayWrapper>{makeCalendar()}</S.CalendarDayWrapper>
             <S.CheckButtonWrapper>
-              <span>취소</span>
-              <span>확인</span>
+              <span onClick={closeCalendar}>취소</span>
+              <span onClick={checkCalendar}>확인</span>
             </S.CheckButtonWrapper>
           </S.CalendarContent>
         </S.CalendarWrapper>
