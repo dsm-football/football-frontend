@@ -1,12 +1,14 @@
 import axios from "axios";
 
-export const getWeather = (url: string) => {
+export const getWeather = (lat: number, lon: number) => {
   axios
-    .get(url)
+    .get(
+      `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}.44&lon=${lon}&exclude=hourly,minutely,alerts&appid=${process.env.REACT_APP_WEATHER_API_KEY}`
+    )
     .then((response: any) => {
-      console.log(response);
+      return response;
     })
     .catch((e) => {
-      console.error(e);
+      return e;
     });
 };
