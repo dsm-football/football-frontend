@@ -8,3 +8,4 @@ export { default as List } from "./header/List.svg";
 
 export { default as PrevIcon } from "./calendar/PrevIcon.svg";
 export { default as NextIcon } from "./calendar/NextIcon.svg";
+export { default as MoreIcon } from "./matchingRegistration/MoreIcon.svg";
