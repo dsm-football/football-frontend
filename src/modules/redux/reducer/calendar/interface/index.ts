@@ -1,5 +1,4 @@
 interface CalendarState {
-  date: moment.Moment;
   isCalendar: boolean;
 }
 
