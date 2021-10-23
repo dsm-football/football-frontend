@@ -11,7 +11,17 @@ import React, { FC, useEffect } from "react";
 import { useSelector } from "react-redux";
 import { reducerType } from "../../modules/redux/reducer";
 import { useHistory } from "react-router";
+import { BASE_URL } from "../../util/api/default";
+import axios from "axios";
 interface pageIndexType {
+  code?: string;
+  name?: string;
+  age?: number;
+  is_pro?: boolean;
+  bio?: string;
+  position_id?: number;
+  gender_id?: number;
+  area?: string;
   pageIndex?: number;
 }
 const SignupItem: FC = () => {
@@ -26,10 +36,23 @@ const SignupItem: FC = () => {
     }
   });
   const postUserInfo = () => {
-    const obj = { ...userInfo };
-    delete obj.pageIndex;
-    console.log(obj);
-    alert("회원가입 성공!");
+    signupUserRequest(userInfo);
+  };
+  const signupUserRequest = (userInfo: pageIndexType) => {
+    const signupData = { ...userInfo };
+    delete signupData.pageIndex;
+    console.log(signupData);
+    axios({
+      method: "post",
+      url: BASE_URL + "/users/auth/google",
+      data: signupData,
+    })
+      .then((res) => {
+        localStorage.setItem("access-token", res.data["access_token"]);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
   switch (userInfo.pageIndex) {
     case 1:
