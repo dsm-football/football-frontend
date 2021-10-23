@@ -7,14 +7,14 @@ const Rank = () => {
         <S.Split />
         <S.RankTitle>2021 하반기 랭킹</S.RankTitle>
         <S.AreaRank>
-          <S.AllRank><div>전체랭킹</div></S.AllRank>
+          <S.AllRank>전체랭킹</S.AllRank>
           <div>지역별랭킹</div>
         </S.AreaRank>
-        <S.Myteam>
-          <div />
+        <S.Myteam> 
+          <S.TeamLogo />
           <S.TeamName>FC어쩌구</S.TeamName>
-          <S.Rank>n위</S.Rank>
-          <S.Result>00승 0무 00패</S.Result>
+            <S.Rank>n위</S.Rank>
+            <S.Result>00승 0무 00패</S.Result>
         </S.Myteam>
         <S.AllCheck>
           <h1>팀 순위</h1>
