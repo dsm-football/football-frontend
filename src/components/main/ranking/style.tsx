@@ -7,7 +7,7 @@ export const Split = styled.div`
 `;
 
 export const RankTitle = styled.div`
-  width: 140px;
+  width: 150px;
   height: 25px;
   margin: 20px 0 14px 20px;
   font-weight: 600;
@@ -17,81 +17,79 @@ export const RankTitle = styled.div`
 
 export const AreaRank = styled.div`
   width: 320px;
-  height: 25px;
-  margin: 10px 0 15px 21px;
+  height: 24px;
+  margin: 10px 0 15px 20px;
   background-color: #e8e8e8;
   border-radius: 5px;
-  text-align: right;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
   justify-content: space-between;
   display: flex;
-  & div {
-    padding: 2px 44px 0 0;
+  & div{
+    padding-top: 5px;
+    padding-right: 50px;
   }
 `;
 
 export const AllRank = styled.div`
-  width: 120px;
-  height: 23px;
-  display: flex;
+  width: 160px;
+  height: 24px;
   border-radius: 5px;
+  padding-left: 50px;
+  padding-top: 5px;
   text-align: center;
   background-color: #bbbbbb;
-  & div {
-    padding: 2px 0 0 50px;
-  }
+  display: flex;
+  justify-content: space-between;
 `;
 
 export const Myteam = styled.div`
   width: 320px;
   height: 84px;
   margin-left: 20px;
-  justify-content: space-between;
   display: flex;
   background-color: #e8e8e8;
   border-radius: 10px;
   padding-top: 12px;
-  & div {
-    width: 60px;
-    height: 60px;
-    margin-top: 12px;
-    margin-left: 12px;
-    background-color: #c4c4c4;
-    border-radius: 50%;
-    display: flex;
-  }
 `;
 
-export const TeamName = styled.h1`
+export const TeamLogo = styled.div`
   width: 60px;
-  height: 19px;
-  display: flex;
+  height: 60px;
+  margin-left: 12px;
+  background-color: #c4c4c4;
+  border-radius: 50%;
+`
+
+export const TeamName = styled.div`
+  width: 60px;
+  height: 20px;
   font-size: 14px;
   font-weight: 600;
   line-height: 19px;
-  margin-top: 18px;
-  margin-right: 180px;
+  margin-top: 10px;
+  margin-left: 10px;
 `;
 
-export const Rank = styled.h1`
-  width: 25px;
+export const Rank = styled.div`
+  width: 30px;
   height: 19px;
-  left: 100px;
-  position: absolute;
   font-size: 14px;
   font-weight: 600;
-  line-height: 19px;
-  margin-top: 40px;
+  line-height: 20px;
+  margin-top: 30px;
+  margin-left: -60px;
 `;
 
-export const Result = styled.p`
-  width: 90px;
+export const Result = styled.div`
+  width: 100px;
   height: 19px;
-  left: 132px;
-  position: absolute;
-  margin-top: 40px;
+  margin-top: 30px;
   font-weight: 500;
   font-size: 14px;
-  line-height: 19px;
+  line-height: 20px;
 `;
 
 export const AllCheck = styled.div`
