@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { MoreIcon } from "../../../assets";
 import { color } from "../../../style";
 
 export const MainWrapper = styled.div`
@@ -74,26 +75,35 @@ export const MatchingInfoTitleFont = styled.span`
   font-weight: bolder;
 `;
 
-export const MathcingInfoSelect = styled.select`
+export const MatchingInfoSelect = styled.select`
   width: 150px;
   height: 25px;
   border: none;
   text-align: right;
-  padding-right: 16px;
+  padding-left: 16px;
   font-size: 16px;
+  background-color: white;
+  color: black;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  background-image: url(${MoreIcon});
+  background-repeat: no-repeat;
+  background-position: calc(100% - 10px) center;
 `;
 
-export const CalendarInput = styled.button`
+export const CalendarInput = styled.div`
   border: none;
+  width: 150px;
+  height: 25px;
+  border: none;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 3px;
 
-  input {
-    width: 125px;
-    height: 25px;
-    border: none;
-    font-size: 16px;
-  }
-
-  & .react-datepicker__day {
-    background-image: ;
+  img {
+    width: 12px;
   }
 `;
