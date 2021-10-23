@@ -2,15 +2,20 @@ import React, { useEffect, useState } from "react";
 import { NextIcon, PrevIcon } from "../../../assets";
 import * as S from "./style";
 import CalendarDayRow from "./CalendarDayRow";
-import useCalendar from "../../../util/hooks/calendar/useCalendar";
 import moment from "moment";
 
 const WEEK = ["일", "월", "화", "수", "목", "금", "토"];
 
-const Calendar = () => {
+interface Props {
+  setDate: React.Dispatch<
+    React.SetStateAction<moment.Moment | null | undefined>
+  >;
+  setCalendar: (payload: boolean) => void;
+}
+
+const Calendar = (props: Props) => {
   const [calendarDate, setCalendarDate] = useState<moment.Moment>(moment());
-  const { state, setState } = useCalendar();
-  const { setDate, setCalendar } = setState;
+  const { setDate, setCalendar } = props;
 
   const setMonth = (next: boolean) =>
     next
@@ -29,17 +34,25 @@ const Calendar = () => {
 
     for (let week = startWeek; week <= endWeek; week++) {
       calendar.push(
-        <CalendarDayRow today={today} week={week} setDate={setCalendarDate} />
+        <CalendarDayRow
+          today={today}
+          week={week}
+          setDate={setCalendarDate}
+          key={week}
+        />
       );
     }
     return calendar;
   };
 
   const closeCalendar = () => {
-    setState.setCalendar(false);
+    setCalendar(false);
   };
 
-  const checkCalendar = () => {};
+  const checkCalendar = () => {
+    setDate(calendarDate);
+    setCalendar(false);
+  };
 
   return (
     <>

@@ -3,13 +3,13 @@ import * as S from "./style";
 import moment from "moment";
 import CalendarDay from "./CalendarDay";
 
-type PropsType = {
+interface Props {
   today: moment.Moment;
   week: number;
   setDate: (payload: moment.Moment) => void;
-};
+}
 
-const CalendarDayRow = (props: PropsType) => {
+const CalendarDayRow = (props: Props) => {
   const { today, week, setDate } = props;
 
   return (
