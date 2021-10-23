@@ -10,20 +10,20 @@ const UserExplain = () =>{
 
     return(
         <>
-            <div className='App'>
+            <S.Line>
                 {arr1.map((el, index) => (
                     <div key={index}>
-                        <S.Explain>{el}</S.Explain>
+                        {el}
                     </div>
                 ))}
-            </div>
-            <div className='App'>
+            </S.Line>
+            <S.Default>
                 {arr2.map((el, index) => (
                     <div key={index}>
-                        <S.Detail>{el}</S.Detail>
+                        {el}
                     </div>
                 ))}
-            </div>
+            </S.Default>
         </>
     );
 }

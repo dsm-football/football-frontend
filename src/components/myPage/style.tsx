@@ -59,22 +59,23 @@ export const Player = styled.div`
     font-size: 18px;
     line-height: 25px;
 `
-export const Explain = styled.div`
-    width: 115px;
-    height: auto;
-    margin-top: 30px;
-    margin-left: 32px;
+
+export const Line = styled.div`
+    width: 50%;
+    height: 60vh;
+    padding-left: 8%;
     font-weight: 600;
     font-size: 18px;
     line-height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 `
 
-export const Detail = styled.div`
-    width: 180px;
-    height: auto;
+export const Default = styled(Line)`
+    padding-left: 0;
+    padding-right: 20px;
     font-weight: 300;
     font-size: 18px;
     line-height: 25px;
-    margin-top: 30px;
-    margin-right: 20px;
 `
