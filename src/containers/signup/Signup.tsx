@@ -5,7 +5,7 @@ const SignupContainer: FC = () => {
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <Header />
-      <PageMoveHeader />
+      <PageMoveHeader header={"회원등록페이지"} />
       <SignupItem />
     </Suspense>
   );

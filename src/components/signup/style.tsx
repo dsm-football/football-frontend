@@ -27,7 +27,7 @@ export const CardWrapper = styled.div`
   align-items: center;
   margin-top: 10%;
 `;
-export const BigCardWrapper = styled(CardWrapper)`
+export const ProCardWrapper = styled(CardWrapper)`
   height: 220px;
   margin: 0;
 `;
@@ -66,4 +66,31 @@ export const InputWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   margin-bottom: 20%;
+`;
+export const MapWrapper = styled.div`
+  width: 320px;
+  height: 360px;
+  background-color: pink;
+`;
+export const MapSignupTitle = styled.div`
+  width: 90%;
+  display: flex;
+  justify-content: flex-start;
+  font-weight: 600;
+  font-size: 15px;
+`;
+export const MapTitle = styled.div`
+  width: 100%;
+  height: 45px;
+  background-color: #f3f3f3;
+  display: flex;
+  box-sizing: border-box;
+  padding: 0 5%;
+  justify-content: space-between;
+  align-items: center;
+  span {
+    margin-left: 30%;
+    font-size: 16px;
+    color: black;
+  }
 `;
