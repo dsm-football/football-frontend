@@ -1,12 +1,33 @@
 import moment from "moment";
 import React, { useState } from "react";
-import { MoreIcon } from "../../assets";
-import useCalendar from "../../util/hooks/calendar/useCalendar";
 import Calendar from "../common/calendar/Calendar";
 import * as S from "./style";
 
+const areaOption = [
+  "서울",
+  "부산",
+  "대구",
+  "인천",
+  "광주",
+  "대전",
+  "울산",
+  "세종",
+  "경기",
+  "강원",
+  "충북",
+  "충남",
+  "전북",
+  "전남",
+  "경북",
+  "경남",
+  "제주",
+];
+
 const MatchingInfo = () => {
-  const { state, setState } = useCalendar();
+  const [isMatchDateCalendar, setIsMatchDateCalendar] =
+    useState<boolean>(false);
+  const [isMatchDeadlineCalendar, setIsMatchDeadlineCalendar] =
+    useState<boolean>(false);
   const [matchDate, setMatchDate] = useState<moment.Moment | null>();
   const [matchDeadline, setMatchDeadlin] = useState<moment.Moment | null>();
 
@@ -18,42 +39,33 @@ const MatchingInfo = () => {
             <S.MatchingInfo>
               <S.MatchingInfoTitleFont>매칭 지역</S.MatchingInfoTitleFont>
               <S.MatchingInfoSelect>
-                <option value="서울">서울</option>
-                <option value="부산">부산</option>
-                <option value="대구">대구</option>
-                <option value="인천">인천</option>
-                <option value="광주">광주</option>
-                <option value="대전">대전</option>
-                <option value="울산">울산</option>
-                <option value="세종">세종</option>
-                <option value="경기">경기</option>
-                <option value="강원">강원</option>
-                <option value="충북">충북</option>
-                <option value="충남">충남</option>
-                <option value="전북">전북</option>
-                <option value="전남">전남</option>
-                <option value="경북">경북</option>
-                <option value="경남">경남</option>
-                <option value="제주">제주</option>
+                {areaOption.map((v: string) => {
+                  return <option value={v}>{v}</option>;
+                })}
               </S.MatchingInfoSelect>
             </S.MatchingInfo>
           </S.MatchingInfoWrapper>
           <S.MatchingInfoWrapper>
             <S.MatchingInfo>
-              {state.isCalendar && (
+              <S.MatchingInfoTitleFont>장소</S.MatchingInfoTitleFont>
+              <S.GpsInput />
+            </S.MatchingInfo>
+          </S.MatchingInfoWrapper>
+          <S.MatchingInfoWrapper>
+            <S.MatchingInfo>
+              {isMatchDateCalendar && (
                 <Calendar
                   setDate={setMatchDate}
-                  setCalendar={setState.setCalendar}
+                  setCalendar={setIsMatchDateCalendar}
                 />
               )}
               <S.MatchingInfoTitleFont>경기 날짜</S.MatchingInfoTitleFont>
               <S.CalendarInput
                 onClick={() => {
-                  setState.setCalendar(true);
+                  setIsMatchDateCalendar(true);
                 }}
               >
                 <span>{matchDate?.format("YYYY-MM-DD")}</span>
-                <img src={MoreIcon} alt="MoreIcon" />
               </S.CalendarInput>
             </S.MatchingInfo>
           </S.MatchingInfoWrapper>
@@ -65,6 +77,24 @@ const MatchingInfo = () => {
                   return <option key={i}>{`${i}:00`}</option>;
                 })}
               </S.MatchingInfoSelect>
+            </S.MatchingInfo>
+          </S.MatchingInfoWrapper>
+          <S.MatchingInfoWrapper>
+            <S.MatchingInfo>
+              {isMatchDeadlineCalendar && (
+                <Calendar
+                  setDate={setMatchDeadlin}
+                  setCalendar={setIsMatchDeadlineCalendar}
+                />
+              )}
+              <S.MatchingInfoTitleFont>매칭 마감일</S.MatchingInfoTitleFont>
+              <S.CalendarInput
+                onClick={() => {
+                  setIsMatchDeadlineCalendar(true);
+                }}
+              >
+                <span>{matchDeadline?.format("YYYY-MM-DD")}</span>
+              </S.CalendarInput>
             </S.MatchingInfo>
           </S.MatchingInfoWrapper>
         </S.MatchingInfoList>

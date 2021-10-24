@@ -3,6 +3,7 @@ import { NextIcon, PrevIcon } from "../../../assets";
 import * as S from "./style";
 import CalendarDayRow from "./CalendarDayRow";
 import moment from "moment";
+import { getWeather } from "../../../util/api/getWeather";
 
 const WEEK = ["일", "월", "화", "수", "목", "금", "토"];
 
@@ -16,6 +17,12 @@ interface Props {
 const Calendar = (props: Props) => {
   const [calendarDate, setCalendarDate] = useState<moment.Moment>(moment());
   const { setDate, setCalendar } = props;
+  const checkWeek = calendarDate.week();
+
+  useEffect(() => {
+    console.log("asdasd");
+    console.log(getWeather("대전"));
+  }, [checkWeek]);
 
   const setMonth = (next: boolean) =>
     next

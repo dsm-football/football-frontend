@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { MoreIcon } from "../../../assets";
+import { GpsIcon, MoreIcon } from "../../../assets";
 import { color } from "../../../style";
 
 export const MainWrapper = styled.div`
@@ -79,7 +79,6 @@ export const MatchingInfoSelect = styled.select`
   width: 150px;
   height: 25px;
   border: none;
-  text-align: right;
   padding-left: 16px;
   font-size: 16px;
   background-color: white;
@@ -101,9 +100,29 @@ export const CalendarInput = styled.div`
   font-size: 16px;
   display: flex;
   justify-content: space-between;
-  margin-right: 3px;
+  padding-left: 16px;
 
-  img {
-    width: 12px;
-  }
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  background-image: url(${MoreIcon});
+  background-repeat: no-repeat;
+  background-position: calc(100% - 10px) center;
+`;
+
+export const GpsInput = styled.div`
+  width: 150px;
+  height: 25px;
+  border: none;
+  padding-left: 16px;
+  font-size: 16px;
+  background-color: white;
+  color: black;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  background-image: url(${GpsIcon});
+  background-repeat: no-repeat;
+  background-position: calc(100% - 5px) center;
 `;
