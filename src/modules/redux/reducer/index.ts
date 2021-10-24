@@ -1,9 +1,6 @@
 import { combineReducers } from "redux";
-import calendarReducer from "./calendar";
 
-const rootReducer = combineReducers({
-  calendar: calendarReducer,
-});
+const rootReducer = combineReducers({});
 
 export type reducerType = ReturnType<typeof rootReducer>;
 export default rootReducer;
