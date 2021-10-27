@@ -1,7 +1,11 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
-import { ClubEstbl, Login, MainPage } from "../components";
-import { ClubManagementContainer } from "../containers";
+import {
+  ClubManagementContainer,
+  SignupContainer,
+  ClubEstblContainer,
+} from "../containers";
+import { Login, MainPage, MyPage } from "../components";
 
 const MainRouter = () => {
   return (
@@ -12,9 +16,11 @@ const MainRouter = () => {
           path="/club/management"
           component={ClubManagementContainer}
         />
-        <Route exact path="/clubEstbl" component={ClubEstbl} />
-        <Route exact path="/Login" component={Login} />
+        <Route exact path="/clubEstbl" component={ClubEstblContainer} />
+        <Route exact path="/login" component={Login} />
         <Route exact path="/" component={MainPage} />
+        <Route exact path="/Mypage" component={MyPage} />
+        <Route exact path="/signup" component={SignupContainer} />
       </Switch>
     </>
   );
