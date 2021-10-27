@@ -21,7 +21,7 @@ export const AreaRank = styled.div`
   margin: 10px 0 15px 20px;
   background-color: #e8e8e8;
   border-radius: 5px;
-  font-weight: 500;
+  font-weight: bold;
   font-size: 12px;
   line-height: 16px;
   text-align: center;
@@ -40,7 +40,7 @@ export const AllRank = styled.div`
   padding-left: 50px;
   padding-top: 5px;
   text-align: center;
-  background-color: #bbbbbb;
+  background-color: #0BFF0B;
   display: flex;
   justify-content: space-between;
 `;
@@ -53,14 +53,18 @@ export const Myteam = styled.div`
   background-color: #e8e8e8;
   border-radius: 10px;
   padding-top: 12px;
+  & div{
+    display: flex;
+    justify-content: space-evenly;
+  }
 `;
 
 export const TeamLogo = styled.div`
   width: 60px;
   height: 60px;
-  margin-left: 12px;
   background-color: #c4c4c4;
   border-radius: 50%;
+  margin: 0 12px;
 `
 
 export const TeamName = styled.div`
@@ -70,26 +74,16 @@ export const TeamName = styled.div`
   font-weight: 600;
   line-height: 19px;
   margin-top: 10px;
-  margin-left: 10px;
 `;
 
 export const Rank = styled.div`
-  width: 30px;
+  width: 130px;
   height: 19px;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 00;
   line-height: 20px;
   margin-top: 30px;
-  margin-left: -60px;
-`;
-
-export const Result = styled.div`
-  width: 100px;
-  height: 19px;
-  margin-top: 30px;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 20px;
+  margin-left: -65px;
 `;
 
 export const AllCheck = styled.div`
@@ -139,66 +133,14 @@ export const Etcs = styled(Etc)`
   width: 10px;
 `;
 
-export const Locate = styled.div`
+export const Ranks = styled.div`
   width: 360px;
+  height: 10%;
   display: flex;
-`;
-
-export const Mark = styled.div`
-  width: 30px;
-  height: 30px;
-  background-color: #c4c4c4;
-  border-radius: 100%;
-  margin-top: 11px;
-  margin-left: 15px;
-`;
-
-export const Rankings = styled.div`
-  width: 10px;
-  height: 16px;
-  margin-left: 10px;
-  margin-top: 18px;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 16px;
-`;
-
-export const TName = styled.div`
-  width: 85px;
-  height: 16px;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 16px;
-  margin-left: 10px;
-  margin-top: 18px;
-`;
-
-export const Score = styled.div`
-  width: 14px;
-  height: 16px;
+  justify-content: space-evenly;
   text-align: center;
+  margin-top: 10px;
   font-weight: 500;
   font-size: 12px;
   line-height: 16px;
-  margin: 18px 8px 0 11px;
-`;
-
-export const And = styled(Score)`
-  margin: 18px 5px 0 7px;
-`;
-
-export const Draw = styled(Score)`
-  margin: 18px 5px 0 1px;
-`;
-
-export const Lose = styled(Score)`
-  margin: 18px 5px 0 1px;
-`;
-
-export const Points = styled(Score)`
-  margin: 18px 5px 0 6px;
-`;
-
-export const LostP = styled(Score)`
-  margin: 18px 0 0 10px;
-`;
+`
