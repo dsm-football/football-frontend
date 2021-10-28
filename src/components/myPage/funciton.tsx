@@ -10,20 +10,22 @@ const UserExplain = () =>{
 
     return(
         <>
-            <S.Line>
-                {arr1.map((el, index) => (
-                    <div key={index}>
-                        {el}
-                    </div>
-                ))}
-            </S.Line>
-            <S.Default>
-                {arr2.map((el, index) => (
-                    <div key={index}>
-                        {el}
-                    </div>
-                ))}
-            </S.Default>
+            <S.Divs>
+                <S.Line>
+                    {arr1.map((el, index) => (
+                        <div key={index}>
+                            {el}
+                        </div>
+                    ))}
+                </S.Line>
+                <S.Default>
+                    {arr2.map((el, index) => (
+                        <div key={index}>
+                            {el}
+                        </div>
+                    ))}
+                </S.Default>
+            </S.Divs> 
         </>
     );
 }
