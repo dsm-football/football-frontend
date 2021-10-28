@@ -5,7 +5,8 @@ import { GET_CLUBNAME,
     GET_AREA_CODE, 
     GET_CYCLE_CODE, 
     GET_GENDER_CODE, 
-    GET_AGE_GROUP_CODE, 
+    GET_AGE_GROUP_CODE,
+     GET_PAGEINDEX,
     ClubEstblInfoAction} from "../../action/clubEstbl";
 
 export const initialState = {
@@ -16,7 +17,8 @@ export const initialState = {
   area_code: 0,
   cycle_code: 0,
   gender_code: 0,
-  age_group_code: 0
+  age_group_code: 0,
+  pageIndex: 0
 };
 
 export function clubEstblreducer(state=initialState, action:ClubEstblInfoAction){
@@ -60,6 +62,11 @@ export function clubEstblreducer(state=initialState, action:ClubEstblInfoAction)
             return{
                 ...state,
                 age_group_code: action.age_group_code
+            }
+        case GET_PAGEINDEX:
+            return{
+                ...state,
+                pageIndex: action.pageIndex
             }
         default:
             return 0;

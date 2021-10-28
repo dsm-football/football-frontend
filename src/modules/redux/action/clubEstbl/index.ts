@@ -6,7 +6,7 @@ export const GET_AREA_CODE = 'GET_AREA_CODE' as const;
 export const GET_CYCLE_CODE = 'GET_CYCLE_CODE' as const;
 export const GET_GENDER_CODE = 'GET_GENDER_CODE' as const;
 export const GET_AGE_GROUP_CODE = 'GET_AGE_GROUP_CODE' as const;
-
+export const GET_PAGEINDEX = 'GET_PAGEINDEX' as const;
 export const setClubName = (name:string) => ({
     type: GET_CLUBNAME,
     name
@@ -39,6 +39,10 @@ export const setAgeGroupCode = (age_group_code:number) =>({
     type: GET_AGE_GROUP_CODE,
     age_group_code
 })
+export const setPageIndex = (pageIndex:number) => ({
+    type: GET_PAGEINDEX,
+    pageIndex
+});
 export type ClubEstblInfoAction =
   | ReturnType<typeof setClubName>
   | ReturnType<typeof setClubDiscription>
@@ -47,4 +51,5 @@ export type ClubEstblInfoAction =
   | ReturnType<typeof setAreaCode>
   | ReturnType<typeof setCycleCode>
   | ReturnType<typeof setGenderCode>
-  | ReturnType<typeof setAgeGroupCode>;
+  | ReturnType<typeof setAgeGroupCode>
+  | ReturnType<typeof setPageIndex>;
