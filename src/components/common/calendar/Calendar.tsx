@@ -17,12 +17,12 @@ interface Props {
 const Calendar = (props: Props) => {
   const [calendarDate, setCalendarDate] = useState<moment.Moment>(moment());
   const { setDate, setCalendar } = props;
+  const [weather, setWeather] = useState<any>();
   const checkWeek = calendarDate.week();
 
   useEffect(() => {
-    console.log("asdasd");
-    console.log(getWeather("대전"));
-  }, [checkWeek]);
+    setWeather(getWeather("대전"));
+  }, []);
 
   const setMonth = (next: boolean) =>
     next
