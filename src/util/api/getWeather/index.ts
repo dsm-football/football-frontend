@@ -70,15 +70,13 @@ LatitudeLongitudeCityDic["제주"] = {
   longitude: 126.542671,
 };
 
-export const getWeather = (area: string) => {
-  return axios
-    .get(
+export const getWeather = async (area: string) => {
+  try {
+    const response = await axios.get(
       `https://api.openweathermap.org/data/2.5/onecall?lat=${LatitudeLongitudeCityDic[area].latitude}&lon=${LatitudeLongitudeCityDic[area].longitude}&exclude=hourly,minutely,alerts&appid=${process.env.REACT_APP_WEATHER_API_KEY}&lang=kr`
-    )
-    .then((response: any) => {
-      return response;
-    })
-    .catch((e) => {
-      return e;
-    });
+    );
+    return response.data;
+  } catch (e) {
+    throw e;
+  }
 };

@@ -17,11 +17,17 @@ interface Props {
 const Calendar = (props: Props) => {
   const [calendarDate, setCalendarDate] = useState<moment.Moment>(moment());
   const { setDate, setCalendar } = props;
-  const [weather, setWeather] = useState<any>();
-  const checkWeek = calendarDate.week();
+  const [weather, setWeather] = React.useState<any>();
 
   useEffect(() => {
-    setWeather(getWeather("대전"));
+    getWeather("대전")
+      .then((res: any) => {
+        setWeather(res);
+        console.log(res);
+      })
+      .catch((err: any) => {
+        console.log(err);
+      });
   }, []);
 
   const setMonth = (next: boolean) =>
@@ -46,6 +52,7 @@ const Calendar = (props: Props) => {
           week={week}
           setDate={setCalendarDate}
           key={week}
+          weather={weather}
         />
       );
     }

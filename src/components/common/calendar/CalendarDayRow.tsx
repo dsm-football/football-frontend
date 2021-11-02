@@ -7,10 +7,11 @@ interface Props {
   today: moment.Moment;
   week: number;
   setDate: (payload: moment.Moment) => void;
+  weather: any;
 }
 
 const CalendarDayRow = (props: Props) => {
-  const { today, week, setDate } = props;
+  const { today, week, setDate, weather } = props;
 
   return (
     <>
@@ -35,6 +36,7 @@ const CalendarDayRow = (props: Props) => {
                   today={today}
                   current={current}
                   i={i}
+                  weatherIcon={""}
                 />
               );
             } else return <span key={i}></span>;
