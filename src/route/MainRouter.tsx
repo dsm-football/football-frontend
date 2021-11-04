@@ -1,14 +1,13 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
-import { ClubEstbl, Login, MainPage } from "../components";
 import {
   ClubManagementContainer,
   MatchingRegistrationContainer,
   SignupContainer,
-} from "../containers";
-
   ClubEstblContainer,
+} from "../containers";
 import { Login, MainPage, MyPage } from "../components";
+
 const MainRouter = () => {
   return (
     <>
