@@ -18,15 +18,15 @@ const Calendar = (props: Props) => {
   const [calendarDate, setCalendarDate] = useState<moment.Moment>(moment());
   const { setDate, setCalendar } = props;
   const [weather, setWeather] = React.useState<any>();
+  const now = moment();
 
   useEffect(() => {
     getWeather("대전")
       .then((res: any) => {
         setWeather(res);
-        console.log(res);
       })
       .catch((err: any) => {
-        console.log(err);
+        alert("오류발생");
       });
   }, []);
 
@@ -52,7 +52,11 @@ const Calendar = (props: Props) => {
           week={week}
           setDate={setCalendarDate}
           key={week}
-          weather={weather}
+          weather={
+            week === now.week() || week === now.clone().add(1, "week").week()
+              ? weather
+              : null
+          }
         />
       );
     }

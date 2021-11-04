@@ -106,11 +106,9 @@ export const CalendarDayRow = styled.div`
   }
 `;
 
-export const Icon = styled.div`
-  margin-top: 2px;
-  width: 12px;
-  height: 12px;
-  background-color: black;
+export const Icon = styled.img`
+  width: 20px;
+  height: 20px;
 `;
 
 export const CheckButtonWrapper = styled.div`

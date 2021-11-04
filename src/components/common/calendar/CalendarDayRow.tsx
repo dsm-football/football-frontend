@@ -12,6 +12,7 @@ interface Props {
 
 const CalendarDayRow = (props: Props) => {
   const { today, week, setDate, weather } = props;
+  const now = moment();
 
   return (
     <>
@@ -25,6 +26,14 @@ const CalendarDayRow = (props: Props) => {
               .startOf("week")
               .add(n + i, "day");
 
+            const weatherIcon =
+              current.format("MM") === now.format("MM") &&
+              (Number(current.format("DD")) - now.day() >= 0 ||
+                Number(current.format("DD")) - now.day() <= 6)
+                ? weather?.daily[Number(current.format("DD")) - now.day()]
+                    ?.weather[0].icon
+                : "";
+
             let isOtherMonth =
               current.format("MM") !== today.format("MM") ? true : false;
 
@@ -36,7 +45,7 @@ const CalendarDayRow = (props: Props) => {
                   today={today}
                   current={current}
                   i={i}
-                  weatherIcon={""}
+                  weatherIcon={weatherIcon}
                 />
               );
             } else return <span key={i}></span>;

@@ -1,6 +1,7 @@
 import moment from "moment";
-import React, { memo } from "react";
+import React from "react";
 import { color } from "../../../style";
+import * as S from "./style";
 
 const weatherIconUrl = "http://openweathermap.org/img/wn/";
 
@@ -12,7 +13,7 @@ interface Props {
   weatherIcon: string;
 }
 
-const CalendarDay = memo((props: Props) => {
+const CalendarDay = (props: Props) => {
   const { today, current, setDate, i, weatherIcon } = props;
 
   const dayClick = (current: moment.Moment) => setDate(current);
@@ -33,7 +34,7 @@ const CalendarDay = memo((props: Props) => {
       >
         {current.format("D")}
         {weatherIcon && (
-          <img
+          <S.Icon
             src={weatherIconUrl + weatherIcon + "@2x.png"}
             alt="날씨 아이콘"
           />
@@ -41,6 +42,6 @@ const CalendarDay = memo((props: Props) => {
       </span>
     </>
   );
-});
+};
 
 export default CalendarDay;
