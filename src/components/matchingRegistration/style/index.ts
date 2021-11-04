@@ -3,7 +3,7 @@ import { GpsIcon, MoreIcon } from "../../../assets";
 import { color } from "../../../style";
 
 export const MainWrapper = styled.div`
-  width: 100%;
+  width: 100%; ;
 `;
 
 export const MatchingRegistrationHeader = styled.div`
@@ -79,10 +79,11 @@ export const MatchingInfoSelect = styled.select`
   width: 150px;
   height: 25px;
   border: none;
-  padding-left: 16px;
   font-size: 16px;
   background-color: white;
   color: black;
+  text-align: right;
+  padding-right: 40px;
 
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -125,4 +126,51 @@ export const GpsInput = styled.div`
   background-image: url(${GpsIcon});
   background-repeat: no-repeat;
   background-position: calc(100% - 5px) center;
+`;
+
+export const MatchingInfoCheckWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  bottom: 25px;
+  z-index: -1;
+`;
+
+export const Directive = styled.p`
+  color: #c4c4c4;
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 30px;
+`;
+
+export const MatchingInfoCheckBtn = styled.button`
+  width: 90%;
+  height: 54px;
+  border-radius: 6px;
+  font-size: 16px;
+  color: white;
+  background-color: ${color.main};
+  cursor: pointer;
+  border: none;
+`;
+
+export const MatchingInfoInput = styled.input`
+  width: 150px;
+  height: 25px;
+  border: none;
+  font-size: 16px;
+  background-color: white;
+  color: black;
+  text-align: right;
+  padding-right: 40px;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  background-image: url(${MoreIcon});
+  background-repeat: no-repeat;
+  background-position: calc(100% - 10px) center;
 `;

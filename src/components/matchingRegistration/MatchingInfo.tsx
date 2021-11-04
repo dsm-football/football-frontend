@@ -39,8 +39,12 @@ const MatchingInfo = () => {
             <S.MatchingInfo>
               <S.MatchingInfoTitleFont>매칭 지역</S.MatchingInfoTitleFont>
               <S.MatchingInfoSelect>
-                {areaOption.map((v: string) => {
-                  return <option value={v}>{v}</option>;
+                {areaOption.map((v: string, i: number) => {
+                  return (
+                    <option key={i} value={v}>
+                      {v}
+                    </option>
+                  );
                 })}
               </S.MatchingInfoSelect>
             </S.MatchingInfo>
@@ -98,6 +102,10 @@ const MatchingInfo = () => {
             </S.MatchingInfo>
           </S.MatchingInfoWrapper>
         </S.MatchingInfoList>
+        <S.MatchingInfoCheckWrapper>
+          <S.Directive>항목을 선택해주세요</S.Directive>
+          <S.MatchingInfoCheckBtn>다음</S.MatchingInfoCheckBtn>
+        </S.MatchingInfoCheckWrapper>
       </S.MainWrapper>
     </>
   );
