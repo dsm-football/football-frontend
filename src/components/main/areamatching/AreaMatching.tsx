@@ -36,23 +36,19 @@ const Area = () => {
             </S.Area>
         </section> 
         <S.Application>
-          <S.Set>서울</S.Set>
-          <S.AppButton>신청가능</S.AppButton>
-          <S.FIcon />
-          <S.TeamName>Fc어쩌구어쩌..</S.TeamName>
-          <S.Match>VS</S.Match>
-          <S.SIcon />
-          <S.TeamName2>???</S.TeamName2>
-          <S.Apply>신청하기</S.Apply>
-        </S.Application>
-        <S.Application>
-          <S.Set>서울</S.Set>
-          <S.AppButton>마감입박</S.AppButton>
-          <S.FIcon />
-          <S.TeamName>Fc어쩌구어쩌..</S.TeamName>
-          <S.Match>VS</S.Match>
-          <S.SIcon />
-          <S.TeamName2>???</S.TeamName2>
+          <div>
+            <S.Set>서울</S.Set>
+            <S.AppButton>신청가능</S.AppButton>
+          </div>
+          <div>
+            <S.FIcon />
+            <S.Match>VS</S.Match>
+            <S.SIcon />
+          </div>
+          <div>
+            <S.TeamName>FC호날두파워</S.TeamName>
+            <S.TeamName2>강북축신</S.TeamName2>
+          </div>
           <S.Apply>신청하기</S.Apply>
         </S.Application>
     </>

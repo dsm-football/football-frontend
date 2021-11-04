@@ -1,12 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import * as S from "./style";
 import { Google } from "../../assets";
-
+import axios from "axios";
+import { BASE_URL } from "../../util/api/default";
 const ClubEstbl = () => {
+  useEffect(() => {
+    axios.get(BASE_URL + "/users/auth/google").then(function (res) {
+      console.log(res.data["link"]);
+    });
+  });
   return (
     <S.Container>
       <S.LoginHeader>로그인</S.LoginHeader>
-      <S.LoginBox href="https://accounts.google.com/o/oauth2/v2/auth?client_id=436549750929-4pepqro96c8s3sn3a35l84rpeir3brt2.apps.googleusercontent.com&scope=https://www.googleapis.com/auth/userinfo.email%20https://www.googleapis.com/auth/userinfo.profile&response_type=code&access_type=offline&redirect_uri=http%3A%2F%2Flocalhost%3A3001">
+      <S.LoginBox>
         <img src={Google} alt="" />
         <span>구글 계정으로 로그인</span>
       </S.LoginBox>

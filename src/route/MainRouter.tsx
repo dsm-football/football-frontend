@@ -7,6 +7,8 @@ import {
   SignupContainer,
 } from "../containers";
 
+  ClubEstblContainer,
+import { Login, MainPage, MyPage } from "../components";
 const MainRouter = () => {
   return (
     <>
@@ -16,9 +18,10 @@ const MainRouter = () => {
           path="/club/management"
           component={ClubManagementContainer}
         />
-        <Route exact path="/clubEstbl" component={ClubEstbl} />
-        <Route exact path="/Login" component={Login} />
+        <Route exact path="/clubEstbl" component={ClubEstblContainer} />
+        <Route exact path="/login" component={Login} />
         <Route exact path="/" component={MainPage} />
+        <Route exact path="/Mypage" component={MyPage} />
         <Route exact path="/signup" component={SignupContainer} />
         <Route
           exact

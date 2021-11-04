@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "http://13.124.222.2:8080/api";
+export const BASE_URL = "http://13.124.222.2:8080/api";
 
 export const getRequest = () => {
   const request = axios.create({
@@ -8,7 +8,7 @@ export const getRequest = () => {
     baseURL: BASE_URL,
     withCredentials: true,
     headers: {
-      withCredentials: true,
+      withCredentials: 'true',
     },
   });
   return request;
@@ -23,7 +23,7 @@ export const getRequestWithAccessToken = (
     baseURL: BASE_URL,
     headers: {
       Authorization: `Bearer ${token}`,
-      withCredentials: true,
+      withCredentials: 'true',
     },
     responseType: type,
     withCredentials: true,
