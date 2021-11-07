@@ -8,7 +8,7 @@ import NoticeModal from "../common/noticeModal/NoticeModal";
 const MatchingRegistration = () => {
   return (
     <>
-      <NoticeModal />
+      {/* <NoticeModal /> */}
       <S.MatchingRegistrationHeader>매칭 생성하기</S.MatchingRegistrationHeader>
       {/* <SelectSoccerKind /> */}
       {/* <MatchingInfo /> */}

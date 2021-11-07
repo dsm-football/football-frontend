@@ -41,7 +41,7 @@ const MatchingOtherInfo = () => {
               <S.MatchingInfoTitleFont>팀인원</S.MatchingInfoTitleFont>
               <S.MatchingInfoSelect>
                 {[...Array(7)].map((v: any, i: number) => {
-                  return <option>{i + 5}명</option>;
+                  return <option key={i}>{i + 5}명</option>;
                 })}
               </S.MatchingInfoSelect>
             </S.MatchingInfo>
