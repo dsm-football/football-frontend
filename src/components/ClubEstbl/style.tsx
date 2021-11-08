@@ -1,13 +1,12 @@
 import styled from "styled-components";
-const mainColor = "#c4c4c4";
 export const ClubEstblItemWrapper = styled.div`
   width: 100%;
   height: 540px;
-  padding: 4% 4%;
+  padding: 4% 5.5%;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   font-size: 12px;
   .inputTitle {
     font-size: 16px;
@@ -21,35 +20,67 @@ export const InputTitle = styled.div`
   font-size: 16px;
   font-weight: 600;
 `;
-export const ClubEstblInput = styled.input`
-  background-color: ${mainColor};
+export const ClubEstblInput = styled.textarea`
   width: 320px;
-  height: 44px;
+  height: 40px;
   border: none;
   font-size: 14px;
-`;
-export const ClubEstblInputDescription = styled.textarea`
-  height: 95px;
-  background-color: ${mainColor};
-  width: 320px;
-  border: none;
-  font-size: 14px;
+  border-bottom: 1px solid black;
+  resize: none;
+  box-sizing: border-box;
+  padding-left: 10px;
+  line-height: 30px;
+  ::placeholder {
+    font-size: 13px;
+    line-height: 16px;
+    color: #c4c4c4;
+  }
 `;
 
 // ClubEstblAdditional
 export const ClubEstblAdditionalWrapper = styled(ClubEstblItemWrapper)`
-  padding-bottom: 20%;
+  padding: 4% 0;
+  align-items: center;
+  justify-content: space-between;
 `;
-
+export const SelectBoxWrapper = styled.div`
+  width: 100%;
+`;
+export const SelectBox = styled.div`
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #f3f3f3;
+  div {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+`;
+export const Select = styled.select`
+  border: none;
+  font-size: 16px;
+`;
 // ClubEstblImage
 export const ClubEstblImageWrapper = styled(ClubEstblItemWrapper)`
-  height: 400px;
-  padding: 10px 4%;
+  height: 84vh;
+  padding: 10px 5.5%;
+  justify-content: space-between;
+`;
+export const ImageWrapper = styled.div`
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 export const LogoImageWrapper = styled.div`
   width: 100px;
   height: 100px;
-  background-color: ${mainColor};
+  background-color: #f3f3f3;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -67,11 +98,31 @@ export const ClubEstblCompletionWrapper = styled(ClubEstblItemWrapper)`
   font-weight: 500;
   font-size: 16px;
   & span {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
 `;
 export const ClubEstblCompletionLogo = styled(LogoImageWrapper)`
-  width: 200px;
-  height: 200px;
-  margin-bottom: 120px;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const NextPage = styled.div`
+  width: 320px;
+  height: 55px;
+  font-size: 16px;
+  border-radius: 6px;
+  background-color: #0bff0b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-weight: 600;
+`;
+export const CompletionPage = styled(NextPage)`
+  position: relative;
+  bottom: -125px;
 `;

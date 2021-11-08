@@ -23,9 +23,9 @@ export const setPosition = (position_id: number) => ({
     type: GET_POSITION,
     position_id
 })
-export const setAthlete = (athlete: boolean) => ({
+export const setAthlete = (is_pro: boolean) => ({
     type: GET_ATHLETE,
-    athlete
+    is_pro
 })
 export const setPage = (pageIndex: number) => ({
     type: GET_PAGE,
@@ -39,9 +39,9 @@ export const setArea = (area: string) => ({
     type: GET_AREA,
     area
 })
-export const setIntroduce = (introduce:string) => ({
+export const setIntroduce = (bio:string) => ({
     type: GET_INTRODUCE,
-    introduce
+    bio
 })
 export type UserInfoAction =
   | ReturnType<typeof setUserName>
