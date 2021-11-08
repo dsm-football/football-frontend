@@ -28,7 +28,7 @@ const initState: MatchRegistrationState = {
   noticeMessage: "",
 };
 
-const matchRegistrationReducer = (
+const matchingRegistrationReducer = (
   state: MatchRegistrationState = initState,
   action: matchingRegistrationActionType
 ): MatchRegistrationState => {
@@ -53,3 +53,5 @@ const matchRegistrationReducer = (
       return state;
   }
 };
+
+export default matchingRegistrationReducer;

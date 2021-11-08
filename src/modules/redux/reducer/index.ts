@@ -1,9 +1,11 @@
 import { combineReducers } from "redux";
 import { userSignupreducer } from "./signup";
-import { clubEstblreducer} from './clubEstbl';
+import { clubEstblreducer } from "./clubEstbl";
+import matchingRegistrationReducer from "./matchingRegistration";
 const rootReducer = combineReducers({
-    userSignupreducer,
-    clubEstblreducer
+  userSignupreducer,
+  clubEstblreducer,
+  matchingRegistration: matchingRegistrationReducer,
 });
 
 export type reducerType = ReturnType<typeof rootReducer>;
