@@ -1,9 +1,13 @@
 import React from "react";
 import * as S from "./style";
-const PageMoveHeader = () => {
+
+interface Header_comment {
+  header?: string;
+}
+const PageMoveHeader = (props: Header_comment) => {
   return (
     <S.PageMoveHeaderWrapper>
-      <S.PageMoveTitle>동호회 개설</S.PageMoveTitle>
+      <S.PageMoveTitle>{props.header}</S.PageMoveTitle>
     </S.PageMoveHeaderWrapper>
   );
 };

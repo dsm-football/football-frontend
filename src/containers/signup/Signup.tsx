@@ -1,16 +1,12 @@
 import React, { FC, Suspense } from "react";
 import { Header, PageMoveHeader } from "../../components/common";
 import SignupItem from "./SignupItem";
-
 const SignupContainer: FC = () => {
-  const value = {
-    id: 0,
-  };
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <Header />
-      <PageMoveHeader />
-      <SignupItem {...value} />
+      <PageMoveHeader header={"회원등록페이지"} />
+      <SignupItem />
     </Suspense>
   );
 };
