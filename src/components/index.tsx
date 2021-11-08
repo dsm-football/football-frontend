@@ -10,6 +10,8 @@ export { default as Position } from "./signup/Position";
 export { default as Introduce } from "./signup/Introduce";
 export { default as Area } from "./signup/Area";
 
+export { default as MatchingRegistration } from "./matchingRegistration/MatchingRegistration";
+
 //동호회 개설
 export { default as ClubEstbl } from "./ClubEstbl/ClubEstbl";
 export { default as ClubEstblAdditional } from "./ClubEstbl/ClubEstblAdditional";
