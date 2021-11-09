@@ -1,4 +1,3 @@
-import axios from "axios";
 import {getRequest} from '../default';
 import { profileUri } from "../url";
 
@@ -12,5 +11,3 @@ export const MyPageToken = async() =>{
         throw error;
     }
 }
-
-
