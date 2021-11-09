@@ -1,6 +1,6 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
-import { ClubEstbl, Login, MainPage } from "../components";
+import { ClubEstbl, Login, MainPage, Match } from "../components";
 import { ClubManagementContainer, SignupContainer } from "../containers";
 
 const MainRouter = () => {
@@ -16,6 +16,7 @@ const MainRouter = () => {
         <Route exact path="/Login" component={Login} />
         <Route exact path="/" component={MainPage} />
         <Route exact path="/signup" component={SignupContainer} />
+        <Route exact path="/MatchDetail" component={Match} />
       </Switch>
     </>
   );
