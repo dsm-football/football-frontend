@@ -19,8 +19,8 @@ const ClubManagement = () => {
           </ul>
         </S.ClubManageList>
         {/* <MatchManagement/> */}
-        {/* <MemberManagement/> */}
-        <ClubInfo/>
+        <MemberManagement />
+        {/* <ClubInfo /> */}
       </section>
     </>
   );
