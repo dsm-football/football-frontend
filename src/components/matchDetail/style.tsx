@@ -56,11 +56,11 @@ export const Information = styled.div`
 export const List = styled.div`
     width: 100%;
     display: flex;
-    justify-content:center;
+    justify-content: flex-start;
+    padding-left: 20px;
 `
 
 export const Detail = styled.div`
-    width: 45%;
     height: 40vh;
     font-weight: 600;
     font-size: 14px;
@@ -68,11 +68,6 @@ export const Detail = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-`
-
-export const Decide = styled(Detail)`
-    font-weight: 500;
-    font-size: 14px;
 `
 
 export const Option = styled.div`
@@ -89,7 +84,8 @@ export const OptionDiv = styled.div`
     width: 100%;
     height: 30%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
 `
 
 export const OptionList = styled.div`
@@ -97,5 +93,39 @@ export const OptionList = styled.div`
     height: 100px;
     background-color: #EBEBEB;
     border-radius: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+`
+
+export const Apply = styled.div`
+    width: 320px;
+    height: 55px;
+    background-color: #0BFF0B;
+    border-radius: 6px;
     margin-left: 20px;
+    padding-top: 16px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: #FFFFFF;
+`
+
+export const Emotion = styled.div`
+    width: 40px;
+    height: 40px;
+    display: flex;
+    margin-left: 30px;
+    background-color: #FFFFFF;
+`
+
+export const OptiaonName = styled.div`
+    width: 100px;
+    height: 20px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    color: #000000;
 `
