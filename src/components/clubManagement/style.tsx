@@ -11,6 +11,8 @@ export const ClubManageBanner = styled.div`
 
   background-image: url(${bannerImg});
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
   b {
     font-size: 20px;
