@@ -15,7 +15,7 @@ export const getClubMemberSuccess = createAction(GET_CLUB_MEMBER_SUCCESS)<
 export const getClubMemberFailure = createAction(
   GET_CLUB_MEMBER_FAILURE
 )<error>();
-export const setId = createAction(SET_ID)<number>();
+export const setId = createAction(SET_ID)<string>();
 
 export type clubMemberActionType =
   | ReturnType<typeof getClubMember>
