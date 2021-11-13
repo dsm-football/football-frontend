@@ -9,7 +9,7 @@ import ClubManagementState from "./interface";
 const initState: ClubManagementState = {
   memberList: [],
   error: null,
-  id: 0,
+  id: "",
 };
 
 const ClubManagementReducer = (
