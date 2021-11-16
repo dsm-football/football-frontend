@@ -13,7 +13,7 @@ const ClubManagementContainer: FC = () => {
   }, [id]);
 
   useEffect(() => {
-    setState.getMemberList(id);
+    setState.getMemberList();
   }, [state.id]);
 
   return (
