@@ -14,19 +14,14 @@ export const FlexBox = styled.div`
   align-items: center;
 `;
 
-export const MemberImg = styled.div`
+export const MemberImg = styled.img`
   width: 30px;
   height: 30px;
-  background-color: #c4c4c4;
   border-radius: 50%;
 `;
 
 export const PersonalInformation = styled.div`
   margin-left: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 `;
 
 export const MemberName = styled.span`

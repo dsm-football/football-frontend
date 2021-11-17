@@ -14,7 +14,6 @@ const getClubMemberListSaga = function* (): any {
   const state = yield select(getStateFunc);
   try {
     const response = yield call(getClubMember, state.id);
-    console.log(response);
     yield put({
       type: SUCCESS,
       payload: response ? response.data : null,

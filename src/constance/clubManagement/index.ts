@@ -6,4 +6,5 @@ export type ClubMemberResponseType = {
   gender: string;
   position: string;
   club_back_num: number;
+  user_id: number;
 };

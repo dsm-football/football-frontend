@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import * as S from "./style";
 import AppliedMember from "./appliedMember/AppliedMember";
 import MemberContainer from "./memberContainer/MemberContainer";
+import UseClubManagement from "../../../util/hooks/clubManagement";
 
 const MemberManagement = () => {
   const [applicationStatus, setApplicationStatus] = useState<boolean>(false);
-
+  const { state, setState } = UseClubManagement();
+  
   return (
     <>
       <S.MainContainer>
@@ -44,11 +46,9 @@ const MemberManagement = () => {
                 <S.MemberPosition>포지션</S.MemberPosition>
               </div>
             </S.MemberAttribute>
-            {Array(3)
-              .fill(0)
-              .map((v, i) => {
-                return <MemberContainer key={i} />;
-              })}
+            {state.memberList.map((v, i) => {
+              return <MemberContainer key={i} {...v} />;
+            })}
           </S.MemberList>
         </S.MemberListContainer>
       </S.MainContainer>
