@@ -14,25 +14,21 @@ export const ClubEstblItemWrapper = styled.div`
   }
   .title-error {
     color: red;
+    margin-top: 5px;
   }
 `;
 export const InputTitle = styled.div`
   font-size: 16px;
   font-weight: 600;
 `;
-export const ClubEstblInput = styled.textarea`
+export const ClubEstblInput = styled.input`
   width: 320px;
   height: 40px;
   border: none;
   font-size: 14px;
   border-bottom: 1px solid black;
-  resize: none;
   box-sizing: border-box;
-  padding-left: 10px;
-  line-height: 30px;
   ::placeholder {
-    font-size: 13px;
-    line-height: 16px;
     color: #c4c4c4;
   }
 `;
