@@ -9,6 +9,7 @@ export { default as Name } from "./signup/Name";
 export { default as Position } from "./signup/Position";
 export { default as Introduce } from "./signup/Introduce";
 export { default as Area } from "./signup/Area";
+export { default as SideBar } from "./sidebar/Sidebar";
 
 export { default as MatchingRegistration } from "./matchingRegistration/MatchingRegistration";
 
