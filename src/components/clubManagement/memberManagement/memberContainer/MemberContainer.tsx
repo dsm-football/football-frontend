@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { ClubMemberResponseType } from "../../../../constance/clubManagement";
 import * as S from "./style";
 
+const positionArray = ["골키퍼", "수비수", "미드필더", "공격수"];
+
 const MemberContainer = (props: ClubMemberResponseType) => {
   const [backNum, setBackNum] = useState<number>(props.club_back_num);
 
@@ -28,11 +30,14 @@ const MemberContainer = (props: ClubMemberResponseType) => {
           value={backNum}
           onChange={onChangeBackNum}
         />
-        <S.MemberPositionSelectBox>
-          <option value="골키퍼">골키퍼</option>
-          <option value="수비수">수비수</option>
-          <option value="미드필더">미드필더</option>
-          <option value="공격수">공격수</option>
+        <S.MemberPositionSelectBox defaultValue={props.position}>
+          {positionArray.map((v, i) => {
+            return (
+              <option key={i} value={v}>
+                {v}
+              </option>
+            );
+          })}
         </S.MemberPositionSelectBox>
         <S.KickOutBtn>강퇴</S.KickOutBtn>
       </S.FlexBox>
