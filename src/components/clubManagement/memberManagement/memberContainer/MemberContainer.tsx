@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ClubMemberResponseType } from "../../../../constance/clubManagement";
+import { ClubMemberResponseType } from "../../../../constance/clubInfo";
 import * as S from "./style";
 
 const positionArray = ["골키퍼", "수비수", "미드필더", "공격수"];

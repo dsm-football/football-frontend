@@ -2,12 +2,28 @@ import React, { useEffect, useState } from "react";
 import * as S from "./style";
 import AppliedMember from "./appliedMember/AppliedMember";
 import MemberContainer from "./memberContainer/MemberContainer";
-import UseClubManagement from "../../../util/hooks/clubManagement";
+import UseClubInfo from "../../../util/hooks/clubInfo";
+import { getApplicationMember } from "../../../util/api/clubManagement";
 
 const MemberManagement = () => {
   const [applicationStatus, setApplicationStatus] = useState<boolean>(false);
-  const { state, setState } = UseClubManagement();
-  
+  const [applicationMemberList, setApplicationMemberList] = useState([]);
+  const { state, setState } = UseClubInfo();
+
+  // useEffect(() => {
+  //   try {
+  //     const response = getApplicationMember();
+  //     console.log(response);
+  //   } catch (error: any) {
+  //     console.log("asdasds");
+  //     if (error.response?.data) {
+  //       console.log("ads");
+  //     } else {
+  //       console.log("asdasdas");
+  //     }
+  //   }
+  // }, [state.id]);
+
   return (
     <>
       <S.MainContainer>
