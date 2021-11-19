@@ -1,6 +1,5 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
-import { ClubEstbl, Login, MainPage, Match } from "../components"
 import {
   ClubManagementContainer,
   MatchingRegistrationContainer,
