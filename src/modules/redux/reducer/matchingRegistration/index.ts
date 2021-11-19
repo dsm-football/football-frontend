@@ -9,7 +9,7 @@ import MatchRegistrationState from "./interface";
 const initState: MatchRegistrationState = {
   matchOption: {
     gameType: 0,
-    areaType: "",
+    areaType: 0,
     matchDate: "",
     matchTime: "",
     endDate: "",

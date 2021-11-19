@@ -14,7 +14,7 @@ const MainRouter = () => {
       <Switch>
         <Route
           exact
-          path="/club/management"
+          path="/club/management/:id"
           component={ClubManagementContainer}
         />
         <Route exact path="/clubestbl" component={ClubEstblContainer} />
