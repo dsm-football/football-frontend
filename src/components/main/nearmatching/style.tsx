@@ -10,9 +10,8 @@ export const ClubManageBanner = styled.div`
 `
 
 export const Matching = styled.div`
-  width: 197px;
+  width: 196px;
   height: 25px;
-  top: 240px;
   background-color: white;
   margin-left: 20px;
   margin-top: 10px;
@@ -21,9 +20,9 @@ export const Matching = styled.div`
 
 export const Searching = styled.div`
   width: 320px;
-  height: 33px;
+  height: 35px;
   margin-top: 10px;
-  margin-left: 21px;
+  margin-left: 20px;
   align-items: center;
   background-color: #F2F2F2;
   justify-content: space-between;
@@ -41,17 +40,14 @@ export const Target = styled.div`
 `
 
 export const Locate = styled.div`
-  height: 19px;
-  left: 26px;
-  top: 3px;
-  margin-left: 7px;
+  height: 20px;
+  margin-left: 8px;
   font-size: 14px;
   font-weight: 500;
 `
 
 export const Select = styled.div`
-  height: 19px;
-  top: 8px;
+  height: 20px;
   margin-left: 110px;
   font-size: 14px;
   font-weight: 500;
@@ -59,7 +55,7 @@ export const Select = styled.div`
 
 export const Map = styled.div`
   width: 320px;
-  height: 177px;
+  height: 180px;
   top: 32px;
   background-color: #C4C4C4;
   & div{
@@ -71,7 +67,6 @@ export const Map = styled.div`
 export const Point1 = styled.div`
   width: 28px;
   height: 40px;
-  top: 59px;
   margin-left: 70px;
   background-color: white;
 `
