@@ -10,20 +10,22 @@ const UserExplain = () =>{
 
     return(
         <>
-            <div className='App'>
-                {arr1.map((el, index) => (
-                    <div key={index}>
-                        <S.Explain>{el}</S.Explain>
-                    </div>
-                ))}
-            </div>
-            <div className='App'>
-                {arr2.map((el, index) => (
-                    <div key={index}>
-                        <S.Detail>{el}</S.Detail>
-                    </div>
-                ))}
-            </div>
+            <S.Divs>
+                <S.Line>
+                    {arr1.map((el, index) => (
+                        <div key={index}>
+                            {el}
+                        </div>
+                    ))}
+                </S.Line>
+                <S.Default>
+                    {arr2.map((el, index) => (
+                        <div key={index}>
+                            {el}
+                        </div>
+                    ))}
+                </S.Default>
+            </S.Divs> 
         </>
     );
 }

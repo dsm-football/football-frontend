@@ -9,77 +9,43 @@ export const Matching = styled.div`
   margin-top: 190px;
   font-weight: 600;
 `;
-export const Calendar = styled.div`
+
+export const Calendars = styled.div`
   width: 100%;
-  height: 30px;
-  margin-top: 8px;
-  align-items: center;
-  background-color: #f3f3f3;
+  height: 60px;
+  margin-bottom: 10px;
+  background-color: #0BFF0B;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+`
+
+export const Dates = styled.div`
+  padding: 0 20px;
+  display: flex;
   justify-content: space-between;
-  & div {
-    display: inline-block;
-    align-items: center;
-  }
-`;
-
-export const Date = styled.div`
-  width: 100%;
-  height: 30px;
-  align-items: center;
-  background-color: #f3f3f3;
-  justify-content: space-between;
-  & div {
-    display: inline-block;
-    align-items: center;
-  }
-`;
-
-export const Area = styled.div`
-  width: 100%;
-  height: 30px;
-  margin-top: 8px;
-  align-items: center;
-  background-color: white;
-  justify-content: space-between;
-  & div {
-    display: inline-block;
-    align-items: center;
-  }
-`;
-
-export const Sunday = styled.div`
-  width: 16px;
-  height: 19px;
-  margin-left: 24px;
-  padding-top: 8px;
-  font-size: 14px;
-`;
-
-export const Day = styled(Sunday)`
-  margin-left: 34px;
-`;
-
-export const First = styled.div`
-  width: 20px;
-  height: 25px;
-  margin-left: 20px;
+  font-weight: 600;
   font-size: 18px;
-  font-weight: 600;
-`;
+  line-height: 20px;
+  padding-top: 8px;
+  text-align: center;
+`
 
-export const Rest = styled(First)`
-  margin-left: 30px;
-`;
+export const Font = styled.div`
+  font-weight: 500;
+  margin-bottom: -15px;
+`
 
-export const All = styled.div`
-  height: 20px;
-  margin-left: 15px;
-  margin-top: 2px;
+export const Areas = styled.div`
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  font-weight: 500;
   font-size: 14px;
-  font-weight: 600;
-`;
-
-export const And = styled(All)``;
+  line-height: 20px;
+`
 
 export const Application = styled.div`
   width: 320px;
@@ -91,6 +57,7 @@ export const Application = styled.div`
   & div{
     display: flex;
     justify-content: space-between;
+    text-align: center;
   }
 `;
 
@@ -153,9 +120,10 @@ export const Apply = styled.div`
   margin-left: 12px;
   margin-top: 28px;
   padding: 12px 116px;
-  background-color: #c4c4c4;
+  background-color: #0BFF0B;
   border-radius: 2px;
   font-weight: 600;
   font-size: 16px;
   line-height: 22px;
+  color: #FFFFFF;
 `;
