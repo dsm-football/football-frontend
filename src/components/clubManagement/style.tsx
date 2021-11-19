@@ -20,7 +20,7 @@ export const ClubManageBanner = styled.div`
   }
 `;
 
-export const ClubManageList = styled.div`
+export const ClubManageList = styled.div<{ page: number }>`
   width: 100%;
   height: 40px;
   background-color: #1b191c;
@@ -41,7 +41,7 @@ export const ClubManageList = styled.div`
       margin-left: 23px;
       list-style: none;
 
-      :first-child {
+      :nth-child(${(props) => props.page}) {
         font-weight: bold;
         border-bottom: 2px solid ${color.main};
       }
