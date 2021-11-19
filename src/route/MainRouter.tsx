@@ -1,11 +1,13 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
+import { ClubEstbl, Login, MainPage, Match } from "../components"
 import {
   ClubManagementContainer,
   MatchingRegistrationContainer,
   SignupContainer,
   ClubEstblContainer,
 } from "../containers";
+
 import { Login, MainPage, MyPage, SideBar } from "../components";
 const MainRouter = () => {
   return (
@@ -21,6 +23,7 @@ const MainRouter = () => {
         <Route exact path="/" component={MainPage} />
         <Route exact path="/mypage" component={MyPage} />
         <Route exact path="/signup" component={SignupContainer} />
+        <Route exact path="/MatchDetail" component={Match} />
         <Route exact path="/sidebar" component={SideBar} />
         <Route
           exact
