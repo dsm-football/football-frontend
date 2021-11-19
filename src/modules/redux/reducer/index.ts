@@ -1,11 +1,11 @@
 import { combineReducers } from "redux";
 import { userSignupreducer } from "./signup";
 import { clubEstblreducer } from "./clubEstbl";
-import ClubManagementReducer from "./clubManagement";
+import ClubInfoReducer from "./clubInfo";
 const rootReducer = combineReducers({
   userSignupreducer,
   clubEstblreducer,
-  clubManagement: ClubManagementReducer,
+  clubInfo: ClubInfoReducer,
 });
 
 export type reducerType = ReturnType<typeof rootReducer>;

@@ -2,10 +2,10 @@ import React, { FC, Suspense, useEffect } from "react";
 import { useParams } from "react-router";
 import { ClubManagement } from "../../components";
 import { Header } from "../../components/common";
-import UseClubManagement from "../../util/hooks/clubManagement";
+import UseClubInfo from "../../util/hooks/clubInfo";
 
 const ClubManagementContainer: FC = () => {
-  const { state, setState } = UseClubManagement();
+  const { state, setState } = UseClubInfo();
   const { id } = useParams() as any;
 
   useEffect(() => {
@@ -14,6 +14,7 @@ const ClubManagementContainer: FC = () => {
 
   useEffect(() => {
     setState.getMemberList();
+    setState.getClubInfo();
   }, [state.id]);
 
   return (
