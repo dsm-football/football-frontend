@@ -1,14 +1,14 @@
 import { useDispatch } from "react-redux";
-import { ClubMemberResponseType } from "../../../constance/clubManagement";
 import {
+  getClubInfo,
   getClubMember,
   setId,
-} from "../../../modules/redux/action/clubManagement";
+} from "../../../modules/redux/action/clubInfo";
 import { useSelectState } from "../default";
 
-const UseClubManagement = () => {
+const UseClubInfo = () => {
   const dispatch = useDispatch();
-  const state = useSelectState().clubManagement;
+  const state = useSelectState().clubInfo;
   const setState = {
     setId: (payload: string) => {
       dispatch(setId(payload));
@@ -16,8 +16,11 @@ const UseClubManagement = () => {
     getMemberList: () => {
       dispatch(getClubMember());
     },
+    getClubInfo: () => {
+      dispatch(getClubInfo());
+    },
   };
   return { state, setState };
 };
 
-export default UseClubManagement;
+export default UseClubInfo;
