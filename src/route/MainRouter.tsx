@@ -6,22 +6,27 @@ import {
   SignupContainer,
   ClubEstblContainer,
 } from "../containers";
-import { Login, MainPage, MyPage } from "../components";
 
+import { Login, MainPage, MyPage } from "../components";
 const MainRouter = () => {
   return (
     <>
       <Switch>
         <Route
           exact
-          path="/club/management"
+          path="/club/management/:id"
           component={ClubManagementContainer}
         />
-        <Route exact path="/clubEstbl" component={ClubEstblContainer} />
+        <Route exact path="/clubestbl" component={ClubEstblContainer} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/" component={MainPage} />
-        <Route exact path="/Mypage" component={MyPage} />
+        <Route exact path="/mypage" component={MyPage} />
         <Route exact path="/signup" component={SignupContainer} />
+        <Route
+          exact
+          path="/MatchDetail"
+          component={MatchingRegistrationContainer}
+        />
         <Route
           exact
           path="/match/registration"

@@ -1,10 +1,28 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import * as S from "./style";
 import AppliedMember from "./appliedMember/AppliedMember";
 import MemberContainer from "./memberContainer/MemberContainer";
+import UseClubInfo from "../../../util/hooks/clubInfo";
+import { getApplicationMember } from "../../../util/api/clubManagement";
 
 const MemberManagement = () => {
   const [applicationStatus, setApplicationStatus] = useState<boolean>(false);
+  const [applicationMemberList, setApplicationMemberList] = useState([]);
+  const { state, setState } = UseClubInfo();
+
+  // useEffect(() => {
+  //   try {
+  //     const response = getApplicationMember();
+  //     console.log(response);
+  //   } catch (error: any) {
+  //     console.log("asdasds");
+  //     if (error.response?.data) {
+  //       console.log("ads");
+  //     } else {
+  //       console.log("asdasdas");
+  //     }
+  //   }
+  // }, [state.id]);
 
   return (
     <>
@@ -44,11 +62,9 @@ const MemberManagement = () => {
                 <S.MemberPosition>포지션</S.MemberPosition>
               </div>
             </S.MemberAttribute>
-            {Array(3)
-              .fill(0)
-              .map((v, i) => {
-                return <MemberContainer key={i} />;
-              })}
+            {state.memberList.map((v, i) => {
+              return <MemberContainer key={i} {...v} />;
+            })}
           </S.MemberList>
         </S.MemberListContainer>
       </S.MainContainer>
