@@ -6,14 +6,15 @@ import {
   SignupContainer,
   ClubEstblContainer,
 } from "../containers";
-import { Login, MainPage, MyPage, SideBar } from "../components";
+
+import { Login, MainPage, MyPage } from "../components";
 const MainRouter = () => {
   return (
     <>
       <Switch>
         <Route
           exact
-          path="/club/management"
+          path="/club/management/:id"
           component={ClubManagementContainer}
         />
         <Route exact path="/clubestbl" component={ClubEstblContainer} />
@@ -21,7 +22,11 @@ const MainRouter = () => {
         <Route exact path="/" component={MainPage} />
         <Route exact path="/mypage" component={MyPage} />
         <Route exact path="/signup" component={SignupContainer} />
-        <Route exact path="/sidebar" component={SideBar} />
+        <Route
+          exact
+          path="/MatchDetail"
+          component={MatchingRegistrationContainer}
+        />
         <Route
           exact
           path="/match/registration"

@@ -10,4 +10,6 @@ export { default as PrevIcon } from "./calendar/PrevIcon.svg";
 export { default as NextIcon } from "./calendar/NextIcon.svg";
 export { default as MoreIcon } from "./matchingRegistration/MoreIcon.svg";
 
-export { default as Cursor } from './login/Cursor.svg'
+export { default as Cursor } from "./login/Cursor.svg";
+
+export { default as bannerImg } from "./clubManagement/bannerImg.png";

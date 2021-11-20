@@ -1,6 +1,6 @@
 export type MatchOptionType = {
   gameType: number;
-  areaType: string;
+  areaType: number;
   matchDate: string;
   matchTime: string;
   endDate: string;
