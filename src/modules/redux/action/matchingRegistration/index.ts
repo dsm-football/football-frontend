@@ -7,6 +7,7 @@ import {
   POST_MATCHINGREGISTRATION_SUCCESS,
   SET_MATCH_OPTION,
   SET_NOTICE_MESSAGE,
+  SET_PAGE,
 } from "./interface";
 
 export const postMatchingRegistration = createAction(
@@ -20,10 +21,12 @@ export const postMatchingRegistrationFailure = createAction(
 )<error>();
 export const setMatchOption = createAction(SET_MATCH_OPTION)<MatchOptionType>();
 export const setNoticeMessage = createAction(SET_NOTICE_MESSAGE)<string>();
+export const setPage = createAction(SET_PAGE)<number>();
 
 export type matchingRegistrationActionType =
   | ReturnType<typeof postMatchingRegistration>
   | ReturnType<typeof postMatchingRegistrationFailure>
   | ReturnType<typeof postMatchingRegistrationSuccess>
   | ReturnType<typeof setMatchOption>
-  | ReturnType<typeof setNoticeMessage>;
+  | ReturnType<typeof setNoticeMessage>
+  | ReturnType<typeof setPage>;
