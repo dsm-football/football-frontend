@@ -1,8 +1,6 @@
 import * as S from "./style";
 
 const AppliedMember = () => {
-
-  
   return (
     <>
       <S.MemberContainer>
