@@ -14,6 +14,13 @@ export const MatchingRegistrationHeader = styled.div`
   justify-content: center;
   background-color: #1e201d;
   color: ${color.main};
+
+  img {
+    position: absolute;
+    left: 0;
+    margin-left: 20px;
+    cursor: pointer;
+  }
 `;
 
 export const SelectSoccerKindWrapper = styled.div`
@@ -67,6 +74,7 @@ export const MatchingInfo = styled.div`
   width: 70%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin: 0 auto;
 `;
 
@@ -100,8 +108,8 @@ export const CalendarInput = styled.div`
   border: none;
   font-size: 16px;
   display: flex;
-  justify-content: space-between;
-  padding-left: 16px;
+  justify-content: end;
+  padding-right: 40px;
 
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -165,12 +173,46 @@ export const MatchingInfoInput = styled.input`
   background-color: white;
   color: black;
   text-align: right;
-  padding-right: 40px;
+`;
 
-  -webkit-appearance: none;
-  -moz-appearance: none;
+export const CostFont = styled.span`
+  margin-right: 10px;
+  font-size: 16px;
+`;
 
-  background-image: url(${MoreIcon});
-  background-repeat: no-repeat;
-  background-position: calc(100% - 10px) center;
+export const MatchCheckWrapper = styled.div`
+  width: 90%;
+  height: 440px;
+  margin-top: 30px;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
+
+export const MatchInfoCheckRow = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  & + & {
+    margin-top: 15px;
+  }
+`;
+
+export const MatchInfoCheckTitle = styled.span`
+  font-size: 16px;
+  font-weight: 600;
+  margin-left: 25px;
+`;
+
+export const MatchInfoCheckFont = styled.span`
+  width: 55%;
+  font-size: 15px;
+  font-weight: 500;
 `;
