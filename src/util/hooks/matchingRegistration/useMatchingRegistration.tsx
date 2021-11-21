@@ -1,6 +1,10 @@
 import { useDispatch } from "react-redux";
 import { MatchOptionType } from "../../../constance/matchingRegistration";
-import { setMatchOption } from "../../../modules/redux/action/matchingRegistration";
+import {
+  setMatchOption,
+  setNoticeMessage,
+} from "../../../modules/redux/action/matchingRegistration";
+import { setPage } from "../../../modules/redux/action/matchingRegistration";
 import { useSelectState } from "../default";
 
 const useMatchingRegistration = () => {
@@ -9,6 +13,12 @@ const useMatchingRegistration = () => {
   const setState = {
     setMatchOption: (payload: MatchOptionType) => {
       dispatch(setMatchOption(payload));
+    },
+    setNoticeMessage: (payload: string) => {
+      dispatch(setNoticeMessage(payload));
+    },
+    setPage: (payload: number) => {
+      dispatch(setPage(payload));
     },
   };
 
