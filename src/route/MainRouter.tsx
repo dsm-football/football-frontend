@@ -7,7 +7,7 @@ import {
   ClubEstblContainer,
 } from "../containers";
 
-import { Login, MainPage, Match, MyPage, SideBar } from "../components";
+import { Login, MainPage, Match, MyPage } from "../components";
 const MainRouter = () => {
   return (
     <>
