@@ -32,3 +32,28 @@ export const getClubInfo = async (id: string) => {
     throw error;
   }
 };
+
+export const patchBackNum = async (id: number, backNum: number) => {
+  try {
+    const accessToken = localStorage.getItem("access_token") || "";
+    const request = getRequestWithAccessToken(accessToken);
+    return await request.patch(uri.backNum, {
+      user_id: id,
+      back_num: backNum,
+    });
+  } catch (error) {
+    throw error;
+  }
+};
+
+export const kickMember = async (id: number) => {
+  try {
+    const accessToken = localStorage.getItem("access_token") || "";
+    const request = getRequestWithAccessToken(accessToken);
+    return await request.patch(uri.kickMember, {
+      user_id: id,
+    });
+  } catch (error) {
+    throw error;
+  }
+};
