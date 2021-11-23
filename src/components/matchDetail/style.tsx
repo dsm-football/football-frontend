@@ -1,11 +1,13 @@
 import styled from "styled-components";
+import { bannerImg } from "../../assets";
 
 export const Back = styled.div`
     width: 100%;
     height: 135px;
     display: flex;
     justify-content: space-around;
-    background-color: #F2F2F2;
+    background-image: url(${bannerImg});
+    background-size: cover;
 `
 
 export const Div = styled.div`
@@ -117,7 +119,6 @@ export const Emotion = styled.div`
     height: 40px;
     display: flex;
     margin-left: 30px;
-    background-color: #FFFFFF;
 `
 
 export const OptiaonName = styled.div`
