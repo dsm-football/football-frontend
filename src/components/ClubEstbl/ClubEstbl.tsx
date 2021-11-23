@@ -3,16 +3,17 @@ import { useDispatch } from "react-redux";
 import {
   setClubDiscription,
   setClubName,
+  setPageIndex,
 } from "../../modules/redux/action/clubEstbl";
+import {
+  ageOption,
+  cycleOption,
+  genderOption,
+  peopleNumber,
+} from "../../constance/option";
 import * as S from "./style";
 
 const ClubEstbl = () => {
-  const selectArr = [
-    { title: "동호회 정원", value: ["100명"] },
-    { title: "시합주기(선택)", value: "1주에 1번" },
-    { title: "나이대 설정(선택)", value: "10대" },
-    { title: "성별 설정(선택)", value: ["남성"] },
-  ];
   const dispatch = useDispatch();
   const [inputs, setInputs] = useState({
     clubName: "",
@@ -27,8 +28,13 @@ const ClubEstbl = () => {
     });
   };
   const onClick = () => {
+    if (inputs.clubName === "" || inputs.clubIntroduce === "") {
+      alert("모든 값을 입력해주세요.");
+      return;
+    }
     dispatch(setClubName(inputs.clubName));
     dispatch(setClubDiscription(inputs.clubIntroduce));
+    dispatch(setPageIndex(2));
   };
   const onBlur = () => {};
   return (
@@ -53,16 +59,46 @@ const ClubEstbl = () => {
           name="clubIntroduce"
         />
         <S.SelectBoxWrapper>
-          {selectArr.map((select, i) => (
-            <S.SelectBox key={i}>
-              <div>
-                <S.InputTitle>{select.title}</S.InputTitle>
-                <S.Select name="memberNum" id="memberNum">
-                  <option>{select.value}</option>
-                </S.Select>
-              </div>
-            </S.SelectBox>
-          ))}
+          <S.SelectBox>
+            <div>
+              <S.InputTitle>동호회 정원</S.InputTitle>
+              <S.Select name="memberNum" id="memberNum">
+                {peopleNumber.map((people, i) => (
+                  <option key={i}>{people}</option>
+                ))}
+              </S.Select>
+            </div>
+          </S.SelectBox>
+          <S.SelectBox>
+            <div>
+              <S.InputTitle>시합 주기</S.InputTitle>
+              <S.Select name="memberNum" id="memberNum">
+                {cycleOption.map((cycle, i) => (
+                  <option key={i}>{cycle}</option>
+                ))}
+              </S.Select>
+            </div>
+          </S.SelectBox>
+          <S.SelectBox>
+            <div>
+              <S.InputTitle>나이대 설정</S.InputTitle>
+              <S.Select name="memberNum" id="memberNum">
+                {ageOption.map((age, i) => (
+                  <option key={i}>{age}</option>
+                ))}
+              </S.Select>
+            </div>
+          </S.SelectBox>
+          <S.SelectBox>
+            <div>
+              <S.InputTitle>성별 설정</S.InputTitle>
+              <S.Select name="memberNum" id="memberNum">
+                {genderOption.map((gender, i) => (
+                  <option key={i}>{gender}</option>
+                ))}
+              </S.Select>
+            </div>
+          </S.SelectBox>
         </S.SelectBoxWrapper>
         <S.NextPage onClick={onClick}>다음</S.NextPage>
       </S.ClubEstblItemWrapper>
