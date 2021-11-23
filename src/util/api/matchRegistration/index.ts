@@ -24,12 +24,12 @@ export const postMatchingRegistration = async (
     const response = await request.post(uri.matchingRegistration, {
       game_type: gameType,
       area: area,
-      date: `${matchDate}T${matchTime}:00`,
-      end_date: endDate,
+      date: `${matchDate} ${matchTime}:00`,
+      end_date: `${endDate} 00:00:00`,
       personnel: person,
       age_type: age,
       gender_type: gender,
-      gas_referee: hasReferee,
+      has_referee: hasReferee,
       longitude: longitude || 0,
       latitude: latitude || 0,
     });

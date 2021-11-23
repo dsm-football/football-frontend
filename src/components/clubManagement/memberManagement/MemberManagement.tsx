@@ -10,20 +10,6 @@ const MemberManagement = () => {
   const [applicationMemberList, setApplicationMemberList] = useState([]);
   const { state, setState } = UseClubInfo();
 
-  // useEffect(() => {
-  //   try {
-  //     const response = getApplicationMember();
-  //     console.log(response);
-  //   } catch (error: any) {
-  //     console.log("asdasds");
-  //     if (error.response?.data) {
-  //       console.log("ads");
-  //     } else {
-  //       console.log("asdasdas");
-  //     }
-  //   }
-  // }, [state.id]);
-
   return (
     <>
       <S.MainContainer>
