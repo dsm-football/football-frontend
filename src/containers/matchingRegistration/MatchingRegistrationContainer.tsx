@@ -1,6 +1,7 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useEffect } from "react";
 import { MatchingRegistration } from "../../components";
 import { Header } from "../../components/common";
+import useMatchingRegistration from "../../util/hooks/matchingRegistration";
 
 const MatchingRegistrationContainer = () => {
   return (
