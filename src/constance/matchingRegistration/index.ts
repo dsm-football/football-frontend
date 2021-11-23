@@ -1,13 +1,13 @@
 export type MatchOptionType = {
   gameType: number;
-  areaType: number;
+  area: string;
   matchDate: string;
   matchTime: string;
   endDate: string;
-  longitude: number;
-  latitude: number;
+  longitude: number | null;
+  latitude: number | null;
   age: number;
-  gender: string;
+  gender: number;
+  person: number;
   hasReferee: boolean;
-  costPerson: number;
 };

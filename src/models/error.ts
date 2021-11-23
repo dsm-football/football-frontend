@@ -1,5 +1,5 @@
 export type error = {
-  statusCode: number;
+  status: number;
   message: string;
   type: string;
 };
