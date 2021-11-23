@@ -2,6 +2,7 @@ import React from 'react'
 import * as S from './style';
 
 const area = [
+    "전체",
     "서울",
     "부산",
     "대구",
@@ -21,6 +22,19 @@ const area = [
     "제주",
   ];
 
+const status = [
+    "전체",
+    "모집중",
+    "끝남"
+];
+
+const gender = [
+    "전체",
+    "남자",
+    "여자",
+    "혼성"
+];
+
 
 const Select = () => {
     return(
@@ -29,7 +43,6 @@ const Select = () => {
                 <S.SelectBox>
                     <S.Defulat>지역</S.Defulat>
                     <S.Choice>
-                        <option>전체</option>
                         {area.map((v: string, i: number) => {
                         return (
                         <option key={i} value={v}>
@@ -42,9 +55,13 @@ const Select = () => {
                 <S.SelectBox>
                     <S.Defulat>상태</S.Defulat>
                     <S.Choice>
-                        <option>전체</option>
-                        <option>모집중</option>
-                        <option>끝남</option>
+                        {status.map((v: string, i: number) => {
+                            return (
+                            <option key={i} value={v}>
+                            {v}
+                            </option>
+                            );
+                        })}
                     </S.Choice>
                 </S.SelectBox>
                 <S.SelectBox>
@@ -59,10 +76,13 @@ const Select = () => {
                 <S.SelectBox>
                 <S.Defulat>성별</S.Defulat>
                     <S.Choice>
-                        <option>전체</option>
-                        <option>남자</option>
-                        <option>여자</option>
-                        <option>혼성</option>
+                        {gender.map((v: string, i: number) => {
+                        return (
+                        <option key={i} value={v}>
+                            {v}
+                        </option>
+                            );
+                        })}
                     </S.Choice>
                 </S.SelectBox>
                 <S.SelectBox>
