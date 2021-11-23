@@ -1,21 +1,34 @@
 import React, { useState } from "react";
-import { getClubNameRequest } from "../../util/api/ClubEstbl";
+import { useDispatch } from "react-redux";
+import {
+  setClubDiscription,
+  setClubName,
+} from "../../modules/redux/action/clubEstbl";
 import * as S from "./style";
 
 const ClubEstbl = () => {
+  const selectArr = [
+    { title: "동호회 정원", value: ["100명"] },
+    { title: "시합주기(선택)", value: "1주에 1번" },
+    { title: "나이대 설정(선택)", value: "10대" },
+    { title: "성별 설정(선택)", value: ["남성"] },
+  ];
+  const dispatch = useDispatch();
   const [inputs, setInputs] = useState({
     clubName: "",
     clubIntroduce: "",
-    clubSNS: "",
-    clubHeadSNS: "",
   });
-  const { clubName, clubIntroduce, clubSNS, clubHeadSNS } = inputs;
+  const { clubName, clubIntroduce } = inputs;
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { value, name } = e.target;
     setInputs({
       ...inputs,
       [name]: value,
     });
+  };
+  const onClick = () => {
+    dispatch(setClubName(inputs.clubName));
+    dispatch(setClubDiscription(inputs.clubIntroduce));
   };
   const onBlur = () => {};
   return (
@@ -24,8 +37,8 @@ const ClubEstbl = () => {
         <S.InputTitle>동호회명</S.InputTitle>
         <div>
           <S.ClubEstblInput
-            onBlur={onBlur}
             onChange={onChange}
+            onBlur={onBlur}
             value={clubName}
             placeholder="15자 이내로 작성해주세요."
             name="clubName"
@@ -39,21 +52,19 @@ const ClubEstbl = () => {
           placeholder="동호회 한 줄 소개를 입력해주세요"
           name="clubIntroduce"
         />
-        <S.InputTitle>동호회 SNS</S.InputTitle>
-        <S.ClubEstblInput
-          onChange={onChange}
-          value={clubSNS}
-          name="clubSNS"
-          placeholder="회원들과 연락할 수 있는 오픈카톡방이나 SNS주소를 입력해주세요."
-        />
-        <S.InputTitle>동호회장 SNS</S.InputTitle>
-        <S.ClubEstblInput
-          onChange={onChange}
-          value={clubHeadSNS}
-          name="clubHeadSNS"
-          placeholder="회원들과 연락할 수 있는 오픈카톡방이나 SNS주소를 입력해주세요."
-        />
-        <S.NextPage>다음</S.NextPage>
+        <S.SelectBoxWrapper>
+          {selectArr.map((select, i) => (
+            <S.SelectBox key={i}>
+              <div>
+                <S.InputTitle>{select.title}</S.InputTitle>
+                <S.Select name="memberNum" id="memberNum">
+                  <option>{select.value}</option>
+                </S.Select>
+              </div>
+            </S.SelectBox>
+          ))}
+        </S.SelectBoxWrapper>
+        <S.NextPage onClick={onClick}>다음</S.NextPage>
       </S.ClubEstblItemWrapper>
     </>
   );

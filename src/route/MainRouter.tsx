@@ -8,6 +8,8 @@ import {
 } from "../containers";
 
 import { Login, MainPage, MyPage, List } from "../components";
+import { Login, MainPage, Match, MyPage } from "../components";
+
 const MainRouter = () => {
   return (
     <>
