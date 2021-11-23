@@ -21,7 +21,6 @@ const MatchingInfo = (props: Props) => {
   const { setMatchOption, setPage, matchOption } = props;
 
   useEffect(() => {
-    console.log(matchDate);
     if (matchDate !== undefined && matchDate?.format("YYYY-MM-DD") !== "") {
       setMatchOption({
         ...matchOption,
@@ -31,7 +30,6 @@ const MatchingInfo = (props: Props) => {
   }, [matchDate]);
 
   useEffect(() => {
-    console.log(matchDeadline);
     if (
       matchDeadline !== undefined &&
       matchDeadline?.format("YYYY-MM-DD") !== ""
@@ -75,20 +73,17 @@ const MatchingInfo = (props: Props) => {
                 onChange={(e) => {
                   setMatchOption({
                     ...matchOption,
-                    area: areaOption[Number(e.target.value)],
+                    area: e.target.value,
                   });
                 }}
+                defaultValue={matchOption.area}
               >
                 <option value={0} hidden>
                   지역 선택
                 </option>
                 {areaOption.map((v: string, i: number) => {
                   return (
-                    <option
-                      key={i}
-                      value={i}
-                      selected={matchOption.area === areaOption[i]}
-                    >
+                    <option key={i} value={v}>
                       {v}
                     </option>
                   );
@@ -130,18 +125,13 @@ const MatchingInfo = (props: Props) => {
                     matchTime: e.target.value,
                   });
                 }}
+                defaultValue={matchOption.matchTime}
               >
                 <option value="" hidden>
                   시간 선택
                 </option>
                 {[...Array(24)].map((v: any, i: number) => {
-                  return (
-                    <option
-                      key={i}
-                      value={`${i}:00`}
-                      selected={`${i}:00` === matchOption.matchTime}
-                    >{`${i}:00`}</option>
-                  );
+                  return <option key={i} value={`${i}:00`}>{`${i}:00`}</option>;
                 })}
               </S.MatchingInfoSelect>
             </S.MatchingInfo>
