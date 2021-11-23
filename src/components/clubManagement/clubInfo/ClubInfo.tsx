@@ -1,6 +1,7 @@
 import * as S from "./style";
 import Select from "react-select";
 import UseClubInfo from "../../../util/hooks/clubInfo";
+import { ageOption, genderOption } from "../../../constance/option";
 
 const ageOptions = [
   { value: "전체", label: "전체" },
@@ -20,6 +21,8 @@ const ClubInfo = () => {
   const { state, setState } = UseClubInfo();
   const { clubInfo } = state;
 
+  console.log(clubInfo);
+
   return (
     <>
       <S.ProfileContainer imgSrc={clubInfo.main_profile}>
@@ -28,54 +31,53 @@ const ClubInfo = () => {
       <S.ClubInfoFixContainer>
         <S.FixBox>
           <S.TitleFont>동호회명</S.TitleFont>
-          <S.BoldFixInput>{clubInfo.name}</S.BoldFixInput>
+          <S.BoldFixInput />
         </S.FixBox>
         <S.FixBox>
           <S.TitleFont>동호회 소개(100자 이내)</S.TitleFont>
-          <S.IntroFixInput>{clubInfo.description}</S.IntroFixInput>
+          <S.IntroFixInput />
         </S.FixBox>
         <S.FixBox>
           <S.TitleFont>동호회 SNS</S.TitleFont>
-          <S.FixInput>{clubInfo.sns}</S.FixInput>
-        </S.FixBox>
-        <S.FixBox>
-          <S.TitleFont>동호회장 SNS</S.TitleFont>
-          <S.FixInput>www.dkjfeksfjkasejfksejfesfkj.dfef</S.FixInput>
+          <S.FixInput />
         </S.FixBox>
         <S.FixBox>
           <S.TitleFont>동호회 지역</S.TitleFont>
           <S.LocationGpsContainer>
             <span>{clubInfo.area}</span>
-            <S.GpsImg />
           </S.LocationGpsContainer>
         </S.FixBox>
         <S.FixBox>
           <S.TitleFont>동호회 정원(현재 정원:25)</S.TitleFont>
-          <S.BoldFixInput>50</S.BoldFixInput>
+          <S.BoldFixInput />
         </S.FixBox>
         <S.FixBox>
           <S.TitleFont>시합주기(선택)</S.TitleFont>
-          <S.BoldFixInput>{clubInfo.cycle}</S.BoldFixInput>
+          <S.BoldFixInput />
         </S.FixBox>
         <S.FixBox>
           <S.TitleFont>나이대 설정(선택)</S.TitleFont>
-          <Select
-            placeholder="전체"
-            options={ageOptions}
-            className="react-select-container"
-            isSearchable={false}
-            maxMenuHeight={100}
-          />
+          <S.SelectInput>
+            {ageOption.map((v, i) => {
+              return (
+                <option key={i} value={v}>
+                  {v}
+                </option>
+              );
+            })}
+          </S.SelectInput>
         </S.FixBox>
         <S.FixBox>
           <S.TitleFont>성별 설정(선택)</S.TitleFont>
-          <Select
-            placeholder="전체"
-            options={genderOptions}
-            className="selectBox"
-            isSearchable={false}
-            maxMenuHeight={100}
-          />
+          <S.SelectInput>
+            {genderOption.map((v, i) => {
+              return (
+                <option key={i} value={v}>
+                  {v}
+                </option>
+              );
+            })}
+          </S.SelectInput>
         </S.FixBox>
       </S.ClubInfoFixContainer>
     </>
