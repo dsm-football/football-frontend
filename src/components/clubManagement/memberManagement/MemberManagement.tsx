@@ -37,12 +37,12 @@ const MemberManagement = () => {
         <S.AllowSubscription>
           <span>동호회 가입 신청 받기</span>
           <S.SwitchContainer
-            applicationStatus={applicationStatus}
+            applicationStatus={!applicationStatus}
             onClick={() => {
               setApplicationStatus(!applicationStatus);
             }}
           >
-            <S.Switch applicationStatus={applicationStatus} />
+            <S.Switch applicationStatus={!applicationStatus} />
           </S.SwitchContainer>
         </S.AllowSubscription>
         <S.AppliedMemberContainer>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { ClubMemberResponseType } from "../../../../constance/clubInfo";
+import { kickMember, patchBackNum } from "../../../../util/api/clubManagement";
 import * as S from "./style";
 
 const positionArray = ["골키퍼", "수비수", "미드필더", "공격수"];
@@ -9,6 +10,33 @@ const MemberContainer = (props: ClubMemberResponseType) => {
 
   const onChangeBackNum = (e: any) => {
     setBackNum(e.target.value);
+  };
+
+  const modBackNum = () => {
+    patchBackNum(props.user_id, backNum)
+      .then((res) => {
+        alert("수정 완료");
+      })
+      .catch((error) => {
+        console.log(error.response);
+      });
+  };
+
+  const onClickKickMember = () => {
+    kickMember(props.user_id)
+      .then((res) => {
+        alert("강퇴 성공");
+      })
+      .catch((error) => {
+        console.log(error.response);
+        if (error?.response?.status === 400) {
+          alert("강퇴 불가능한 멤버 입니다.");
+        } else if (error?.response?.status === 403) {
+          alert("동호회 관리자가 아닙니다.");
+        } else if (error?.response?.status === 404) {
+          alert("유저를 찾을 수 없습니다.");
+        }
+      });
   };
 
   return (
@@ -29,6 +57,7 @@ const MemberContainer = (props: ClubMemberResponseType) => {
           max="99"
           value={backNum}
           onChange={onChangeBackNum}
+          onBlur={modBackNum}
         />
         <S.MemberPositionSelectBox defaultValue={props.position}>
           {positionArray.map((v, i) => {
@@ -39,7 +68,7 @@ const MemberContainer = (props: ClubMemberResponseType) => {
             );
           })}
         </S.MemberPositionSelectBox>
-        <S.KickOutBtn>강퇴</S.KickOutBtn>
+        <S.KickOutBtn onClick={onClickKickMember}>강퇴</S.KickOutBtn>
       </S.FlexBox>
     </S.MemberContainer>
   );
