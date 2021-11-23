@@ -8,12 +8,10 @@ export { default as Gender } from "./signup/Gender";
 export { default as Name } from "./signup/Name";
 export { default as Position } from "./signup/Position";
 export { default as Introduce } from "./signup/Introduce";
-export {default as Match} from "./matchDetail/MatchDetail";
+export { default as Match } from "./matchDetail/MatchDetail";
 export { default as Area } from "./signup/Area";
-export { default as SideBar } from "./sidebar/Sidebar";
-
 export { default as MatchingRegistration } from "./matchingRegistration/MatchingRegistration";
 export { default as ClubEstbl } from "./ClubEstbl/ClubEstbl";
-export { default as ClubEstblAdditional } from "./ClubEstbl/ClubEstblAdditional";
 export { default as ClubEstblImage } from "./ClubEstbl/ClubEstblImage";
 export { default as ClubEstblCompletion } from "./ClubEstbl/ClubEstblCompletion";
+export { default as List} from "./clubList/ClubList";

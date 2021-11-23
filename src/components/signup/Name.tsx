@@ -21,7 +21,7 @@ const Name = () => {
     }
     return false;
   };
-  useEffect(() => {
+  /*useEffect(() => {
     const urlLink = decodeURI(window.location.href).substring(34);
     if (urlLink === "") {
       alert("잘못된 경로입니다.");
@@ -29,7 +29,7 @@ const Name = () => {
     } else {
       dispatch(setCode(urlLink));
     }
-  }, [history, dispatch]);
+  }, [history, dispatch]);*/
   const dispatchName = () => {
     if (userName === "") {
       alert("이름을 입력해주세요");
