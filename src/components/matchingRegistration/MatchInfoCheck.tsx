@@ -5,6 +5,7 @@ import { MatchOptionType } from "../../constance/matchingRegistration";
 import { error } from "../../models/error";
 import { POST_MATCHINGREGISTRATION } from "../../modules/redux/action/matchingRegistration/interface";
 import * as S from "./style";
+import { ageOption, genderOption } from "../../constance/option";
 
 type Props = {
   setMatchOption: (payload: MatchOptionType) => void;
@@ -14,19 +15,6 @@ type Props = {
   page: number;
   noticeMessage: string;
 };
-
-const ageOption = [
-  "전체",
-  "10대",
-  "20대",
-  "30대",
-  "40대",
-  "50대",
-  "60대",
-  "70대",
-];
-
-const genderOption = ["남자", "여자", "혼성"];
 
 const MatchInfoCheck = (props: Props) => {
   const { setMatchOption, setPage, matchOption } = props;
