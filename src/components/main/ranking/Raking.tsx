@@ -1,5 +1,6 @@
 import React from 'react'
 import * as S from './style';
+import Ranks from './function';
 
 const Rank = () => {
   return(
@@ -7,14 +8,15 @@ const Rank = () => {
         <S.Split />
         <S.RankTitle>2021 하반기 랭킹</S.RankTitle>
         <S.AreaRank>
-          <S.AllRank><div>전체랭킹</div></S.AllRank>
+          <S.AllRank>전체랭킹</S.AllRank>
           <div>지역별랭킹</div>
         </S.AreaRank>
-        <S.Myteam>
-          <div />
-          <S.TeamName>FC어쩌구</S.TeamName>
-          <S.Rank>n위</S.Rank>
-          <S.Result>00승 0무 00패</S.Result>
+        <S.Myteam> 
+          <S.TeamLogo />
+          <div>
+            <S.TeamName>FC어쩌구</S.TeamName>
+            <S.Rank>n위 00승 0무 00패</S.Rank>
+          </div>
         </S.Myteam>
         <S.AllCheck>
           <h1>팀 순위</h1>
@@ -26,66 +28,11 @@ const Rank = () => {
           <S.Etc>득점</S.Etc>
           <S.Etc>실점</S.Etc>
         </S.AllCheck>
-        <S.Locate>
-          <S.Mark />
-          <S.Rankings>1</S.Rankings>
-          <S.TName>Fc어쩌구저쩌구</S.TName>
-          <S.Score>00</S.Score>
-          <S.And>00</S.And>
-          <S.And>00</S.And>
-          <S.Draw>0</S.Draw>
-          <S.Lose>00</S.Lose>
-          <S.Points>00</S.Points>
-          <S.LostP>00</S.LostP>
-        </S.Locate>
-        <S.Locate>
-          <S.Mark />
-          <S.Rankings>1</S.Rankings>
-          <S.TName>Fc어쩌구저쩌구</S.TName>
-          <S.Score>00</S.Score>
-          <S.And>00</S.And>
-          <S.And>00</S.And>
-          <S.Draw>0</S.Draw>
-          <S.Lose>00</S.Lose>
-          <S.Points>00</S.Points>
-          <S.LostP>00</S.LostP>
-        </S.Locate>
-        <S.Locate>
-          <S.Mark />
-          <S.Rankings>1</S.Rankings>
-          <S.TName>Fc어쩌구저쩌구</S.TName>
-          <S.Score>00</S.Score>
-          <S.And>00</S.And>
-          <S.And>00</S.And>
-          <S.Draw>0</S.Draw>
-          <S.Lose>00</S.Lose>
-          <S.Points>00</S.Points>
-          <S.LostP>00</S.LostP>
-        </S.Locate>
-        <S.Locate>
-          <S.Mark />
-          <S.Rankings>1</S.Rankings>
-          <S.TName>Fc어쩌구저쩌구</S.TName>
-          <S.Score>00</S.Score>
-          <S.And>00</S.And>
-          <S.And>00</S.And>
-          <S.Draw>0</S.Draw>
-          <S.Lose>00</S.Lose>
-          <S.Points>00</S.Points>
-          <S.LostP>00</S.LostP>
-        </S.Locate>
-        <S.Locate>
-          <S.Mark />
-          <S.Rankings>1</S.Rankings>
-          <S.TName>Fc어쩌구저쩌구</S.TName>
-          <S.Score>00</S.Score>
-          <S.And>00</S.And>
-          <S.And>00</S.And>
-          <S.Draw>0</S.Draw>
-          <S.Lose>00</S.Lose>
-          <S.Points>00</S.Points>
-          <S.LostP>00</S.LostP>
-        </S.Locate>
+        <Ranks />
+        <Ranks />
+        <Ranks />
+        <Ranks />
+        <Ranks />
     </>
   );
 }
