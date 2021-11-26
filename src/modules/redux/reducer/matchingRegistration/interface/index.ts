@@ -5,6 +5,7 @@ interface MatchRegistrationState {
   matchOption: MatchOptionType;
   error: error | null;
   noticeMessage: string;
+  page: number;
 }
 
 export default MatchRegistrationState;

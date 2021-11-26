@@ -46,14 +46,15 @@ export const SelectBox = styled.div`
   width: 100%;
   height: 60px;
   display: flex;
-  justify-content: center;
   align-items: center;
   border-bottom: 1px solid #f3f3f3;
+  justify-content: space-between;
   div {
-    width: 80%;
+    box-sizing: border-box;
+    padding-left: 2%;
+    width: 95%;
     height: 100%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
   }
 `;
@@ -117,6 +118,9 @@ export const NextPage = styled.div`
   align-items: center;
   color: #ffffff;
   font-weight: 600;
+  :hover {
+    cursor: pointer;
+  }
 `;
 export const CompletionPage = styled(NextPage)`
   position: relative;

@@ -3,32 +3,34 @@ import {
   POST_MATCHINGREGISTRATION_FAILURE,
   SET_MATCH_OPTION,
   SET_NOTICE_MESSAGE,
+  SET_PAGE,
 } from "../../action/matchingRegistration/interface";
 import MatchRegistrationState from "./interface";
 
 const initState: MatchRegistrationState = {
   matchOption: {
     gameType: 0,
-    areaType: "",
+    area: "",
     matchDate: "",
     matchTime: "",
     endDate: "",
     longitude: 0,
     latitude: 0,
-    age: -1,
-    gender: "",
+    age: 0,
+    gender: 0,
+    person: 0,
     hasReferee: false,
-    costPerson: -1,
   },
   error: {
     type: "",
-    statusCode: 0,
+    status: 0,
     message: "",
   },
   noticeMessage: "",
+  page: 0,
 };
 
-const matchRegistrationReducer = (
+const matchingRegistrationReducer = (
   state: MatchRegistrationState = initState,
   action: matchingRegistrationActionType
 ): MatchRegistrationState => {
@@ -48,8 +50,14 @@ const matchRegistrationReducer = (
         ...state,
         error: action.payload,
       };
-
+    case SET_PAGE:
+      return {
+        ...state,
+        page: action.payload,
+      };
     default:
       return state;
   }
 };
+
+export default matchingRegistrationReducer;
