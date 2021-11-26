@@ -49,14 +49,6 @@ export const Name = styled.div`
     display: flex;
 `
 
-export const Evaluation = styled.div`
-    width: 95px;
-    height: 16px;
-    font-size: 12px;
-    line-height: 16px;  
-    display: flex;
-`
-
 export const Player = styled.div`
     width: 85px;
     height: 28px;
@@ -78,7 +70,7 @@ export const Line = styled.div`
 `
 
 export const Default = styled(Line)`
-    font-weight: 300;
-    font-size: 18px;
+    font-weight: 500;
+    font-size: 15px;
     line-height: 25px;
 `

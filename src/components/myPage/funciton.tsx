@@ -1,13 +1,25 @@
-import React from 'react';
+import React, { FC, useEffect } from 'react';
 import * as S from './style';
 
-const UserExplain = () =>{
-    const arr1 = ['구글 계정', '설명','동호회 이름', '포지션', 
-                 '지역', '나이', '나의한줄소개'];
-    
-    const arr2 = ['ss@gamail', '김수인', '축구한판팀', '골키퍼', 
-                  '서울시 노원구 하계동', '20', '슈퍼거미']
+type UserType = {
+        '구글 계정': string;
+        '동호회 이름': string;
+        '포지션': string;
+        '지역': string;
+        '나이': string;
+        '나의 한줄 소개': string;
+    };
 
+type UserExplainProps = {
+    user: UserType;
+    isDisabled: boolean;
+    modifier: React.ChangeEventHandler<HTMLInputElement>;
+}
+
+const UserExplain:FC<UserExplainProps> = ({ user, isDisabled ,modifier }) => {
+    const arr1 = Object.keys(user);
+    const arr2 = Object.values(user);
+    
     return(
         <>
             <S.Divs>
@@ -20,9 +32,13 @@ const UserExplain = () =>{
                 </S.Line>
                 <S.Default>
                     {arr2.map((el, index) => (
-                        <div key={index}>
-                            {el}
-                        </div>
+                        <input
+                            placeholder={arr1[index] + " 입력"}
+                            onChange={modifier}
+                            disabled={isDisabled}
+                            key={index}
+                            name={arr1[index]}
+                        />
                     ))}
                 </S.Default>
             </S.Divs> 
