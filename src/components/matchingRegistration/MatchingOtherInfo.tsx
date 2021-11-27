@@ -42,20 +42,15 @@ const MatchingOtherInfo = (props: Props) => {
                     age: Number(e.target.value),
                   });
                 }}
+                defaultValue={matchOption.age}
               >
                 <option value={0} hidden>
                   나이 선택
                 </option>
-                <option value={1} selected={1 === matchOption.age}>
-                  전체
-                </option>
+                <option value={1}>전체</option>
                 {[...Array(7)].map((v, i) => {
                   return (
-                    <option
-                      key={i}
-                      value={i + 2}
-                      selected={i + 2 === matchOption.age}
-                    >
+                    <option key={i} value={i + 2}>
                       {(i + 1) * 10}대
                     </option>
                   );
@@ -73,17 +68,14 @@ const MatchingOtherInfo = (props: Props) => {
                     gender: Number(e.target.value),
                   });
                 }}
+                defaultValue={matchOption.gender}
               >
                 <option value={0} hidden>
                   성별 선택
                 </option>
                 {genderArray.map((v, i) => {
                   return (
-                    <option
-                      key={i}
-                      value={i + 1}
-                      selected={i + 1 === matchOption.gender}
-                    >
+                    <option key={i} value={i + 1}>
                       {v}
                     </option>
                   );
@@ -101,13 +93,10 @@ const MatchingOtherInfo = (props: Props) => {
                     hasReferee: e.target.value === "1",
                   });
                 }}
+                defaultValue={matchOption.hasReferee ? 1 : 0}
               >
-                <option value={0} selected={matchOption.hasReferee === false}>
-                  없어요
-                </option>
-                <option value={1} selected={matchOption.hasReferee !== false}>
-                  있어요
-                </option>
+                <option value={0}>없어요</option>
+                <option value={1}>있어요</option>
               </S.MatchingInfoSelect>
             </S.MatchingInfo>
           </S.MatchingInfoWrapper>
@@ -121,17 +110,14 @@ const MatchingOtherInfo = (props: Props) => {
                     person: Number(e.target.value),
                   });
                 }}
+                defaultValue={matchOption.person}
               >
                 <option value={0} hidden>
                   팀 인원 선택
                 </option>
                 {[...Array(7)].map((v: any, i: number) => {
                   return (
-                    <option
-                      key={i}
-                      value={i + 5}
-                      selected={i + 5 === matchOption.person}
-                    >
+                    <option key={i} value={i + 5}>
                       {i + 5}명
                     </option>
                   );
