@@ -50,14 +50,18 @@ const MemberManagement = () => {
             <span>가입을 요청한 회원</span>
           </b>
           <S.AppliedMemberList>
-            {applicationMemberList.map((v, i) => {
-              return <AppliedMember key={i} {...v} />;
-            })}
+            {applicationMemberList.length === 0 ? (
+              <S.AppliedMemberListNotice>가입을 요청한 회원이 없습니다.</S.AppliedMemberListNotice>
+            ) : (
+              applicationMemberList.map((v, i) => {
+                return <AppliedMember key={i} {...v} />;
+              })
+            )}
           </S.AppliedMemberList>
         </S.AppliedMemberContainer>
         <S.MemberListContainer>
           <b>
-            <span>회원목록(20)</span>
+            <span>회원목록({state.memberList.length})</span>
           </b>
           <S.MemberList>
             <S.MemberAttribute>

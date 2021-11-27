@@ -75,7 +75,6 @@ export const applicationConsentMember = async (
 
 export const getApplicantGameClubList = async () => {
   try {
-    console.log(uri.applicantGameClubList);
     const accessToken = localStorage.getItem("access_token") || "";
     const request = getRequestWithAccessToken(accessToken);
     return await request.get(uri.applicantGameClubList);
