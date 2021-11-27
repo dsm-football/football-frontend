@@ -1,10 +1,35 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import * as S from "./style";
 import AppliedMember from "./appliedMember/AppliedMember";
 import MemberContainer from "./memberContainer/MemberContainer";
+import UseClubInfo from "../../../util/hooks/clubInfo";
+import { getApplicationMember } from "../../../util/api/clubManagement";
+import { useHistory } from "react-router";
+import { ClubApplicationResponseType } from "../../../constance/clubInfo";
 
 const MemberManagement = () => {
   const [applicationStatus, setApplicationStatus] = useState<boolean>(false);
+  const [applicationMemberList, setApplicationMemberList] = useState<
+    Array<ClubApplicationResponseType>
+  >([]);
+  const { state, setState } = UseClubInfo();
+  const history = useHistory();
+
+  useEffect(() => {
+    getApplicationMember()
+      .then((response) => {
+        setApplicationMemberList(response.data || []);
+      })
+      .catch((error) => {
+        if (error.response?.status === 401) {
+          alert("인증 오류");
+          history.goBack();
+        } else if (error.response?.status === 403) {
+          alert("동호회 관리자가 아닙니다.");
+          history.goBack();
+        }
+      });
+  }, [state.id]);
 
   return (
     <>
@@ -12,12 +37,12 @@ const MemberManagement = () => {
         <S.AllowSubscription>
           <span>동호회 가입 신청 받기</span>
           <S.SwitchContainer
-            applicationStatus={applicationStatus}
+            applicationStatus={!applicationStatus}
             onClick={() => {
               setApplicationStatus(!applicationStatus);
             }}
           >
-            <S.Switch applicationStatus={applicationStatus} />
+            <S.Switch applicationStatus={!applicationStatus} />
           </S.SwitchContainer>
         </S.AllowSubscription>
         <S.AppliedMemberContainer>
@@ -25,11 +50,9 @@ const MemberManagement = () => {
             <span>가입을 요청한 회원</span>
           </b>
           <S.AppliedMemberList>
-            {Array(3)
-              .fill(0)
-              .map((v, i) => {
-                return <AppliedMember key={i} />;
-              })}
+            {applicationMemberList.map((v, i) => {
+              return <AppliedMember key={i} {...v} />;
+            })}
           </S.AppliedMemberList>
         </S.AppliedMemberContainer>
         <S.MemberListContainer>
@@ -44,11 +67,9 @@ const MemberManagement = () => {
                 <S.MemberPosition>포지션</S.MemberPosition>
               </div>
             </S.MemberAttribute>
-            {Array(3)
-              .fill(0)
-              .map((v, i) => {
-                return <MemberContainer key={i} />;
-              })}
+            {state.memberList.map((v, i) => {
+              return <MemberContainer key={i} {...v} />;
+            })}
           </S.MemberList>
         </S.MemberListContainer>
       </S.MainContainer>

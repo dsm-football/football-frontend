@@ -1,18 +1,27 @@
 import styled from "styled-components";
 
 export const Div = styled.div`
-    width: auto;
-    height: auto;
+    width: 100%;
     display: flex;
+    padding: 0 5%;
     justify-content: space-around;
+    &div{
+        justify-content: center;
+    }
 `
+
+export const Divs = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content:center;
+`
+
 
 export const Profile = styled.div`
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    background-color: #C4C4C4;
-    margin-top: 36px;
+    background-color: #0BFF0B;
 `
 
 export const Modify = styled.button`
@@ -21,7 +30,8 @@ export const Modify = styled.button`
     border: 1px solid #C4C4C4;
     background-color: white;
     border-radius: 3px;
-    margin-top: 20px;
+    float: right;
+    margin: 10px;
     padding: 8px 14px;
     font-weight: normal;
     font-size: 12px;
@@ -29,20 +39,46 @@ export const Modify = styled.button`
     cursor: pointer;
 `
 
-export const Explain = styled.div`
-    width: 115px;
-    height: auto;
+export const Name = styled.div`
+    width: 60px;
+    height: 25px;
     margin-top: 20px;
     font-weight: 600;
     font-size: 18px;
     line-height: 25px;
+    display: flex;
 `
 
-export const Detail = styled.div`
-    width: 180px;
-    height: auto;
+export const Evaluation = styled.div`
+    width: 95px;
+    height: 16px;
+    font-size: 12px;
+    line-height: 16px;  
+    display: flex;
+`
+
+export const Player = styled.div`
+    width: 85px;
+    height: 28px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    display: flex;
+`
+
+export const Line = styled.div`
+    width: 45%;
+    height: 60vh;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+`
+
+export const Default = styled(Line)`
     font-weight: 300;
     font-size: 18px;
     line-height: 25px;
-    margin-top: 20px;
 `

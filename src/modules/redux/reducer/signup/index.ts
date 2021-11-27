@@ -15,10 +15,10 @@ export const initialState = {
   age: 0,
   position_id: 0,
   gender_id: 0,
-  athlete: true,
+  is_pro: true,
   area: "",
   pageIndex: 0,
-  introduce: "",
+  bio: "",
 };
 
 export function userSignupreducer(state=initialState, action: UserInfoAction){
@@ -31,12 +31,12 @@ export function userSignupreducer(state=initialState, action: UserInfoAction){
         case GET_USERAGE:
             return {
                 ...state,
-                age: action.age
+                age: Number(action.age)
             }
             case GET_GENDER:
                 return{
                     ...state,
-                    gender: Number(action.gender)
+                    gender_id: Number(action.gender)
                 }
         case GET_POSITION:
             return{
@@ -51,7 +51,7 @@ export function userSignupreducer(state=initialState, action: UserInfoAction){
         case GET_ATHLETE:
             return{
                 ...state,
-                athlete: action.athlete
+                is_pro: action.is_pro
             }
         case GET_CODE:
             return{
@@ -66,7 +66,7 @@ export function userSignupreducer(state=initialState, action: UserInfoAction){
         case GET_INTRODUCE:
             return{
                 ...state,
-                introduce:action.introduce
+                bio:action.bio
             }
         default:
             return 0;
