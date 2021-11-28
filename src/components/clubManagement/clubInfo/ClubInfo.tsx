@@ -1,5 +1,4 @@
 import * as S from "./style";
-import Select from "react-select";
 import UseClubInfo from "../../../util/hooks/clubInfo";
 import { ageOption, genderOption } from "../../../constance/option";
 
