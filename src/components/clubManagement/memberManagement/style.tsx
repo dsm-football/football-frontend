@@ -21,7 +21,7 @@ export const SwitchContainer = styled.div`
   width: 65px;
   height: 30px;
   background-color: ${({ applicationStatus }: Props) =>
-    applicationStatus ? "#C4C4C4" : "#008800"};
+    applicationStatus ? "#008800" : "#C4C4C4"};
   border-radius: 20px;
   display: flex;
   align-items: center;
