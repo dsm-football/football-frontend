@@ -82,3 +82,25 @@ export const getApplicantGameClubList = async () => {
     throw error;
   }
 };
+
+export const getClubApplicant = async () => {
+  try {
+    const accessToken = localStorage.getItem("access_token") || "";
+    const request = getRequestWithAccessToken(accessToken);
+    return await request.get(uri.clubApplcant);
+  } catch (error) {
+    throw error;
+  }
+};
+
+export const postClubApplicant = async (count: number) => {
+  try {
+    const accessToken = localStorage.getItem("access_token") || "";
+    const request = getRequestWithAccessToken(accessToken);
+    return await request.post(uri.clubApplcant, {
+      count: count,
+    });
+  } catch (error) {
+    throw error;
+  }
+};
