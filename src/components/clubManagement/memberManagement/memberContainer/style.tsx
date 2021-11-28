@@ -14,19 +14,14 @@ export const FlexBox = styled.div`
   align-items: center;
 `;
 
-export const MemberImg = styled.div`
+export const MemberImg = styled.img`
   width: 30px;
   height: 30px;
-  background-color: #c4c4c4;
   border-radius: 50%;
 `;
 
 export const PersonalInformation = styled.div`
   margin-left: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 `;
 
 export const MemberName = styled.span`
@@ -48,12 +43,14 @@ export const MemberBackNumberInput = styled.input`
   border: 1px solid #e4e1e9;
   border-radius: 4px;
   margin-right: 8px;
+  padding-left: 5px;
 `;
 
 export const MemberPositionSelectBox = styled.select`
   width: 80px;
   height: 30px;
   border: 1px solid #e4e1e9;
+  background-color: white;
   border-radius: 4px;
   margin-right: 8px;
   text-align: center;

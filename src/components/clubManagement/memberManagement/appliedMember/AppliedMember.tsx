@@ -1,16 +1,21 @@
+import { ClubApplicationResponseType } from "../../../../constance/clubInfo";
 import * as S from "./style";
 
-const AppliedMember = () => {
+const AppliedMember = (props: ClubApplicationResponseType) => {
+  const { name, age, area, gender, profile } = props;
+
   return (
     <>
       <S.MemberContainer>
-        <div>
-          <S.ProfileImg />
+        <S.ProfileWrapper>
+          <S.ProfileImg src={profile} alt="프로필 사진" />
           <S.MemberInfo>
-            <S.MemberName>회원이름</S.MemberName>
-            <S.MemberInfoFont>서울/24/남</S.MemberInfoFont>
+            <S.MemberName>{name}</S.MemberName>
+            <S.MemberInfoFont>
+              {area.substr(0, 2)}/{age}/{gender}
+            </S.MemberInfoFont>
           </S.MemberInfo>
-        </div>
+        </S.ProfileWrapper>
         <S.AceeptContainer>
           <button>수락</button>
           <button>거절</button>

@@ -1,7 +1,13 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
-import { ClubEstbl, Login, MainPage } from "../components";
-import { ClubManagementContainer, DetailClubContainer } from "../containers";
+import {
+  ClubManagementContainer,
+  MatchingRegistrationContainer,
+  SignupContainer,
+  ClubEstblContainer,
+} from "../containers";
+
+import { Login, MainPage, MyPage, List, Match } from "../components";
 
 const MainRouter = () => {
   return (
@@ -9,13 +15,12 @@ const MainRouter = () => {
       <Switch>
         <Route
           exact
-          path="/club/management"
+          path="/club/management/:id"
           component={ClubManagementContainer}
         />
-        <Route exact path="/clubEstbl" component={ClubEstbl} />
-        <Route exact path="/Login" component={Login} />
+        <Route exact path="/clubestbl" component={ClubEstblContainer} />
+        <Route exact path="/login" component={Login} />
         <Route exact path="/" component={MainPage} />
-        <Route exact path="/detail-club/:id" component={DetailClubContainer} />
       </Switch>
     </>
   );

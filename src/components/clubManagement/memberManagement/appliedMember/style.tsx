@@ -1,25 +1,25 @@
 import styled from "styled-components";
+import { color } from "../../../../style";
 
 export const MemberContainer = styled.div`
   width: 100%;
   height: 65px;
-  background-color: #dedede;
   border-radius: 5px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 10px;
-
-  & div {
-    display: flex;
-    align-items: center;
-  }
+  border: 1px solid #c4c4c4;
 `;
 
-export const ProfileImg = styled.div`
+export const ProfileWrapper = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+export const ProfileImg = styled.img`
   width: 40px;
   height: 40px;
-  background-color: #c4c4c4;
   border-radius: 50%;
   margin-left: 10px;
 `;
@@ -33,21 +33,26 @@ export const MemberInfo = styled.div`
 `;
 
 export const MemberName = styled.span`
-  font-size: 16px;
+  font-size: 13px;
 `;
 
 export const MemberInfoFont = styled.span`
-  font-size: 11px;
+  font-size: 12px;
 `;
 
 export const AceeptContainer = styled.div`
-  & button {
+  margin-right: 12px;
+
+  button {
     width: 60px;
-    height: 20px;
-    background-color: #c4c4c4;
-    border-radius: 2px;
+    height: 24px;
+    background-color: ${color.main};
+    color: black;
+    border-radius: 3px;
     border: none;
-    margin-right: 10px;
+    margin-right: 5px;
     cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
   }
 `;
