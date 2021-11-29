@@ -14,7 +14,7 @@ export const initialState = {
   description: "",
   main_profile: "",
   sub_profile: "",
-  area_code: 0,
+  area: '',
   cycle_code: 0,
   gender_code: 0,
   age_group_code: 0,
@@ -31,7 +31,7 @@ export function clubEstblreducer(state=initialState, action:ClubEstblInfoAction)
         case GET_CLUBDISCRIPTION:
             return{
                 ...state,
-                discription: action.discription
+                description: action.description
             }
         case GET_MAIN_PROFILE:
             return{
@@ -46,7 +46,7 @@ export function clubEstblreducer(state=initialState, action:ClubEstblInfoAction)
         case GET_AREA_CODE:
             return{
                 ...state,
-                area_code: action.area_code
+                area: action.area
             }
         case GET_CYCLE_CODE:
             return{
