@@ -5,6 +5,8 @@ enum uri {
   backNum = "/club/backnum",
   kickMember = "/club/kick",
   getClubName = '/club/check'
+  applicantGameClubList = "/club/game/applicant",
+  clubApplcant = "/club/applicant",
 }
 
 export default uri;

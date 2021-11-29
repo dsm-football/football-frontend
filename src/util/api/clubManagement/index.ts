@@ -57,3 +57,50 @@ export const kickMember = async (id: number) => {
     throw error;
   }
 };
+
+export const applicationConsentMember = async (
+  consent: boolean,
+  id: number
+) => {
+  try {
+    const accessToken = localStorage.getItem("access_token") || "";
+    const request = getRequestWithAccessToken(accessToken);
+    return consent
+      ? await request.put(uri.application + `/${id}`)
+      : await request.delete(uri.application + `/${id}`);
+  } catch (error) {
+    throw error;
+  }
+};
+
+export const getApplicantGameClubList = async () => {
+  try {
+    const accessToken = localStorage.getItem("access_token") || "";
+    const request = getRequestWithAccessToken(accessToken);
+    return await request.get(uri.applicantGameClubList);
+  } catch (error) {
+    throw error;
+  }
+};
+
+export const getClubApplicant = async () => {
+  try {
+    const accessToken = localStorage.getItem("access_token") || "";
+    const request = getRequestWithAccessToken(accessToken);
+    return await request.get(uri.clubApplcant);
+  } catch (error) {
+    throw error;
+  }
+};
+
+export const postClubApplicant = async (count: number) => {
+  try {
+    const accessToken = localStorage.getItem("access_token") || "";
+    const request = getRequestWithAccessToken(accessToken);
+    return await request.post(uri.clubApplcant, {
+      count: count,
+    });
+  } catch (error) {
+    throw error;
+  }
+};
