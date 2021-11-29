@@ -4,6 +4,8 @@ enum uri {
   application = "/application",
   backNum = "/club/backnum",
   kickMember = "/club/kick",
+  applicantGameClubList = "/club/game/applicant",
+  clubApplcant = "/club/applicant",
 }
 
 export default uri;

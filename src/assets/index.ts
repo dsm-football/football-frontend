@@ -14,6 +14,8 @@ export { default as MatchPrevIcon } from "./matchingRegistration/MatchPrevIcon.s
 export { default as Cursor } from "./login/Cursor.svg";
 
 export { default as bannerImg } from "./clubManagement/bannerImg.png";
+export { default as CloseModalIcon } from "./clubManagement/CloseModalIcon.svg";
+export { default as MemberMoreIcon } from "./clubManagement/MemberMoreIcon.svg";
 
 export { default as Age } from "./matchDetail/Age.svg";
 export { default as Man } from "./matchDetail/Man.svg";
