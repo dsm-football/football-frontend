@@ -1,34 +1,28 @@
-import styled from 'styled-components';
+import styled from "styled-components";
+import { GpsIcon, MoreIcon } from "../../../assets";
 
-export const ProfileContainer = styled.div`
+export const ProfileContainer = styled.div<{ imgSrc: string }>`
   width: 100%;
   height: 180px;
-  background-color: #6A6A6A;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
-`
+  background-image: url(${(props) => props.imgSrc});
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+`;
 
-export const ChangeImgBtn = styled.button`
-  width: 90%;
-  height: 45px;
-  background-color: #ACACAC;
-  border: none;
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
-  margin-top: 25px;
-`
-
-export const ProfileImg = styled.div`
+export const ProfileImg = styled.img`
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background-color: #C4C4C4;
   transform: translateY(50%);
-`
+  bottom: 0;
+  position: absolute;
+`;
 
 export const ClubInfoFixContainer = styled.div`
   width: 90%;
@@ -38,7 +32,7 @@ export const ClubInfoFixContainer = styled.div`
   align-items: center;
   margin: 0 auto;
   margin-top: 60px;
-`
+`;
 
 export const FixBox = styled.div`
   width: 100%;
@@ -46,61 +40,86 @@ export const FixBox = styled.div`
   flex-direction: column;
   justify-content: center;
   margin-bottom: 25px;
-
-`
+`;
 
 export const TitleFont = styled.span`
   font-size: 16px;
   margin-bottom: 10px;
-`
+`;
 
-export const BoldFixInput = styled.span`
+export const BoldFixInput = styled.input`
   width: 95%;
   height: 45px;
-  background-color: #C4C4C4;
+  background-color: #c4c4c4;
+  border-radius: 5px;
   font-size: 16px;
   display: flex;
   align-items: center;
   padding-left: 15px;
-`
+  border: none;
+`;
 
-export const FixInput = styled.span`
+export const FixInput = styled.input`
   width: 95%;
   height: 45px;
-  background-color: #C4C4C4;
+  background-color: #c4c4c4;
+  border-radius: 5px;
   font-size: 12px;
   display: flex;
   align-items: center;
   padding-left: 15px;
-`
+  border: none;
+`;
 
-export const IntroFixInput = styled.span`
+export const IntroFixInput = styled.textarea`
   width: 95%;
   height: 70px;
-  background-color: #C4C4C4;
+  background-color: #c4c4c4;
+  border-radius: 5px;
   display: flex;
   align-items: center;
-  padding-left: 15px;
+  padding: 10px 15px;
   font-size: 12px;
-`
+  border: none;
+  resize: none;
+`;
 
 export const LocationGpsContainer = styled.div`
   width: 95%;
   height: 45px;
-  background-color: #C4C4C4;
+  background-color: #c4c4c4;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-left: 15px;
+  border-radius: 5px;
 
-  & span{
+  & span {
     font-size: 16px;
   }
-`
 
-export const GpsImg = styled.div`
-  width: 25px;
-  height: 25px;
-  background-color: black;
-  margin-right: 10px;
-`
+  background-image: url(${GpsIcon});
+  background-repeat: no-repeat;
+  background-position: calc(100% - 10px) center;
+`;
+
+export const SelectInput = styled.select`
+  width: 95%;
+  height: 45px;
+  background-color: #c4c4c4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  color: black;
+  border: none;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  background-image: url(${MoreIcon});
+  background-repeat: no-repeat;
+  background-position: calc(100% - 10px) center;
+`;

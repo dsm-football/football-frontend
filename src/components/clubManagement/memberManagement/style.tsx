@@ -21,7 +21,7 @@ export const SwitchContainer = styled.div`
   width: 65px;
   height: 30px;
   background-color: ${({ applicationStatus }: Props) =>
-    applicationStatus ? "#C4C4C4" : "#008800"};
+    applicationStatus ? "#008800" : "#C4C4C4"};
   border-radius: 20px;
   display: flex;
   align-items: center;
@@ -41,7 +41,6 @@ export const Switch = styled.div`
 export const AppliedMemberContainer = styled.div`
   width: 100%;
   margin-top: 35px;
-
 `;
 
 export const AppliedMemberList = styled.div`
@@ -50,15 +49,24 @@ export const AppliedMemberList = styled.div`
   margin-top: 15px;
   overflow-y: scroll;
 
-  ::-webkit-scrollbar{
+  ::-webkit-scrollbar {
     display: none;
   }
-`
+`;
+
+export const AppliedMemberListNotice = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+`;
 
 export const MemberListContainer = styled.div`
   width: 100%;
   margin-top: 30px;
-`
+`;
 
 export const MemberList = styled.ul`
   width: 100%;
@@ -66,11 +74,11 @@ export const MemberList = styled.ul`
   margin: 0;
   padding: 0;
   margin-top: 15px;
-  
-  & li{
-    border-bottom: 1px solid #F3F3F3;
+
+  & li {
+    border-bottom: 1px solid #f3f3f3;
   }
-`
+`;
 
 export const MemberAttribute = styled.li`
   height: 20px;
@@ -79,20 +87,20 @@ export const MemberAttribute = styled.li`
   align-items: center;
   justify-content: space-between;
 
-  & span{
+  & span {
     font-size: 10px;
   }
 
-  & div{
+  & div {
     display: flex;
     align-items: center;
   }
-`
+`;
 
 export const MemberBackNumber = styled.span`
   margin-right: 40px;
-`
+`;
 
 export const MemberPosition = styled.span`
   margin-right: 95px;
-`
+`;

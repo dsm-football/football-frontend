@@ -14,25 +14,21 @@ export const ClubEstblItemWrapper = styled.div`
   }
   .title-error {
     color: red;
+    margin-top: 5px;
   }
 `;
 export const InputTitle = styled.div`
   font-size: 16px;
   font-weight: 600;
 `;
-export const ClubEstblInput = styled.textarea`
+export const ClubEstblInput = styled.input`
   width: 320px;
   height: 40px;
   border: none;
   font-size: 14px;
   border-bottom: 1px solid black;
-  resize: none;
   box-sizing: border-box;
-  padding-left: 10px;
-  line-height: 30px;
   ::placeholder {
-    font-size: 13px;
-    line-height: 16px;
     color: #c4c4c4;
   }
 `;
@@ -50,14 +46,15 @@ export const SelectBox = styled.div`
   width: 100%;
   height: 60px;
   display: flex;
-  justify-content: center;
   align-items: center;
   border-bottom: 1px solid #f3f3f3;
+  justify-content: space-between;
   div {
-    width: 80%;
+    box-sizing: border-box;
+    padding-left: 2%;
+    width: 95%;
     height: 100%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
   }
 `;
@@ -121,6 +118,9 @@ export const NextPage = styled.div`
   align-items: center;
   color: #ffffff;
   font-weight: 600;
+  :hover {
+    cursor: pointer;
+  }
 `;
 export const CompletionPage = styled(NextPage)`
   position: relative;

@@ -14,14 +14,14 @@ import { useHistory } from "react-router";
 import { BASE_URL } from "../../util/api/default";
 import axios from "axios";
 interface pageIndexType {
-  code?: string;
-  name?: string;
-  age?: number;
-  is_pro?: boolean;
-  bio?: string;
-  position_id?: number;
-  gender_id?: number;
-  area?: string;
+  code: string;
+  name: string;
+  age: number;
+  is_pro: boolean;
+  bio: string;
+  position_id: number;
+  gender_id: number;
+  area: string;
   pageIndex?: number;
 }
 const SignupItem: FC = () => {
