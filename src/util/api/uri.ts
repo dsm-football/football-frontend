@@ -6,6 +6,7 @@ enum uri {
   kickMember = "/club/kick",
   applicantGameClubList = "/club/game/applicant",
   clubApplcant = "/club/applicant",
+  login = '/users/auth/google'
 }
 
 export default uri;
