@@ -74,7 +74,7 @@ export const ImageWrapper = styled.div`
   flex-direction: column;
   justify-content: space-between;
 `;
-export const LogoImageWrapper = styled.div`
+export const LogoImageWrapper = styled.label`
   width: 100px;
   height: 100px;
   background-color: #f3f3f3;

@@ -20,3 +20,6 @@ export { default as MemberMoreIcon } from "./clubManagement/MemberMoreIcon.svg";
 export { default as Age } from "./matchDetail/Age.svg";
 export { default as Man } from "./matchDetail/Man.svg";
 export { default as ReFeree } from "./matchDetail/Referee.svg";
+
+export { default as LocationIcon } from "./detailClub/LocationIcon.svg";
+export { default as KakaoTalkIcon } from "./detailClub/KakaoTalkIcon.svg";

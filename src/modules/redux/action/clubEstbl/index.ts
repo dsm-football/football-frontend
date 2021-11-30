@@ -11,9 +11,9 @@ export const setClubName = (name:string) => ({
     type: GET_CLUBNAME,
     name
 });
-export const setClubDiscription = (discription: string) => ({
+export const setClubDiscription = (description: string) => ({
     type: GET_CLUBDISCRIPTION,
-    discription
+    description
 });
 export const setMainProfile = (main_profile:string) => ({
     type: GET_MAIN_PROFILE,
@@ -23,9 +23,9 @@ export const setSubProfile = (sub_profile:string) => ({
     type: GET_SUB_PROFILE,
     sub_profile
 });
-export const setAreaCode = (area_code: number) => ({
+export const setAreaCode = (area: string) => ({
     type: GET_AREA_CODE,
-    area_code
+    area
 });
 export const setCycleCode = (cycle_code:number) => ({
     type: GET_CYCLE_CODE,
