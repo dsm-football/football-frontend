@@ -47,7 +47,7 @@ export const TitleFont = styled.span`
   margin-bottom: 10px;
 `;
 
-export const BoldFixInput = styled.input`
+export const BoldFont = styled.span`
   width: 95%;
   height: 45px;
   background-color: #c4c4c4;
@@ -59,7 +59,7 @@ export const BoldFixInput = styled.input`
   border: none;
 `;
 
-export const FixInput = styled.input`
+export const FixFont = styled.span`
   width: 95%;
   height: 45px;
   background-color: #c4c4c4;
@@ -71,7 +71,7 @@ export const FixInput = styled.input`
   border: none;
 `;
 
-export const IntroFixInput = styled.textarea`
+export const IntroFont = styled.span`
   width: 95%;
   height: 70px;
   background-color: #c4c4c4;
@@ -81,7 +81,6 @@ export const IntroFixInput = styled.textarea`
   padding: 10px 15px;
   font-size: 12px;
   border: none;
-  resize: none;
 `;
 
 export const LocationGpsContainer = styled.div`
@@ -97,29 +96,4 @@ export const LocationGpsContainer = styled.div`
   & span {
     font-size: 16px;
   }
-
-  background-image: url(${GpsIcon});
-  background-repeat: no-repeat;
-  background-position: calc(100% - 10px) center;
-`;
-
-export const SelectInput = styled.select`
-  width: 95%;
-  height: 45px;
-  background-color: #c4c4c4;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 15px;
-  border-radius: 5px;
-  font-size: 16px;
-  color: black;
-  border: none;
-
-  -webkit-appearance: none;
-  -moz-appearance: none;
-
-  background-image: url(${MoreIcon});
-  background-repeat: no-repeat;
-  background-position: calc(100% - 10px) center;
 `;
