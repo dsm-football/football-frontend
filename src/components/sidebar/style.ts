@@ -4,7 +4,7 @@ import styled from "styled-components";
 export const GrayScreen = styled.div`
   width: 100%;
   height: 100vh;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.2);
@@ -16,7 +16,7 @@ export const Container = styled.div`
   height: 100vh;
   box-sizing: border-box;
   padding: 10vh 30px;
-  position: absolute;
+  position: fixed;
   right: 0;
   background-color: white;
   z-index: 1;
