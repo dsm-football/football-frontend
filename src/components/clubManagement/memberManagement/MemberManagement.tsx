@@ -46,9 +46,8 @@ const MemberManagement = () => {
 
     getClubApplicant()
       .then((response: any) => {
-        console.log(response);
-        setApplicationStatus(response.data.is_open);
-        setApplicationCount(response.data.count);
+        setApplicationStatus(response.data?.is_open);
+        setApplicationCount(response.data?.count);
       })
       .catch((error) => {
         errorOption(error.response?.status);
