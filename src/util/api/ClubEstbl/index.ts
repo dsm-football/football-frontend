@@ -1,14 +1,22 @@
-import Axios from "axios"
-import { BASE_URL } from "../default"
-
-export const getClubNameRequest = (clubName:string) => {
-    Axios({
-        method: 'get',
-        url: BASE_URL + '/club/check',
-        params:{
-            name:clubName
-        },
-    })
-    .then(res=>console.log(res))
-    .catch(error=>console.log(error))
+import { ClubInfoType } from "../../../constance/ClubEstbl";
+import { getRequest, getRequestWithAccessToken } from "../default"
+import uri from "../uri"
+export const getClubNameRequest = async (clubName:string) => {
+    try{
+        const request = getRequest()
+        return await request.get(uri.getClubName);
+    }
+    catch(error){
+        return Promise.reject(error);
+    }
+}
+export const postClubEstbl = async (token:string,clubInfo:ClubInfoType) => {
+    try{
+        const request =  getRequestWithAccessToken(token)
+        const response = await request.post(uri.club,clubInfo)
+        return response;
+    }
+    catch(error){
+        return Promise.reject(error);
+    }
 }
