@@ -89,8 +89,7 @@ export const MapTitle = styled.div`
   justify-content: space-between;
   align-items: center;
   span {
-    margin-left: 30%;
-    font-size: 16px;
+    font-size: 15px;
     color: black;
   }
 `;
