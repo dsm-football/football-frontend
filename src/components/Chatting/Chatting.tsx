@@ -1,6 +1,10 @@
 import React from "react";
+import { getChattingList } from "../../util/api/chatting";
 import * as S from "./style";
 const Chatting = () => {
+  const chattingList = getChattingList(
+    "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ3bHNkbjU3OTNAZ21haWwuY29tIiwidHlwZSI6ImFjY2VzcyIsImlhdCI6MTYzNTEyMDkzMSwiZXhwIjoyNjM1MTI4MTMxfQ.ToHX5vZcvH5Z07utSYGr02mA2G9AlYow2deMG5DiR6s"
+  ).then((response) => console.log(response));
   return (
     <S.ChattingContainer>
       <S.ChattingList>
