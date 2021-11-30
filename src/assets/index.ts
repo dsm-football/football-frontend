@@ -22,3 +22,4 @@ export { default as Man } from "./matchDetail/Man.svg";
 export { default as ReFeree } from "./matchDetail/Referee.svg";
 
 export { default as LocationIcon } from "./detailClub/LocationIcon.svg";
+export { default as KakaoTalkIcon } from "./detailClub/KakaoTalkIcon.svg";
