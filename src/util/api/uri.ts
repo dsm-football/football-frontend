@@ -4,7 +4,7 @@ enum uri {
   application = "/application",
   backNum = "/club/backnum",
   kickMember = "/club/kick",
-  getClubName = '/club/check'
+  getClubName = "/club/check",
   applicantGameClubList = "/club/game/applicant",
   clubApplcant = "/club/applicant",
 }
