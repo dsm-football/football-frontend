@@ -48,10 +48,11 @@ export const SelectBox = styled.div`
   display: flex;
   align-items: center;
   border-bottom: 1px solid #f3f3f3;
+  justify-content: space-between;
   div {
     box-sizing: border-box;
     padding-left: 2%;
-    width: 80%;
+    width: 95%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -73,7 +74,7 @@ export const ImageWrapper = styled.div`
   flex-direction: column;
   justify-content: space-between;
 `;
-export const LogoImageWrapper = styled.div`
+export const LogoImageWrapper = styled.label`
   width: 100px;
   height: 100px;
   background-color: #f3f3f3;

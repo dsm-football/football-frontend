@@ -1,18 +1,18 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const MatchingList = styled.div`
   width: 100%;
   position: relative;
 
-  & h3{
+  & h3 {
     font-size: 16px;
     margin: 20px;
   }
-`
+`;
 
 export const MatchContainer = styled.div`
-  border-bottom: 10px solid #F0F0F0;
-`
+  border-bottom: 10px solid #f0f0f0;
+`;
 
 export const MatchingApplicationList = styled.div`
   width: 320px;
@@ -20,11 +20,11 @@ export const MatchingApplicationList = styled.div`
   overflow-y: scroll;
   margin: auto;
   margin-bottom: 17px;
-  
-  ::-webkit-scrollbar{
+
+  ::-webkit-scrollbar {
     display: none;
   }
-`
+`;
 
 export const MatchSlideList = styled.div`
   width: 90%;
@@ -32,7 +32,16 @@ export const MatchSlideList = styled.div`
   margin: auto;
   margin-bottom: 20px;
 
-  & div::-webkit-scrollbar{
+  & div::-webkit-scrollbar {
     display: none;
   }
-`
+`;
+
+export const MatchingApplicationNotice = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+`;

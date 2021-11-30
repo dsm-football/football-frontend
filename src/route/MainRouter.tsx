@@ -8,6 +8,7 @@ import {
 } from "../containers";
 
 import { Login, MainPage, MyPage, List, Match } from "../components";
+import DetailClubContainer from "../containers/detailClub";
 
 const MainRouter = () => {
   return (
@@ -29,11 +30,13 @@ const MainRouter = () => {
           path="/MatchDetail"
           component={Match}
         />
+        <Route exact path="/MatchDetail" component={Match} />
         <Route
           exact
           path="/match/registration"
           component={MatchingRegistrationContainer}
         />
+        <Route exact path="/club/:id" component={DetailClubContainer} />
       </Switch>
     </>
   );
