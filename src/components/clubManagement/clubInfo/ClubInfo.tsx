@@ -1,6 +1,8 @@
+import React, { FC, useState } from "react";
 import * as S from "./style";
 import UseClubInfo from "../../../util/hooks/clubInfo";
 import { ageOption, genderOption } from "../../../constance/option";
+import { ClubInfoResponseType } from "../../../constance/clubInfo";
 
 const ageOptions = [
   { value: "전체", label: "전체" },
@@ -16,25 +18,51 @@ const genderOptions = [
   { value: "여자", label: "여자" },
 ];
 
-const ClubInfo = () => {
+const ClubInfo: FC = () => {
   const { state, setState } = UseClubInfo();
   const { clubInfo } = state;
-
-  console.log(clubInfo);
+  const [clubInfoValue, setClubInfoValue] =
+    useState<ClubInfoResponseType>(clubInfo);
+  const {
+    name,
+    description,
+    sns,
+    area,
+    cycle,
+    gender,
+    sub_profile,
+    main_profile,
+  } = clubInfoValue;
 
   return (
     <>
-      <S.ProfileContainer imgSrc={clubInfo.main_profile}>
-        <S.ProfileImg src={clubInfo.sub_profile} alt="클럽 프로필 이미지" />
+      <S.ProfileContainer imgSrc={main_profile}>
+        <S.ProfileImg src={sub_profile} alt="클럽 프로필 이미지" />
       </S.ProfileContainer>
       <S.ClubInfoFixContainer>
         <S.FixBox>
           <S.TitleFont>동호회명</S.TitleFont>
-          <S.BoldFixInput />
+          <S.BoldFixInput
+            value={name}
+            onChange={(e) => {
+              setClubInfoValue({
+                ...clubInfoValue,
+                name: e.target.value,
+              });
+            }}
+          />
         </S.FixBox>
         <S.FixBox>
           <S.TitleFont>동호회 소개(100자 이내)</S.TitleFont>
-          <S.IntroFixInput />
+          <S.IntroFixInput
+            value={description}
+            onChange={(e) => {
+              setClubInfoValue({
+                ...clubInfoValue,
+                description: e.target.value,
+              });
+            }}
+          />
         </S.FixBox>
         <S.FixBox>
           <S.TitleFont>동호회 SNS</S.TitleFont>

@@ -45,10 +45,10 @@ const MemberManagement = () => {
       });
 
     getClubApplicant()
-      .then((response: any) => {
-        console.log(response);
-        setApplicationStatus(response.data.is_open);
-        setApplicationCount(response.data.count);
+      .then((response) => {
+        console.log(response.data);
+        setApplicationStatus(response.data);
+        setApplicationCount(response.data);
       })
       .catch((error) => {
         errorOption(error.response?.status);
