@@ -6,6 +6,7 @@ import {
   SignupContainer,
   ClubEstblContainer,
   ChattingContainer,
+  ChattingContentContainer,
   MatchResultContainer,
 } from "../containers";
 
@@ -35,7 +36,6 @@ const MainRouter = () => {
         />
         <Route exact path="/club/:id" component={DetailClubContainer} />
         <Route exact path="/chatting" component={ChattingContainer} />
-        <Route exact path="/match/result" component={MatchResultContainer} />
       </Switch>
     </>
   );

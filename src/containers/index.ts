@@ -7,3 +7,4 @@ export { default as DetailClubContainer } from "./detailClub";
 
 export { default as ChattingContainer } from "./chatting/ChattingContainer";
 export { default as MatchResultContainer } from "./matchResult";
+export { default as ChattingContentContainer } from './chatting/ChattingContentContainer'
