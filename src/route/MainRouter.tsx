@@ -5,6 +5,8 @@ import {
   MatchingRegistrationContainer,
   SignupContainer,
   ClubEstblContainer,
+  ChattingContainer,
+  ChattingContentContainer,
 } from "../containers";
 
 import { Login, MainPage, MyPage, List, Match } from "../components";
@@ -32,6 +34,12 @@ const MainRouter = () => {
           component={MatchingRegistrationContainer}
         />
         <Route exact path="/club/:id" component={DetailClubContainer} />
+        <Route exact path="/chatting" component={ChattingContainer} />
+        <Route
+          exact
+          path="/chattingcontent"
+          component={ChattingContentContainer}
+        />
       </Switch>
     </>
   );

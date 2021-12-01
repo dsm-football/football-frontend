@@ -1,15 +1,17 @@
 import React from "react";
-import * as S from "./style";
+import * as S from "../signup/style";
+import Map from "../signup/Map/Map";
 import { GpsIcon } from "../../assets";
-import Map from "./Map/Map";
 import { useDispatch } from "react-redux";
-import { setPage, setArea } from "../../modules/redux/action/signup";
-const Area = () => {
+import {
+  setAreaCode,
+  setPageIndex,
+} from "../../modules/redux/action/clubEstbl";
+const ClubPlace = () => {
   const dispatch = useDispatch();
-
-  const dispatchArea = () => {
-    dispatch(setPage(6));
-    dispatch(setArea("대덕소프트웨어마이스터고등학교"));
+  const onClick = () => {
+    dispatch(setAreaCode("대덕소프트웨어마이스터고등학교"));
+    dispatch(setPageIndex(4));
   };
   return (
     <S.SignupWrapper>
@@ -23,9 +25,9 @@ const Area = () => {
         <Map />
       </S.MapWrapper>
       <span>위치를 설정해주세요</span>
-      <S.NextPage onClick={dispatchArea}>다음</S.NextPage>
+      <S.NextPage onClick={onClick}>다음</S.NextPage>
     </S.SignupWrapper>
   );
 };
 
-export default Area;
+export default ClubPlace;
