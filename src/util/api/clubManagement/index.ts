@@ -100,3 +100,15 @@ export const postClubApplicant = async (count: number) => {
     throw error;
   }
 };
+
+export const createChatRoom = async (userId: number) => {
+  try {
+    const accessToken = localStorage.getItem("access_token") || "";
+    const request = getRequestWithAccessToken(accessToken);
+    return await request.post(uri.clubApplcant, {
+      user_id: userId,
+    });
+  } catch (error) {
+    throw error;
+  }
+};
