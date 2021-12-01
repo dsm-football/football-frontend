@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { GpsIcon, MoreIcon } from "../../../assets";
 
 export const ProfileContainer = styled.div<{ imgSrc: string }>`
   width: 100%;

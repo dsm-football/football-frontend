@@ -7,6 +7,7 @@ import {
   ClubEstblContainer,
   ChattingContainer,
   ChattingContentContainer,
+  MatchResultContainer,
 } from "../containers";
 
 import { Login, MainPage, MyPage, List, Match } from "../components";
@@ -35,11 +36,6 @@ const MainRouter = () => {
         />
         <Route exact path="/club/:id" component={DetailClubContainer} />
         <Route exact path="/chatting" component={ChattingContainer} />
-        <Route
-          exact
-          path="/chattingcontent"
-          component={ChattingContentContainer}
-        />
       </Switch>
     </>
   );
