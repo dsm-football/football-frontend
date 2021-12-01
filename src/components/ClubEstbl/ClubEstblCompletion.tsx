@@ -6,7 +6,7 @@ import { setPageIndex } from "../../modules/redux/action/clubEstbl";
 const ClubEstblCompletion = () => {
   const dispatch = useDispatch();
   const onClick = () => {
-    dispatch(setPageIndex(4));
+    dispatch(setPageIndex(5));
   };
   return (
     <>

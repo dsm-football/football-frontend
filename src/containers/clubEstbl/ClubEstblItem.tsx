@@ -5,6 +5,7 @@ import {
   ClubEstbl,
   ClubEstblImage,
   ClubEstblCompletion,
+  ClubPlace,
 } from "../../components";
 import { reducerType } from "../../modules/redux/reducer";
 import { postClubEstbl } from "../../util/api/ClubEstbl";
@@ -27,7 +28,7 @@ const ClubEstblItem = () => {
     (state: reducerType) => state.clubEstblreducer
   );
   useEffect(() => {
-    if (clubEstbl.pageIndex === 4) {
+    if (clubEstbl.pageIndex === 5) {
       clubEstblRequest(clubEstbl);
     }
   });
@@ -46,8 +47,10 @@ const ClubEstblItem = () => {
     case 2:
       return <ClubEstblImage />;
     case 3:
-      return <ClubEstblCompletion />;
+      return <ClubPlace />;
     case 4:
+      return <ClubEstblCompletion />;
+    case 5:
       return <ClubEstblCompletion />;
     default:
       return <ClubEstbl />;
