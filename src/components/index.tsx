@@ -14,3 +14,7 @@ export { default as MatchingRegistration } from "./matchingRegistration/Matching
 export { default as ClubEstbl } from "./ClubEstbl/ClubEstbl";
 export { default as ClubEstblImage } from "./ClubEstbl/ClubEstblImage";
 export { default as ClubEstblCompletion } from "./ClubEstbl/ClubEstblCompletion";
+export { default as ClubPlace } from "./ClubEstbl/ClubPlace";
+export { default as List } from "./clubList/ClubList";
+export { default as Chatting } from "./Chatting/Chatting";
+export { default as ChattingContent } from "./Chatting/ChattingContent";

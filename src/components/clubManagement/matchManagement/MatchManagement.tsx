@@ -1,20 +1,49 @@
+import React, { useEffect, useState } from "react";
 import { ScrollMenu } from "react-horizontal-scrolling-menu";
+import { useHistory } from "react-router";
+import { ApplicantGameClubListResponseType } from "../../../constance/clubInfo";
+import { getApplicantGameClubList } from "../../../util/api/clubManagement";
 import { MatchCard } from "../../common";
 import ApplicationMatching from "./matchRequst/ApplicationMatching";
 import * as S from "./style";
 
 const MatchManagement = () => {
+  const [applicantGameClubList, setApplicantGameClubList] = useState<
+    Array<ApplicantGameClubListResponseType>
+  >([]);
+  const history = useHistory();
+
+  useEffect(() => {
+    getApplicantGameClubList()
+      .then((response) => {
+        setApplicantGameClubList(response.data || []);
+      })
+      .catch((error) => {
+        if (error.response?.status === 401) {
+          alert("로그인 후 이용하세요.");
+          history.push("/");
+        } else if (error.response?.status === 403) {
+          alert("동호회 관리자가 아닙니다.");
+          history.goBack();
+        }
+      });
+  }, []);
+
   return (
     <>
       <S.MatchingList>
         <S.MatchContainer>
           <h3>매치 요청</h3>
           <S.MatchingApplicationList>
-            {Array(4)
-              .fill(0)
-              .map((v, i) => {
-                return <ApplicationMatching key={i} />;
-              })}
+            {applicantGameClubList.length === 0 ? (
+              <S.MatchingApplicationNotice>
+                매치 요청이 없습니다.
+              </S.MatchingApplicationNotice>
+            ) : (
+              applicantGameClubList.map((v, i) => {
+                return <ApplicationMatching key={i} {...v} />;
+              })
+            )}
           </S.MatchingApplicationList>
         </S.MatchContainer>
         <S.MatchContainer>

@@ -48,10 +48,11 @@ export const SelectBox = styled.div`
   display: flex;
   align-items: center;
   border-bottom: 1px solid #f3f3f3;
+  justify-content: space-between;
   div {
     box-sizing: border-box;
     padding-left: 2%;
-    width: 80%;
+    width: 95%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -73,7 +74,7 @@ export const ImageWrapper = styled.div`
   flex-direction: column;
   justify-content: space-between;
 `;
-export const LogoImageWrapper = styled.div`
+export const LogoImageWrapper = styled.label`
   width: 100px;
   height: 100px;
   background-color: #f3f3f3;
@@ -124,4 +125,32 @@ export const NextPage = styled.div`
 export const CompletionPage = styled(NextPage)`
   position: relative;
   bottom: -125px;
+`;
+
+// map
+export const MapWrapper = styled.div`
+  width: 320px;
+  height: 360px;
+  background-color: pink;
+`;
+export const MapSignupTitle = styled.div`
+  width: 90%;
+  display: flex;
+  justify-content: flex-start;
+  font-weight: 600;
+  font-size: 15px;
+`;
+export const MapTitle = styled.div`
+  width: 100%;
+  height: 45px;
+  background-color: #f3f3f3;
+  display: flex;
+  box-sizing: border-box;
+  padding: 0 5%;
+  justify-content: space-between;
+  align-items: center;
+  span {
+    font-size: 15px;
+    color: black;
+  }
 `;

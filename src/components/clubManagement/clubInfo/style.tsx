@@ -46,34 +46,40 @@ export const TitleFont = styled.span`
   margin-bottom: 10px;
 `;
 
-export const BoldFixInput = styled.span`
+export const BoldFont = styled.span`
   width: 95%;
   height: 45px;
   background-color: #c4c4c4;
+  border-radius: 5px;
   font-size: 16px;
   display: flex;
   align-items: center;
   padding-left: 15px;
+  border: none;
 `;
 
-export const FixInput = styled.span`
+export const FixFont = styled.span`
   width: 95%;
   height: 45px;
   background-color: #c4c4c4;
+  border-radius: 5px;
   font-size: 12px;
   display: flex;
   align-items: center;
   padding-left: 15px;
+  border: none;
 `;
 
-export const IntroFixInput = styled.span`
+export const IntroFont = styled.span`
   width: 95%;
   height: 70px;
   background-color: #c4c4c4;
+  border-radius: 5px;
   display: flex;
   align-items: center;
-  padding-left: 15px;
+  padding: 10px 15px;
   font-size: 12px;
+  border: none;
 `;
 
 export const LocationGpsContainer = styled.div`
@@ -84,15 +90,9 @@ export const LocationGpsContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   padding-left: 15px;
+  border-radius: 5px;
 
   & span {
     font-size: 16px;
   }
-`;
-
-export const GpsImg = styled.div`
-  width: 25px;
-  height: 25px;
-  background-color: black;
-  margin-right: 10px;
 `;
