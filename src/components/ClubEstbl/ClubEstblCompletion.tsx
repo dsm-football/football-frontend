@@ -1,7 +1,13 @@
 import React from "react";
 import * as S from "./style";
 import { CameraImg } from "../../assets";
+import { useDispatch } from "react-redux";
+import { setPageIndex } from "../../modules/redux/action/clubEstbl";
 const ClubEstblCompletion = () => {
+  const dispatch = useDispatch();
+  const onClick = () => {
+    dispatch(setPageIndex(5));
+  };
   return (
     <>
       <S.ClubEstblCompletionWrapper>
@@ -13,7 +19,7 @@ const ClubEstblCompletion = () => {
         <S.ClubEstblCompletionLogo>
           <img src={CameraImg} alt="" />
         </S.ClubEstblCompletionLogo>
-        <S.CompletionPage>완료</S.CompletionPage>
+        <S.CompletionPage onClick={onClick}>완료</S.CompletionPage>
       </S.ClubEstblCompletionWrapper>
     </>
   );

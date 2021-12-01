@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -14,7 +15,7 @@ export const Container = styled.div`
 export const LoginHeader = styled.h1`
   font-size: 48px;
 `;
-export const LoginBox = styled.a`
+export const LoginBox = styled(Link)`
   width: 305px;
   height: 92px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.12);

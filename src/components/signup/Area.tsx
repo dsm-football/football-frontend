@@ -17,7 +17,7 @@ const Area = () => {
       <S.MapWrapper>
         <S.MapTitle>
           <h4>장소</h4>
-          <span>서울 00초등학교</span>
+          <span>대덕소프트웨어마이스터고등학교</span>
           <img src={GpsIcon} alt="" />
         </S.MapTitle>
         <Map />
