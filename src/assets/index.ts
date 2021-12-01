@@ -23,3 +23,5 @@ export { default as ReFeree } from "./matchDetail/Referee.svg";
 
 export { default as LocationIcon } from "./detailClub/LocationIcon.svg";
 export { default as KakaoTalkIcon } from "./detailClub/KakaoTalkIcon.svg";
+
+export { default as VSIcon } from "./matchResult/VSIcon.svg";

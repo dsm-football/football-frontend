@@ -8,7 +8,7 @@ export const GrayScreen = styled.div`
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.2);
-  z-index: 0;
+  z-index: 1;
 `;
 
 export const Container = styled.div`
