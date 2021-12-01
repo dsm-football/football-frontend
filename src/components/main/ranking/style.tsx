@@ -15,35 +15,44 @@ export const RankTitle = styled.div`
   line-height: 25px;
 `;
 
-export const AreaRank = styled.div`
+export const RankDiv = styled.div`
   width: 320px;
   height: 24px;
   margin: 10px 0 15px 20px;
   background-color: #e8e8e8;
-  border-radius: 5px;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 16px;
   text-align: center;
   justify-content: space-between;
+  border-radius: 5px;
   display: flex;
-  & div{
-    padding-top: 5px;
-    padding-right: 50px;
-  }
+  cursor: pointer;
 `;
 
-export const AllRank = styled.div`
+export const AllRank = styled.button`
   width: 160px;
   height: 24px;
-  border-radius: 5px;
+  border: none;
   padding-left: 50px;
-  padding-top: 5px;
+  border-radius: 5px;
+  padding-top: 4px;
   text-align: center;
-  background-color: #0BFF0B;
   display: flex;
   justify-content: space-between;
+  background-color: ${props => props.color};
+  cursor: pointer;
 `;
+
+export const AreaRank = styled.button`
+  width: 160px;
+  height: 24px;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 45px;
+  font-size: 12px;
+  line-height: 16px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+`
 
 export const Myteam = styled.div`
   width: 320px;

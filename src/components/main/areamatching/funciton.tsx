@@ -1,8 +1,13 @@
 import React from 'react';
 import * as S from './style';
-
+import moment from 'moment';
 
 const Calendar = () =>{
+
+    const moment = require('moment');
+    moment().format("DD");
+    moment().add(1, "d").format();
+
     const days = [
         {
             id: 1,

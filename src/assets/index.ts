@@ -18,3 +18,6 @@ export { default as bannerImg } from "./clubManagement/bannerImg.png";
 export { default as Age } from "./matchDetail/Age.svg";
 export { default as Man } from "./matchDetail/Man.svg";
 export { default as ReFeree } from "./matchDetail/Referee.svg";
+
+export { default as Locate } from "./main/Locate.svg";
+export { default as LocatePin } from "./main/LocatePin.svg";

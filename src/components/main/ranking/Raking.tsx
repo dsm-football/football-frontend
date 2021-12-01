@@ -1,16 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
 import * as S from './style';
 import Ranks from './function';
 
+
 const Rank = () => {
-  return(
+  const [color, setColor] = useState('#0BFF0B');
+
+  const onClick = () => {
+    color === '#0BFF0B' ? setColor('#e8e8e8') : setColor('#0BFF0B');
+  }
+
+  
+  return (
     <>
         <S.Split />
         <S.RankTitle>2021 하반기 랭킹</S.RankTitle>
-        <S.AreaRank>
-          <S.AllRank>전체랭킹</S.AllRank>
-          <div>지역별랭킹</div>
-        </S.AreaRank>
+        <S.RankDiv>
+          <S.AllRank color={color} onClick={onClick}>전체랭킹</S.AllRank>
+          <S.AreaRank>지역별랭킹</S.AreaRank>
+        </S.RankDiv>
         <S.Myteam> 
           <S.TeamLogo />
           <div>
