@@ -9,7 +9,7 @@ import Member from "./member/Member";
 import * as S from "./style";
 
 const DetailClub = () => {
-  const { state, setState } = UseClubInfo();
+  const { state } = UseClubInfo();
   const { memberList, id, clubInfo } = state;
   const {
     main_profile,
