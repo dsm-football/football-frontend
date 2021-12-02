@@ -105,7 +105,7 @@ export const createChatRoom = async (userId: number) => {
   try {
     const accessToken = localStorage.getItem("access_token") || "";
     const request = getRequestWithAccessToken(accessToken);
-    return await request.post(uri.clubApplcant, {
+    return await request.post(uri.createChat, {
       user_id: userId,
     });
   } catch (error) {

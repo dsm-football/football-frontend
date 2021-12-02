@@ -24,7 +24,8 @@ const MatchManagement = () => {
           history.push("/");
         } else if (error.response?.status === 403) {
           alert("동호회 관리자가 아닙니다.");
-          history.goBack();
+          history.push("/");
+          window.location.reload();
         }
       });
   }, []);
