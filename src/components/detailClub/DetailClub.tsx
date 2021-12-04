@@ -9,7 +9,7 @@ import Member from "./member/Member";
 import * as S from "./style";
 
 const DetailClub = () => {
-  const { state, setState } = UseClubInfo();
+  const { state } = UseClubInfo();
   const { memberList, id, clubInfo } = state;
   const {
     main_profile,
@@ -44,23 +44,22 @@ const DetailClub = () => {
     <S.MainWrapper>
       <div className="clubIntro">
         <S.BannerWrapper>
-          <S.BannerImg src={main_profile} alt="베너 이미지" />
-          <S.ProfileImg src={sub_profile} alt="프로필 이미지" />
+          <S.BannerImg src={sub_profile} alt="베너 이미지" />
+          <S.ProfileImg src={main_profile} alt="프로필 이미지" />
         </S.BannerWrapper>
         <S.ClubLocation>
           <img src={LocationIcon} alt="LocationIcon" />
-          서울시 노원구 하계동
+          {area}
         </S.ClubLocation>
         <S.ClubInfoWrapper>
           <strong className="clubName">{name}</strong>
           <div className="clubDetailInfo">
             <div>
-              {area && <span>{area}</span>}
               {gender && <span>{gender}</span>}
               {<span>20대</span>}
               {cycle && <span>{cycle}</span>}
             </div>
-            <a href={sns}>
+            <a href={sns} target="blank">
               <img src={KakaoTalkIcon} alt="카카오톡" />
             </a>
           </div>

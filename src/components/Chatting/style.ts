@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { color } from "../../style";
 
 export const ChattingContainer = styled.div`
   width: 100%;
@@ -49,4 +50,90 @@ export const Message = styled.div`
     border-radius: 8px;
     display: flex;
     justify-content: center;
+`;
+
+// chattingContent
+export const ChattingContentContainer = styled(ChattingContainer)`
+    padding: 10px;
+    height: 540px;
+`;
+export const MessageContainer = styled.div`
+    width: 100%;
+    height: 40px;
+    display: flex;
+    margin-bottom: 10px;
+`;
+export const OtherProfile = styled(ProfileImage)`
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+`
+export const MessageBox = styled.div`
+    width: auto;
+    background-color: #f0f0f0;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 7px 7px 7px ;
+    margin-right: 8px;
+    padding: 0 10px;
+`;
+export const MessageTime = styled(Time)`
+    height: 100%;
+    justify-content: flex-end;
+    margin-right: 8px;
+    font-size: 12px;
+`;
+export const MyMessageBox = styled(MessageBox)`
+    border-radius: 7px 0 7px 7px;
+`
+export const MyMessageContainer = styled(MessageContainer)`
+    justify-content: flex-end;
+`;
+export const DayInfo = styled.div`
+    display: flex;
+        flex-basis: 100%;
+        align-items: center;
+        color: rgba(0, 0, 0, 0.35);
+        font-size: 13px;
+        margin: 8px 0px;
+     ::before{
+        content: "";
+        flex-grow: 1;
+        background: #f0f0f0;
+        height: 1px;
+        font-size: 0px;
+        line-height: 0px;
+        margin-right: 10px;
+    }
+     ::after {
+        content: "";
+        flex-grow: 1;
+        background-color: #f0f0f0;
+        height: 1px;
+        font-size: 0px;
+        line-height: 0px;
+        margin-left:10px;
+    }
+`;
+export const InputContainer = styled.div`
+width: 100%;
+height: 50px;
+background-color: ${color.main};
+display: flex;
+justify-content: space-around;
+align-items: center;
+    input{
+        width: 70%;
+        height: 60%;
+        border-radius: 10px;
+        outline:none;
+        border:none;
+        padding-left: 10px;
+    }
+    span{
+        font-size: 18px;
+        font-weight:600;
+    }
 `;

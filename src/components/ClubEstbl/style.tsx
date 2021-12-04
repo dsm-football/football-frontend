@@ -126,3 +126,31 @@ export const CompletionPage = styled(NextPage)`
   position: relative;
   bottom: -125px;
 `;
+
+// map
+export const MapWrapper = styled.div`
+  width: 320px;
+  height: 360px;
+  background-color: pink;
+`;
+export const MapSignupTitle = styled.div`
+  width: 90%;
+  display: flex;
+  justify-content: flex-start;
+  font-weight: 600;
+  font-size: 15px;
+`;
+export const MapTitle = styled.div`
+  width: 100%;
+  height: 45px;
+  background-color: #f3f3f3;
+  display: flex;
+  box-sizing: border-box;
+  padding: 0 5%;
+  justify-content: space-between;
+  align-items: center;
+  span {
+    font-size: 15px;
+    color: black;
+  }
+`;
