@@ -1,50 +1,46 @@
 import React from 'react';
 import * as S from './style';
-import moment from 'moment';
 
 const Calendar = () =>{
-
-    const moment = require('moment');
-    moment().format("DD");
-    moment().add(1, "d").format();
 
     const days = [
         {
             id: 1,
             day: '일',
-            date: '22'
+            date: '5'
         },
         {
             id: 2,
             day: '월',
-            date: '23'
+            date: '6'
         },
         {
             id: 3,
             day: '화',
-            date: '24'
+            date: '7'
         },
         {
             id: 4,
             day: '수',
-            date: '25'
+            date: '8'
         },
         {
             id: 5,
             day: '목',
-            date: '26'
+            date: '9'
         },
         {
             id: 6,
             day: '금',
-            date: '27'
+            date: '10'
         },
         {
             id: 7,
             day: '토',
-            date: '28'
+            date: '11'
         }
     ];
+
     return(
         <>
         <S.Calendars>
@@ -55,9 +51,8 @@ const Calendar = () =>{
                     {el.date}
                 </div>
                 ))}    
-            </S.Dates>
+                </S.Dates>
         </S.Calendars>
-        
         </>
     );
 }
