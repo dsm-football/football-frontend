@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { color } from "../../style";
 
 export const GrayScreen = styled.div`
   width: 100%;
@@ -67,4 +68,13 @@ export const LogoutBtn = styled.div`
   color: #6c6c6c;
   font-size: 14px;
   margin-top: 10vh;
+`;
+export const LoginBtn = styled.button`
+  width: 150px;
+  height: 40px;
+  background-color: ${color.main};
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
 `;

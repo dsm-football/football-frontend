@@ -20,8 +20,8 @@ const ClubInfo: FC = () => {
 
   return (
     <>
-      <S.ProfileContainer imgSrc={main_profile}>
-        <S.ProfileImg src={sub_profile} alt="클럽 프로필 이미지" />
+      <S.ProfileContainer imgSrc={sub_profile}>
+        <S.ProfileImg src={main_profile} alt="클럽 프로필 이미지" />
       </S.ProfileContainer>
       <S.ClubInfoFixContainer>
         <S.FixBox>
