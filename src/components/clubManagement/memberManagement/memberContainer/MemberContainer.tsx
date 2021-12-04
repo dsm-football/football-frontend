@@ -23,20 +23,24 @@ const MemberContainer = (props: ClubMemberResponseType) => {
   };
 
   const onClickKickMember = () => {
-    kickMember(props.user_id)
-      .then((res) => {
-        alert("강퇴 성공");
-      })
-      .catch((error) => {
-        console.log(error.response);
-        if (error?.response?.status === 400) {
-          alert("강퇴 불가능한 멤버 입니다.");
-        } else if (error?.response?.status === 403) {
-          alert("동호회 관리자가 아닙니다.");
-        } else if (error?.response?.status === 404) {
-          alert("유저를 찾을 수 없습니다.");
-        }
-      });
+    if (window.confirm(`정말 ${props.name}님을 강퇴하시겠습니까?`) === true) {
+      kickMember(props.user_id)
+        .then((res) => {
+          alert("성공적으로 강퇴했습니다.");
+          window.location.reload();
+        })
+        .catch((error) => {
+          if (error?.response?.status === 400) {
+            alert("강퇴 불가능한 멤버 입니다.");
+          } else if (error?.response?.status === 403) {
+            alert("동호회 관리자가 아닙니다.");
+          } else if (error?.response?.status === 404) {
+            alert("유저를 찾을 수 없습니다.");
+          }
+        });
+    } else {
+      return;
+    }
   };
 
   return (
