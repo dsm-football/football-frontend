@@ -11,6 +11,7 @@ enum uri {
   chattingList = "/chat/history",
   createChat = "/chat/room",
   profile = "/profile",
+  matchResult = "/game/result",
 }
 
 export default uri;
