@@ -8,8 +8,10 @@ const ClubEstbl = () => {
     getLink();
   }, []);
   const getLink = async () => {
-    const loginLink = await getLoginLink().then((res) => res?.data.link);
-    setLink(loginLink);
+    const loginLink = await getLoginLink().then((res) =>
+      setLink(res.data.link)
+    );
+    console.log(loginLink);
   };
   return (
     <S.Container>
