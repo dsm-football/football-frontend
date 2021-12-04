@@ -14,7 +14,7 @@ const ClubEstbl = () => {
   return (
     <S.Container>
       <S.LoginHeader>로그인</S.LoginHeader>
-      <S.LoginBox to={link}>
+      <S.LoginBox href={link}>
         <img src={Google} alt="" />
         <span>구글 계정으로 로그인</span>
       </S.LoginBox>

@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from "react";
 import * as S from "./style";
-import {
-  setPage,
-  setUserName,
-  setCode,
-} from "../../modules/redux/action/signup";
+import { setPage, setUserName } from "../../modules/redux/action/signup";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router";
+import { postLogin } from "../../util/api/login";
 const Name = () => {
   const dispatch = useDispatch();
   const history = useHistory();
@@ -21,15 +18,15 @@ const Name = () => {
     }
     return false;
   };
-  /*useEffect(() => {
+  useEffect(() => {
     const urlLink = decodeURI(window.location.href).substring(34);
     if (urlLink === "") {
       alert("잘못된 경로입니다.");
       history.push("/login");
-    } else {
-      dispatch(setCode(urlLink));
     }
-  }, [history, dispatch]);*/
+    if (1) {
+    }
+  }, [history, dispatch]);
   const dispatchName = () => {
     if (userName === "") {
       alert("이름을 입력해주세요");
