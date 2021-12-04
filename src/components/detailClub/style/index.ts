@@ -32,10 +32,10 @@ export const ProfileImg = styled.img`
 `;
 
 export const ClubLocation = styled.div`
-  display: flex;
-  justify-content: end;
+  width: 100%;
+  text-align: right;
   font-size: 12px;
-  margin-right: 20px;
+  padding-right: 20px;
   margin-top: 10px;
 
   & img {

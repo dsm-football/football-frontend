@@ -10,6 +10,7 @@ enum uri {
   login = "/users/auth/google",
   chattingList = "/chat/history",
   createChat = "/chat/room",
+  profile = "/profile",
 }
 
 export default uri;
