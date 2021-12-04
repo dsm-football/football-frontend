@@ -22,7 +22,7 @@ const initState: MyProfileState = {
     is_club_executive: false,
   },
   error: null,
-  id: 1,
+  id: 0,
 };
 
 const myProfileReducer = (
