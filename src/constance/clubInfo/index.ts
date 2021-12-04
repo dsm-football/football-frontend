@@ -33,4 +33,5 @@ export type ApplicantGameClubListResponseType = {
   club_profile: string;
   club_name: string;
   club_id: number;
+  user_id: number;
 };

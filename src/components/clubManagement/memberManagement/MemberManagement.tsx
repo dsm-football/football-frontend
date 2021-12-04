@@ -24,14 +24,17 @@ const MemberManagement = () => {
 
   const errorOption = (errorCode: number) => {
     if (errorCode === 401) {
-      alert("인증 오류");
-      history.goBack();
+      alert("로그인 실패");
+      history.push("/login");
+      window.location.reload();
     } else if (errorCode === 403) {
       alert("동호회 관리자가 아닙니다.");
-      history.goBack();
+      history.push("/");
+      window.location.reload();
     } else if (errorCode === 500) {
       alert("잠시 후 시도하세요.");
-      history.goBack();
+      history.push("/");
+      window.location.reload();
     }
   };
 
@@ -46,9 +49,8 @@ const MemberManagement = () => {
 
     getClubApplicant()
       .then((response: any) => {
-        console.log(response);
-        setApplicationStatus(response.data.is_open);
-        setApplicationCount(response.data.count);
+        setApplicationStatus(response.data?.is_open);
+        setApplicationCount(response.data?.count);
       })
       .catch((error) => {
         errorOption(error.response?.status);

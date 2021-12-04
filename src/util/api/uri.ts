@@ -7,7 +7,10 @@ enum uri {
   getClubName = "/club/check",
   applicantGameClubList = "/club/game/applicant",
   clubApplcant = "/club/applicant",
-  login = '/users/auth/google'
+  login = "/users/auth/google",
+  chattingList = "/chat/history",
+  createChat = "/chat/room",
+  profile = "/profile",
 }
 
 export default uri;

@@ -4,7 +4,7 @@ import uri from "../uri";
 export const getClubMember = async (id: string) => {
   try {
     const request = getRequest();
-    return await request.get(uri.club + id + "/member");
+    return await request.get(uri.club + "/" + id + "/member");
   } catch (error) {
     throw error;
   }
@@ -12,10 +12,6 @@ export const getClubMember = async (id: string) => {
 
 export const getApplicationMember = async () => {
   try {
-    localStorage.setItem(
-      "access_token",
-      "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ3bHNkbjU3OTNAZ21haWwuY29tIiwidHlwZSI6ImFjY2VzcyIsImlhdCI6MTYzNTEyMDkzMSwiZXhwIjoyNjM1MTI4MTMxfQ.ToHX5vZcvH5Z07utSYGr02mA2G9AlYow2deMG5DiR6s"
-    );
     const accessToken = localStorage.getItem("access_token") || "";
     const request = getRequestWithAccessToken(accessToken);
     return await request.get(uri.application);
@@ -27,7 +23,7 @@ export const getApplicationMember = async () => {
 export const getClubInfo = async (id: string) => {
   try {
     const request = getRequest();
-    return await request.get(uri.club + id);
+    return await request.get(uri.club + "/" + id);
   } catch (error) {
     throw error;
   }
@@ -99,6 +95,18 @@ export const postClubApplicant = async (count: number) => {
     const request = getRequestWithAccessToken(accessToken);
     return await request.post(uri.clubApplcant, {
       count: count,
+    });
+  } catch (error) {
+    throw error;
+  }
+};
+
+export const createChatRoom = async (userId: number) => {
+  try {
+    const accessToken = localStorage.getItem("access_token") || "";
+    const request = getRequestWithAccessToken(accessToken);
+    return await request.post(uri.createChat, {
+      user_id: userId,
     });
   } catch (error) {
     throw error;
