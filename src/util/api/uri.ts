@@ -10,6 +10,7 @@ enum uri {
   login = "/users/auth/google",
   chattingList = "/chat/history",
   createChat = "/chat/room",
+  loginUser = '/users/login',
   profile = "/profile",
   matchResult = "/game/result",
   userId = "/users/auth",

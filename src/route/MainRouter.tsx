@@ -41,6 +41,11 @@ const MainRouter = () => {
           path="/match/result/:id"
           component={MatchResultContainer}
         />
+        <Route
+          exact
+          path="/chatting/content"
+          component={ChattingContentContainer}
+        />
       </Switch>
     </>
   );
