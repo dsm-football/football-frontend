@@ -15,6 +15,7 @@ export type ClubApplicationResponseType = {
   age: number;
   gender: string;
   profile: string;
+  user_id: number;
 };
 
 export type ClubInfoResponseType = {
@@ -26,4 +27,11 @@ export type ClubInfoResponseType = {
   area: string;
   cycle: string;
   gender: string;
+};
+
+export type ApplicantGameClubListResponseType = {
+  club_profile: string;
+  club_name: string;
+  club_id: number;
+  user_id: number;
 };

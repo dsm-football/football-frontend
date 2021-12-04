@@ -28,6 +28,7 @@ export const getClubInfoSuccess = createAction(
 )<ClubInfoResponseType>();
 export const getClubInfoFailure = createAction(GET_CLUB_INFO_FAILURE)<error>();
 
+
 export type clubMemberActionType =
   | ReturnType<typeof getClubMember>
   | ReturnType<typeof getClubMemberSuccess>

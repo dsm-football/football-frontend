@@ -5,9 +5,13 @@ import {
   MatchingRegistrationContainer,
   SignupContainer,
   ClubEstblContainer,
+  ChattingContainer,
+  ChattingContentContainer,
+  MatchResultContainer,
 } from "../containers";
 
 import { Login, MainPage, MyPage, List, Match } from "../components";
+import DetailClubContainer from "../containers/detailClub";
 
 const MainRouter = () => {
   return (
@@ -24,16 +28,14 @@ const MainRouter = () => {
         <Route exact path="/mypage" component={MyPage} />
         <Route exact path="/signup" component={SignupContainer} />
         <Route exact path="/clublist" component={List} />
-        <Route
-          exact
-          path="/MatchDetail"
-          component={Match}
-        />
+        <Route exact path="/MatchDetail" component={Match} />
         <Route
           exact
           path="/match/registration"
           component={MatchingRegistrationContainer}
         />
+        <Route exact path="/club/:id" component={DetailClubContainer} />
+        <Route exact path="/chatting" component={ChattingContainer} />
       </Switch>
     </>
   );
