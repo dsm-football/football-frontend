@@ -3,10 +3,12 @@ import * as S from './style';
 import Header from "../common/header/Header"
 import Explain from '../matchDetail/function';
 import { Age, Man, ReFeree } from "../../assets";
+import { getApply } from '../../util/api/matchDetail';
 
 
 const Match = () => {
-    return(
+
+    return (
         <>
             <Header />
             <S.Back>

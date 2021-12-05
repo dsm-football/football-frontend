@@ -53,13 +53,15 @@ const Sidebar: FC<Props> = (props) => {
         )}
         <S.PageLinkWrapper>
           <S.PageLink to="/">홈</S.PageLink>
-          <S.PageLink to="/match/registration">매칭 등록</S.PageLink>
+          <S.PageLink to={is_club_executive ? "/match/registration" : "/#"}>
+            매칭 등록
+          </S.PageLink>
           <S.PageLink to="/clublist">동호회 리스트</S.PageLink>
-          <S.PageLink to={club_id ? "/club/" + club_id : ""}>
+          <S.PageLink to={club_id ? "/club/" + club_id : "/#"}>
             가입한 동호회
           </S.PageLink>
           <S.PageLink
-            to={is_club_executive ? "/club/management/" + club_id : ""}
+            to={is_club_executive ? "/club/management/" + club_id : "/#"}
           >
             동호회 관리
           </S.PageLink>

@@ -41,7 +41,7 @@ export const Period = styled.select`
 `
 
 export const Options = styled.div`
-width: 100%;
+    width: 100%;
     height: 60px;
     background-color: #F5F5F5;
     display: flex;
@@ -54,6 +54,7 @@ export const SelectBox = styled.div`
     height: 40px;
     background-color: white;
     display: flex;
+    justify-content: space-evenly;
     text-align: center;
     margin-right: 10px;
 `
