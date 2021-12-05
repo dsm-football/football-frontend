@@ -20,3 +20,12 @@ export const postLogin = async(code:any) => {
         return Promise.reject(error)
     }
 }
+export const postSignup = async(userInfo:any) => {
+    try{
+        const request = getRequest();
+        return await request.post(uri.signup, userInfo);
+    }
+    catch(error){
+        return Promise.reject(error);
+    }
+}

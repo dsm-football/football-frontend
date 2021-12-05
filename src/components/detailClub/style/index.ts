@@ -122,8 +122,7 @@ export const MemberContainer = styled.div`
   border-radius: 5px;
   display: flex;
   align-items: center;
-
-  & + & {
+  color: black & + & {
     margin-top: 10px;
   }
 
@@ -141,10 +140,12 @@ export const MemberContainer = styled.div`
 
     & .memberMainInfo {
       font-size: 16px;
+      color: black;
     }
 
     & .memberOtherInfo {
       font-size: 11px;
+      color: black;
     }
   }
 `;

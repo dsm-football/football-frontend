@@ -1,5 +1,6 @@
 import React, { FC, useEffect } from "react";
 import { useHistory } from "react-router";
+import { getUserId } from "../../util/api/userId";
 import UseMyProfile from "../../util/hooks/myProfile";
 import * as S from "./style";
 
@@ -23,6 +24,14 @@ const Sidebar: FC<Props> = (props) => {
     window.location.reload();
   };
 
+  useEffect(() => {
+    getUserId()
+      .then((res: any) => {
+        setState.setId(res.user_id);
+      })
+      .catch(() => {});
+  }, [localStorage.getItem("access_token")]);
+
   return (
     <S.GrayScreen
       onClick={(e) => {
@@ -40,7 +49,9 @@ const Sidebar: FC<Props> = (props) => {
               </S.UserGrade>
             </S.UserInfoWrapper>
             <S.UserRecord>{is_pro ? "선출" : "비선출"}</S.UserRecord>
-            <S.MyPageLink to="/mypage">마이페이지</S.MyPageLink>
+            <S.MyPageLink to={state.id !== 0 ? "/profile/" + state.id : "/"}>
+              마이페이지
+            </S.MyPageLink>
           </>
         ) : (
           <S.LoginBtn
