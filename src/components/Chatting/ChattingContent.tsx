@@ -1,31 +1,35 @@
 import React, { useEffect, useState } from "react";
 import io from "socket.io-client";
 import * as S from "./style";
-// const token = localStorage.getItem("access_token");
-// const socket = io(`ws://3.38.180.170:3000?token=Bearer ${token}`);
+const token = localStorage.getItem("access_token");
+const socket = io(`ws://3.35.216.245:3000?token=Bearer ${token}`);
 const ChattingContent = () => {
-  // useEffect(() => {
-  //   socket.on("get.message", (msg) => {
-  //     console.log(msg);
-  //   });
-  // }, []);
-  // const [message, setMessage] = useState("");
-  // const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-  //   setMessage(e.target.value);
-  // };
-  // const sendMessage = () => {
-  //   socket.emit("send.message", {
-  //     message: message,
-  //     room_id: 0,
-  //     user_id: 2,
-  //   });
-  // };
-  // const checkEnter = (e: React.KeyboardEvent<HTMLInputElement>) => {
-  //   if (e.key !== "Enter") {
-  //     return;
-  //   }
-  //   sendMessage();
-  // };
+  useEffect(() => {
+    socket.on("get.message", (msg) => {
+      console.log(msg);
+    });
+  }, []);
+  const [message, setMessage] = useState("");
+  const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setMessage(e.target.value);
+  };
+  const sendMessage = () => {
+    socket.emit("send.message", {
+      message: message,
+      room_id: 0,
+      user_id: 2,
+    });
+    setMessage("");
+    socket.on("check.message", () => {
+      socket.emit("get.message", { room_id: 0 });
+    });
+  };
+  const checkEnter = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key !== "Enter") {
+      return;
+    }
+    sendMessage();
+  };
   return (
     <>
       <S.ChattingContentContainer>
@@ -46,7 +50,7 @@ const ChattingContent = () => {
         </S.MyMessageContainer>
       </S.ChattingContentContainer>
       <S.InputContainer>
-        {/* <input value={message} onChange={onChange} onKeyPress={checkEnter} /> */}
+        <input value={message} onChange={onChange} onKeyPress={checkEnter} />
         <span>보내기</span>
       </S.InputContainer>
     </>
