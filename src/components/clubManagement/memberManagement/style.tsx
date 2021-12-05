@@ -103,4 +103,5 @@ export const MemberBackNumber = styled.span`
 
 export const MemberPosition = styled.span`
   margin-right: 95px;
+  color: black;
 `;
