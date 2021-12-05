@@ -13,8 +13,6 @@ const Header: FC = () => {
   useEffect(() => {
     getUserId()
       .then((res: any) => {
-        console.log(res);
-
         setState.setId(res.user_id);
       })
       .catch(() => {});
