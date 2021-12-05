@@ -2,6 +2,7 @@ import axios from "axios";
 
 export const BASE_URL = "http://3.34.145.168:8080/api";
 
+
 export const getRequest = () => {
   const request = axios.create({
     timeout: 10000,
