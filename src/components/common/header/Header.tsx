@@ -10,14 +10,6 @@ const Header: FC = () => {
   const [sideBar, setSideBar] = useState<boolean>(false);
   const { state, setState } = UseMyProfile();
 
-  useEffect(() => {
-    getUserId()
-      .then((res: any) => {
-        setState.setId(res.user_id);
-      })
-      .catch(() => {});
-  }, [localStorage.getItem("access_token")]);
-
   return (
     <>
       {sideBar && <Sidebar closeSideBar={setSideBar} />}

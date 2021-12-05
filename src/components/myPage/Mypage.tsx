@@ -14,35 +14,22 @@ const Mine = () => {
     setState.setMyProfile();
   }, [state.id]);
 
-  const updateForm: ChangeEventHandler = (e) => {
-    const $target = e.target as HTMLInputElement;
-  };
-
-  const Modify = () => {
-    if (!isModifyMode) return setIsModifyMode(true);
-    setIsModifyMode(false);
-  };
-
   return (
     <>
-      <Header />
-      <S.Modify onClick={Modify}>
-        {isModifyMode ? "수정완료" : "수정하기"}
-      </S.Modify>
-      <S.Div>
-        <S.Profile></S.Profile>
-        <div>
-          <S.Name>{profileInfo.name}</S.Name>
-          <S.Player>{profileInfo.is_pro ? "선수출신" : "비선수출신"}</S.Player>
-        </div>
-      </S.Div>
-      <S.Div>
-        <UserExplain
-          user={profileInfo}
-          modifier={updateForm}
-          isDisabled={!isModifyMode}
-        />
-      </S.Div>
+      <S.MainWrapper>
+        <S.Div>
+          <S.Profile src={profileInfo.profile} alt="프로필" />
+          <div>
+            <S.Name>{profileInfo.name}</S.Name>
+            <S.Player>
+              {profileInfo.is_pro ? "선수출신" : "비선수출신"}
+            </S.Player>
+          </div>
+        </S.Div>
+        <S.Div>
+          <UserExplain user={profileInfo} />
+        </S.Div>
+      </S.MainWrapper>
     </>
   );
 };
