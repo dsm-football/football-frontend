@@ -51,6 +51,7 @@ export const MemberPositionSelectBox = styled.select`
   height: 30px;
   border: 1px solid #e4e1e9;
   background-color: white;
+  color: black;
   border-radius: 4px;
   margin-right: 8px;
   text-align: center;
@@ -63,4 +64,5 @@ export const KickOutBtn = styled.button`
   border-radius: 4px;
   font-size: 12px;
   background-color: white;
+  color: black;
 `;
