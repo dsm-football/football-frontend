@@ -8,6 +8,73 @@ import { MatchCard } from "../common";
 import Member from "./member/Member";
 import * as S from "./style";
 
+const matchList = [
+  {
+    myProfile:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROP0FDz7vwuA05VW6PM9uGhhpLB-f-yNT7OQ&usqp=CAU",
+    yourProfile: "",
+    area: "보령",
+    myName: "동네축구",
+    date: "12월 5일",
+    matchStatus: false,
+    opposingTeam: "???",
+    myScore: -1,
+    yourScore: -1,
+  },
+  {
+    myProfile:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROP0FDz7vwuA05VW6PM9uGhhpLB-f-yNT7OQ&usqp=CAU",
+    yourProfile:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSR4giwxamewZyZsY4-j_WpOg0-BIaRsoCwfA&usqp=CAU",
+    area: "보령",
+    myName: "동네축구",
+    date: "11월 25일",
+    matchStatus: true,
+    opposingTeam: "축구한판",
+    myScore: 2,
+    yourScore: 3,
+  },
+  {
+    myProfile:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROP0FDz7vwuA05VW6PM9uGhhpLB-f-yNT7OQ&usqp=CAU",
+    area: "보령",
+    yourProfile:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiFInk7PX8GQukpTV7bXfnjqgCiw0tOvcevQ&usqp=CAU",
+    myName: "동네축구",
+    date: "11월 21일",
+    matchStatus: true,
+    opposingTeam: "리버풀",
+    myScore: 3,
+    yourScore: 1,
+  },
+  {
+    myProfile:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROP0FDz7vwuA05VW6PM9uGhhpLB-f-yNT7OQ&usqp=CAU",
+    area: "보령",
+    yourProfile:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwcbJtLuz3x_erb3_ZjDCkODn79MQ4qHiLWw&usqp=CAU",
+    myName: "동네축구",
+    date: "11월 15일",
+    matchStatus: true,
+    opposingTeam: "대전FC",
+    myScore: 1,
+    yourScore: 5,
+  },
+  {
+    myProfile:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROP0FDz7vwuA05VW6PM9uGhhpLB-f-yNT7OQ&usqp=CAU",
+    area: "보령",
+    yourProfile:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSR4giwxamewZyZsY4-j_WpOg0-BIaRsoCwfA&usqp=CAU",
+    myName: "동네축구",
+    date: "11월 5일",
+    matchStatus: true,
+    opposingTeam: "축구한판",
+    myScore: 2,
+    yourScore: 1,
+  },
+];
+
 const DetailClub = () => {
   const { state, setState } = UseClubInfo();
   const { memberList, id, clubInfo } = state;
@@ -71,8 +138,8 @@ const DetailClub = () => {
         <div className="matchListHeader">매칭목록</div>
         <div className="matchScroll">
           <ScrollMenu>
-            {[...Array(5)].map((v, i) => {
-              return <MatchCard key={i} />;
+            {matchList.map((v, i) => {
+              return <MatchCard key={i} {...v} />;
             })}
           </ScrollMenu>
         </div>
