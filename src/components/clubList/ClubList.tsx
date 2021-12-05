@@ -10,7 +10,7 @@ const List = () => {
       <S.Title>동호회를 찾아보세요!</S.Title>
       <S.Divide />
       <S.Find>
-        <S.All>전체 111</S.All>
+        <S.All>전체 5</S.All>
         <S.Period>
           <option>최신순</option>
           <option>오래전순</option>
@@ -55,7 +55,7 @@ const List = () => {
             <S.Box>남자</S.Box>
             <S.Box>10대</S.Box>
           </S.BoxDiv>
-          <S.Recruit>9명 모집중</S.Recruit>
+          <S.Recruit>5명 모집중</S.Recruit>
           <S.Poeple>1</S.Poeple>
         </S.Selected>
       </S.Clubs>
@@ -101,7 +101,7 @@ const List = () => {
             <S.Box>여자</S.Box>
             <S.Box>20대</S.Box>
           </S.BoxDiv>
-          <S.Recruit>3명 모집중</S.Recruit>
+          <S.Recruit>1명 모집중</S.Recruit>
           <S.Poeple>19</S.Poeple>
         </S.Selected>
       </S.Clubs>
@@ -124,7 +124,7 @@ const List = () => {
             <S.Box>남자</S.Box>
             <S.Box>40대</S.Box>
           </S.BoxDiv>
-          <S.Recruit>3명 모집중</S.Recruit>
+          <S.Recruit>5명 모집중</S.Recruit>
           <S.Poeple>15</S.Poeple>
         </S.Selected>
       </S.Clubs>
