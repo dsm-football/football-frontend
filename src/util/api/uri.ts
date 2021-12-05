@@ -7,6 +7,7 @@ enum uri {
   gameApplication = "/game/application",
   getClubName = "/club/check",
   applicantGameClubList = "/club/game/applicant",
+  clubList = "/club/list",
   clubApplcant = "/club/applicant",
   login = "/users/auth/google",
   chattingList = "/chat/history",
