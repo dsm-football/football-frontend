@@ -1,36 +1,46 @@
-import React from 'react';
-import * as S from './style';
+import React, { FC, useEffect } from "react";
+import { MyProfileResponseType } from "../../constance/myProfile";
+import * as S from "./style";
 
-const UserExplain = () =>{
-    const arr1 = ['구글 계정', '설명','동호회 이름', '포지션', 
-                 '지역', '나이', '나의한줄소개'];
-    
-    const arr2 = ['ss@gamail.com', '김수인', '축구한판팀', '골키퍼', 
-                  '서울시 노원구 하계동', '20', '슈퍼거미']
+type UserExplainProps = {
+  user: MyProfileResponseType;
+};
 
-    return(
-        <>
-            <S.Divs>
-                <S.Line>
-                    {arr1.map((el, index) => (
-                        <div key={index}>
-                            {el}
-                        </div>
-                    ))}
-                </S.Line>
-                <S.Default>
-                    {arr2.map((el, index) => (
-                        <div key={index}>
-                            {el}
-                        </div>
-                    ))}
-                </S.Default>
-            </S.Divs> 
-        </>
-    );
-}
-
-
-
+const UserExplain: FC<UserExplainProps> = ({ user }) => {
+  return (
+    <>
+      <S.Divs>
+        <S.InputInfo>
+          <span>구글계정</span>
+          <span className="info">{user.email}</span>
+        </S.InputInfo>
+        <S.InputInfo>
+          <span>성별</span>
+          <span className="info">{user.gender}</span>
+        </S.InputInfo>
+        <S.InputInfo>
+          <span>나이</span>
+          <span className="info">{user.age}</span>
+        </S.InputInfo>
+        <S.InputInfo>
+          <span>포지션</span>
+          <span className="info">{user.position}</span>
+        </S.InputInfo>
+        <S.InputInfo>
+          <span>지역</span>
+          <span className="info">{user.area}</span>
+        </S.InputInfo>
+        <S.InputInfo>
+          <span>동호회 이름</span>
+          <span className="info">{user.club}</span>
+        </S.InputInfo>
+        <S.InputInfo>
+          <span>한줄소개</span>
+          <span className="info">{user.bio}</span>
+        </S.InputInfo>
+      </S.Divs>
+    </>
+  );
+};
 
 export default UserExplain;
