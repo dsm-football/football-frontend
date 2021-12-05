@@ -40,23 +40,35 @@ export const MatchingContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  & div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 export const ClubIntro = styled.div`
   width: 47px;
 
+  & img {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+    background-color: #c4c4c4;
+  }
+
   & div {
     width: 38px;
     height: 38px;
-    background-color: #C4C4C4;
     border-radius: 50%;
-    margin: auto;
     margin-bottom: 5px;
+    background-color: #c4c4c4;
   }
 
   & span {
     display: inline-block;
-    width: 50px;
     font-size: 11px;
     text-align: center;
     margin: auto;
@@ -69,23 +81,23 @@ export const MatchInfo = styled.div`
   flex-direction: column;
   justify-content: center;
 
-  & span{
+  & span {
     font-size: 10px;
     text-align: center;
   }
 
   & p {
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-size: 18px;
     margin-top: 2px;
     margin-bottom: 5px;
     text-align: center;
     font-weight: bold;
   }
-`
+`;
 
 export const MatchStatus = styled.span`
-  height: 15px;
-  background-color: #E1E1E1;
+  background-color: #e1e1e1;
   border-radius: 8px;
-`
+  padding: 1px 5px;
+`;

@@ -1,30 +1,54 @@
-import React from 'react';
-import * as S from './style';
+import React, { FC } from "react";
+import * as S from "./style";
 
-const MatchCard = () => {
+type Props = {
+  myProfile: string;
+  yourProfile: string;
+  area: string;
+  myName: string;
+  date: string;
+  matchStatus: boolean;
+  myScore: number;
+  yourScore: number;
+  opposingTeam: string;
+};
+
+const MatchCard: FC<Props> = (props) => {
+  const {
+    myProfile,
+    yourProfile,
+    myName,
+    area,
+    date,
+    matchStatus,
+    opposingTeam,
+    myScore,
+    yourScore,
+  } = props;
+
   return (
     <S.CardContainer>
       <S.CardHeader>
-        <S.AreaText>서울</S.AreaText>
+        <S.AreaText>{area}</S.AreaText>
         <S.EditText>편집</S.EditText>
       </S.CardHeader>
       <S.MatchingContainer>
         <S.ClubIntro>
-          <div/>
-          <span>FC어쩌구어쩌구</span>
+          <img src={myProfile} alt="내 프로필" />
+          <span>{myName}</span>
         </S.ClubIntro>
         <S.MatchInfo>
-          <span>8월 16일</span>
-          <p>VS</p>
-          <S.MatchStatus>매칭대기</S.MatchStatus>
+          <span>{date}</span>
+          <p>{matchStatus ? `${myScore} : ${yourScore}` : "VS"}</p>
+          <S.MatchStatus>{matchStatus ? "경기종료" : "매칭대기"}</S.MatchStatus>
         </S.MatchInfo>
         <S.ClubIntro>
-          <div/>
-          <span>???</span>
+          {yourProfile ? <img src={yourProfile} alt="상대프로필" /> : <div />}
+          <span>{opposingTeam}</span>
         </S.ClubIntro>
       </S.MatchingContainer>
     </S.CardContainer>
   );
-}
+};
 
 export default MatchCard;
