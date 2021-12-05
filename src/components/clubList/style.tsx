@@ -58,6 +58,23 @@ export const SelectBox = styled.div`
   text-align: center;
   margin-right: 10px;
 `;
+    width: 100%;
+    height: 60px;
+    background-color: #F5F5F5;
+    display: flex;
+    overflow-x:scroll;
+    padding: 10px 20px;
+`
+
+export const SelectBox = styled.div`
+    width: 120px;
+    height: 40px;
+    background-color: white;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    margin-right: 10px;
+`
 
 export const Defulat = styled.div`
   width: 30px;

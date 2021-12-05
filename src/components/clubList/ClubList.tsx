@@ -6,6 +6,10 @@ import { getClubList } from "../../util/api/clubList";
 import { Link, useHistory } from "react-router-dom";
 import { ClubListResponseType } from "../../constance/clubList";
 import Club from "./club/Club";
+import React from 'react'
+import * as S from './style';
+import Select from "./SelectBox"
+import Header from "../common/header/Header"
 
 const List = () => {
   const history = useHistory();
