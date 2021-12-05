@@ -69,7 +69,7 @@ export const InputWrapper = styled.div`
 `;
 export const MapWrapper = styled.div`
   width: 320px;
-  height: 360px;
+  height: 315px;
   background-color: pink;
 `;
 export const MapSignupTitle = styled.div`

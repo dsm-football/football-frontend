@@ -2,27 +2,29 @@ import React, { useEffect, useState } from "react";
 import io from "socket.io-client";
 import * as S from "./style";
 const token = localStorage.getItem("access_token");
-const socket = io(`ws://3.35.216.245:3000?token=Bearer ${token}`);
+const socket = io(`ws://13.124.218.77:3000?token=Bearer ${token}`);
+
 const ChattingContent = () => {
-  useEffect(() => {
-    socket.on("get.message", (msg) => {
-      console.log(msg);
-    });
-  }, []);
+  let myMessage: string[] = ["너 개못하잖아"];
   const [message, setMessage] = useState("");
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setMessage(e.target.value);
   };
+  useEffect(() => {
+    socket.on("check.message", () => {
+      console.log("success");
+      socket.emit("get.message", { room_id: 0 });
+      socket.on("receive.message", (msg) => console.log(msg));
+    });
+  });
   const sendMessage = () => {
     socket.emit("send.message", {
       message: message,
       room_id: 0,
       user_id: 2,
     });
+    myMessage.push(message);
     setMessage("");
-    socket.on("check.message", () => {
-      socket.emit("get.message", { room_id: 0 });
-    });
   };
   const checkEnter = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key !== "Enter") {
@@ -42,12 +44,14 @@ const ChattingContent = () => {
           <S.MessageTime>PM 10:00</S.MessageTime>
         </S.MessageContainer>
 
-        <S.MyMessageContainer>
-          <S.MessageTime>PM 10:00</S.MessageTime>
-          <S.MyMessageBox>
-            <span>ㅅㅂ ㅋㅋㅋ 벌레가 깝치누</span>
-          </S.MyMessageBox>
-        </S.MyMessageContainer>
+        {myMessage.map((msg, index) => (
+          <S.MyMessageContainer key={index}>
+            <S.MessageTime>PM 10:00</S.MessageTime>
+            <S.MyMessageBox>
+              <span>{msg}</span>
+            </S.MyMessageBox>
+          </S.MyMessageContainer>
+        ))}
       </S.ChattingContentContainer>
       <S.InputContainer>
         <input value={message} onChange={onChange} onKeyPress={checkEnter} />

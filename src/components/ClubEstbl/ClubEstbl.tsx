@@ -25,10 +25,10 @@ const ClubEstbl = () => {
   });
   const { clubName, clubIntroduce } = inputs;
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name } = e.target;
+    const { name, value } = e.target;
     setInputs({
       ...inputs,
-      [name]: 1,
+      [name]: value,
     });
   };
   const [selects, setSelects] = useState({

@@ -3,7 +3,7 @@ import io from "socket.io-client";
 import { getChattingList } from "../../util/api/chatting";
 import * as S from "./style";
 const token = localStorage.getItem("access_token");
-const socket = io(`ws://3.35.216.245:3000?token=Bearer ${token}`);
+const socket = io(`ws://13.124.218.77:3000?token=Bearer ${token}`);
 const Chatting = () => {
   const [list, getList] = useState([]);
   useEffect(() => {
@@ -25,8 +25,8 @@ const Chatting = () => {
         <S.ChattingList key={index} onClick={enterChatting}>
           <S.ProfileImage />
           <S.ChattingInfo>
-            <h4>{}</h4>
-            <span>{}</span>
+            <h4>{"김지민 매니저님"}</h4>
+            <span>{"너 개못하잖아"}</span>
           </S.ChattingInfo>
           <S.Time>
             <span>PM 9:40</span>

@@ -124,7 +124,7 @@ export const NextPage = styled.div`
 `;
 export const CompletionPage = styled(NextPage)`
   position: relative;
-  bottom: -125px;
+  bottom: -200px;
 `;
 
 // map

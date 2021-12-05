@@ -8,14 +8,23 @@ import {
   setPageIndex,
   setSubProfile,
 } from "../../modules/redux/action/clubEstbl";
+
 const ClubEstblImage = () => {
+  const checkImg = "https://t1.daumcdn.net/cfile/blog/99A253505B3203EC22";
   const dispatch = useDispatch();
   const [logoImg, setLogoImg] = useState(CameraImg);
+  const [backgroundImg, setBackgroundImg] = useState(CameraImg);
   const changeLogo = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files === null) {
       return;
     }
-    setLogoImg(URL.createObjectURL(e.target.files[0]));
+    setLogoImg(checkImg);
+  };
+  const changeBackground = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files === null) {
+      return;
+    }
+    setBackgroundImg(checkImg);
   };
   const onClick = () => {
     dispatch(setMainProfile("손채건 벌레년"));
@@ -27,11 +36,20 @@ const ClubEstblImage = () => {
     <>
       <S.ClubEstblImageWrapper>
         <S.ImageWrapper>
-          <S.LogoImageWrapper htmlFor="logoImg">
+          <S.LogoImageWrapper
+            htmlFor="logoImg"
+            style={
+              logoImg === CameraImg ? { display: "flex" } : { display: "none" }
+            }
+          >
             <img
               src={logoImg}
               alt=""
-              style={logoImg ? { display: "none" } : { display: "block" }}
+              style={
+                logoImg === CameraImg
+                  ? { display: "block" }
+                  : { display: "none" }
+              }
             />
           </S.LogoImageWrapper>
           <input
@@ -41,8 +59,15 @@ const ClubEstblImage = () => {
             onChange={changeLogo}
           />
           <S.InputTitle>동호회 배경사진</S.InputTitle>
-          <S.BackgroundImageWrapper htmlFor="BackgroundImg">
-            <img src={CameraImg} alt="" />
+          <S.BackgroundImageWrapper
+            htmlFor="BackgroundImg"
+            style={
+              backgroundImg === CameraImg
+                ? { display: "flex" }
+                : { display: "none" }
+            }
+          >
+            <img src={backgroundImg} alt="" />
           </S.BackgroundImageWrapper>
           <input type="file" id="BackgroundImg" style={{ display: "none" }} />
         </S.ImageWrapper>

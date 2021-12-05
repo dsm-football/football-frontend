@@ -16,9 +16,6 @@ const ClubEstblCompletion = () => {
           <br />
           FC축구한판 동호회가 개설되었습니다.
         </span>
-        <S.ClubEstblCompletionLogo>
-          <img src={CameraImg} alt="" />
-        </S.ClubEstblCompletionLogo>
         <S.CompletionPage onClick={onClick}>완료</S.CompletionPage>
       </S.ClubEstblCompletionWrapper>
     </>
