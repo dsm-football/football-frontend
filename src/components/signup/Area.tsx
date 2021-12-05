@@ -9,7 +9,7 @@ const Area = () => {
 
   const dispatchArea = () => {
     dispatch(setPage(6));
-    dispatch(setArea("대덕소프트웨어마이스터고등학교"));
+    dispatch(setArea("대마고"));
   };
   return (
     <S.SignupWrapper>
