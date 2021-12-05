@@ -6,7 +6,7 @@ const Introduce = () => {
   const [introducestr, setIntroduceStr] = useState("");
   const dispatch = useDispatch();
   const dispatchIntroduce = () => {
-    dispatch(setIntroduce("A"));
+    dispatch(setIntroduce(introducestr));
     dispatch(setPage(7));
   };
 

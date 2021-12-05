@@ -3,7 +3,7 @@ import io from "socket.io-client";
 import { getChattingList } from "../../util/api/chatting";
 import * as S from "./style";
 const token = localStorage.getItem("access_token");
-const socket = io(`ws://3.38.180.170:3000?token=Bearer ${token}`);
+const socket = io(`ws://3.34.145.168:3000?token=Bearer ${token}`);
 const Chatting = () => {
   const [list, getList] = useState([]);
   const getchattingList = getChattingList(
