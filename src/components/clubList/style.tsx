@@ -84,7 +84,6 @@ export const Clubs = styled.div`
     border: 1px solid #EFEFEF;
     border-radius: 10px;
     margin-top: 12px;
-    margin-left: 20px;
     text-align: center;
 `
 
@@ -94,6 +93,13 @@ export const Explain = styled.div`
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
+`
+
+export const List = styled.div`
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 `
 
 export const Top = styled.div`
