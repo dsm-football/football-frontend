@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import io from "socket.io-client";
 import * as S from "./style";
 const token = localStorage.getItem("access_token");
-const socket = io(`ws://3.38.180.170:3000?token=Bearer ${token}`);
+const socket = io(`ws://3.34.145.168:3000?token=Bearer ${token}`);
 const ChattingContent = () => {
   useEffect(() => {
     socket.on("get.message", (msg) => {
@@ -13,12 +13,25 @@ const ChattingContent = () => {
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setMessage(e.target.value);
   };
+  const getMessage = () => {
+    /*socket.emit("get.message", {
+      room_id: 1,
+    });
+    socket.on("receive.message", (msg) => {
+      console.log(msg);
+    });*/
+  };
   const sendMessage = () => {
     socket.emit("send.message", {
       message: message,
       room_id: 0,
       user_id: 2,
     });
+    setMessage("");
+    socket.on("check.message", (msg) => {
+      console.log(msg);
+    });
+    getMessage();
   };
   const checkEnter = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key !== "Enter") {

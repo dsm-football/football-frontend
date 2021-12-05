@@ -11,8 +11,7 @@ import React, { FC, useEffect } from "react";
 import { useSelector } from "react-redux";
 import { reducerType } from "../../modules/redux/reducer";
 import { useHistory } from "react-router";
-import { BASE_URL } from "../../util/api/default";
-import axios from "axios";
+import { postSignup } from "../../util/api/login";
 interface pageIndexType {
   code: string;
   name: string;
@@ -42,17 +41,10 @@ const SignupItem: FC = () => {
     const signupData = { ...userInfo };
     delete signupData.pageIndex;
     console.log(signupData);
-    axios({
-      method: "post",
-      url: BASE_URL + "/users/auth/google",
-      data: signupData,
-    })
-      .then((res) => {
-        localStorage.setItem("access-token", res.data["access_token"]);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    const postSignUpapi = postSignup(signupData).then((res) => {
+      localStorage.setItem("access-token", res.data["access_token"]);
+    });
+    console.log(postSignUpapi);
   };
   switch (userInfo.pageIndex) {
     case 1:
