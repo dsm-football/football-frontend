@@ -83,11 +83,13 @@ export const Option = styled.div`
 `
 
 export const OptionDiv = styled.div`
-    width: 100%;
-    height: 30%;
+    width: 90%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     margin-bottom: 20px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 `
 
 export const OptionList = styled.div`

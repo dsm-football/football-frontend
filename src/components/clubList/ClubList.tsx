@@ -1,6 +1,6 @@
 import React from 'react'
 import * as S from './style';
-import Select from './SelectBox'
+import Select from "./SelectBox"
 import Header from "../common/header/Header"
 
 const List = () => {

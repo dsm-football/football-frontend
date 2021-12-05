@@ -1,4 +1,12 @@
 import styled from 'styled-components';
+import { bannerImg } from "../../../assets";
+
+export const Section = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
 
 export const ClubManageBanner = styled.div`
   width: 100%;
@@ -7,13 +15,14 @@ export const ClubManageBanner = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url(${bannerImg});
+  background-size: cover;
 `
 
 export const Matching = styled.div`
   width: 196px;
   height: 25px;
   background-color: white;
-  margin-left: 20px;
   margin-top: 10px;
   font-weight: 600;
 `
@@ -22,8 +31,7 @@ export const Searching = styled.div`
   width: 320px;
   height: 35px;
   margin-top: 10px;
-  margin-left: 20px;
-  align-items: center;
+  text-align: center;
   background-color: #F2F2F2;
   justify-content: space-between;
   & div{
@@ -34,7 +42,6 @@ export const Searching = styled.div`
 export const Target = styled.div`
   width: 24px;
   height: 24px;
-  background-color: white;
   margin-left: 10px;
   margin-top: 4px;
 `
@@ -48,7 +55,8 @@ export const Locate = styled.div`
 
 export const Select = styled.div`
   height: 20px;
-  margin-left: 110px;
+  margin-left: 100px;
+  color: #A6A6A6;
   font-size: 14px;
   font-weight: 500;
 `
@@ -56,7 +64,8 @@ export const Select = styled.div`
 export const Map = styled.div`
   width: 320px;
   height: 180px;
-  top: 32px;
+  display: flex;
+  text-align: center;
   background-color: #C4C4C4;
   & div{
     display: flex;
@@ -68,5 +77,4 @@ export const Point1 = styled.div`
   width: 28px;
   height: 40px;
   margin-left: 70px;
-  background-color: white;
 `

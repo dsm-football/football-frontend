@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { color } from "../../style";
 
 export const ChattingContainer = styled.div`
   width: 100%;
@@ -54,6 +55,7 @@ export const Message = styled.div`
 // chattingContent
 export const ChattingContentContainer = styled(ChattingContainer)`
     padding: 10px;
+    height: 540px;
 `;
 export const MessageContainer = styled.div`
     width: 100%;
@@ -113,5 +115,25 @@ export const DayInfo = styled.div`
         font-size: 0px;
         line-height: 0px;
         margin-left:10px;
+    }
+`;
+export const InputContainer = styled.div`
+width: 100%;
+height: 50px;
+background-color: ${color.main};
+display: flex;
+justify-content: space-around;
+align-items: center;
+    input{
+        width: 70%;
+        height: 60%;
+        border-radius: 10px;
+        outline:none;
+        border:none;
+        padding-left: 10px;
+    }
+    span{
+        font-size: 18px;
+        font-weight:600;
     }
 `;

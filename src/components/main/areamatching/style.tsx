@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const Matching = styled.div`
   width: 196px;
   height: 25px;
-  top: 512px;
   background-color: white;
   margin-left: 20px;
   margin-top: 190px;
@@ -29,6 +28,7 @@ export const Dates = styled.div`
   line-height: 20px;
   padding-top: 8px;
   text-align: center;
+  cursor: pointer;
 `
 
 export const Font = styled.div`
@@ -45,6 +45,16 @@ export const Areas = styled.div`
   font-weight: 500;
   font-size: 14px;
   line-height: 20px;
+  cursor: pointer;
+`
+
+export const ApplicationList = styled.div`
+  width: 100%;
+  height: 410px;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `
 
 export const Application = styled.div`
@@ -52,7 +62,6 @@ export const Application = styled.div`
   height: 190px;
   border: 1px solid #e0e0e0;
   border-radius: 10px;
-  margin-left: 20px;
   margin-bottom: 12px;
   & div{
     display: flex;
@@ -119,6 +128,7 @@ export const Apply = styled.div`
   height: 46px;
   margin-left: 12px;
   margin-top: 28px;
+  margin-bottom: 10px;
   padding: 12px 116px;
   background-color: #0BFF0B;
   border-radius: 2px;
@@ -126,4 +136,5 @@ export const Apply = styled.div`
   font-size: 16px;
   line-height: 22px;
   color: #FFFFFF;
+  cursor: pointer;
 `;

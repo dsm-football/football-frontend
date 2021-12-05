@@ -18,6 +18,13 @@ export const areaOption = [
   "제주",
 ];
 
+export const status = [
+    "전체",
+    "모집중",
+    "끝남"
+];
+
+
 export const ageOption = [
   "전체",
   "10대",
