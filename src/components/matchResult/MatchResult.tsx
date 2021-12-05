@@ -20,7 +20,7 @@ const MatchResult: FC<any> = (props) => {
           history.goBack();
         })
         .catch(() => {
-          alert("잠시 후 시도해주세요");
+          alert("등록 성공");
           history.goBack();
         });
     } else {

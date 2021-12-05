@@ -40,7 +40,7 @@ const Sidebar: FC<Props> = (props) => {
       }}
     >
       <S.Container>
-        {club_id ? (
+        {name ? (
           <>
             <S.UserInfoWrapper>
               <S.UserName>{name}</S.UserName>

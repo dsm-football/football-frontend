@@ -4,11 +4,12 @@ import { ClubMemberResponseType } from "../../../constance/clubInfo";
 import * as S from "../style";
 
 const Member: FC<ClubMemberResponseType> = (props) => {
-  const { profile, name, club_back_num, area, age, gender, position } = props;
+  const { profile, name, club_back_num, area, age, gender, position, user_id } =
+    props;
 
   return (
     <>
-      <Link to={"/mypage"}>
+      <Link to={"/profile/" + user_id}>
         <S.MemberContainer>
           <img src={profile} alt="프로필" />
           <div>

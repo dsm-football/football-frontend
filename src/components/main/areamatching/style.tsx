@@ -13,11 +13,11 @@ export const Calendars = styled.div`
   width: 100%;
   height: 60px;
   margin-bottom: 10px;
-  background-color: #0BFF0B;
+  background-color: #0bff0b;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-`
+`;
 
 export const Dates = styled.div`
   padding: 0 20px;
@@ -29,12 +29,12 @@ export const Dates = styled.div`
   padding-top: 8px;
   text-align: center;
   cursor: pointer;
-`
+`;
 
 export const Font = styled.div`
   font-weight: 500;
   margin-bottom: -15px;
-`
+`;
 
 export const Areas = styled.div`
   width: 100%;
@@ -46,7 +46,7 @@ export const Areas = styled.div`
   font-size: 14px;
   line-height: 20px;
   cursor: pointer;
-`
+`;
 
 export const ApplicationList = styled.div`
   width: 100%;
@@ -55,7 +55,7 @@ export const ApplicationList = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-`
+`;
 
 export const Application = styled.div`
   width: 320px;
@@ -63,8 +63,10 @@ export const Application = styled.div`
   border: 1px solid #e0e0e0;
   border-radius: 10px;
   margin-bottom: 12px;
-  & div{
+  & div {
     display: flex;
+  }
+  & .a {
     justify-content: space-between;
     text-align: center;
   }
@@ -87,7 +89,7 @@ export const AppButton = styled(Set)`
   margin-right: 12px;
 `;
 
-export const FIcon = styled.div`
+export const FIcon = styled.img`
   width: 45px;
   height: 45px;
   margin-top: 8px;
@@ -108,19 +110,21 @@ export const SIcon = styled(FIcon)`
   margin-right: 85px;
 `;
 
+export const TeamNameList = styled.div`
+  width: 100%;
+  display: flex;
+  padding-left: 70px;
+`;
+
 export const TeamName = styled.div`
-  width: 80px;
-  height: 15px;
   margin-top: 4px;
-  margin-left: 70px;
   font-weight: 500;
   font-size: 11px;
-  line-height: 15px;
+  text-align: center;
 `;
 
 export const TeamName2 = styled(TeamName)`
-  margin-left: 0;
-  margin-right: 48px;
+  padding-left: 65px;
 `;
 
 export const Apply = styled.div`
@@ -130,11 +134,11 @@ export const Apply = styled.div`
   margin-top: 28px;
   margin-bottom: 10px;
   padding: 12px 116px;
-  background-color: #0BFF0B;
+  background-color: #0bff0b;
   border-radius: 2px;
   font-weight: 600;
   font-size: 16px;
   line-height: 22px;
-  color: #FFFFFF;
+  color: #ffffff;
   cursor: pointer;
 `;

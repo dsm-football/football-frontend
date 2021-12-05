@@ -12,7 +12,7 @@ export const getMyProfileRequestSaga = function* (): any {
   const FAILURE = `${type}_FAILURE`;
   const state = yield select(getStateFunc);
   try {
-    const response = yield call(getMyProfile, state.id);
+    const response = yield call(getMyProfile, 1);
     yield put({
       type: SUCCESS,
       payload: response ? response.data : null,

@@ -125,7 +125,15 @@ const MatchManagement = () => {
               </S.MatchingApplicationNotice>
             ) : (
               applicantGameClubList.map((v, i) => {
-                return <ApplicationMatching key={i} {...v} />;
+                return (
+                  <div
+                    onClick={() => {
+                      history.push("/chatting");
+                    }}
+                  >
+                    <ApplicationMatching key={i} {...v} />
+                  </div>
+                );
               })
             )}
           </S.MatchingApplicationList>

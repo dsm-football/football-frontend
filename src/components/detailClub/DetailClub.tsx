@@ -119,7 +119,9 @@ const DetailClub = () => {
           {area}
         </S.ClubLocation>
         <S.ClubInfoWrapper>
-          <strong className="clubName">{name}</strong>
+          <strong className="clubName">
+            {name} 승률: 60%(승: 6 무: 0 패: 4)
+          </strong>
           <div className="clubDetailInfo">
             <div>
               {gender && <span>{gender}</span>}

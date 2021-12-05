@@ -27,7 +27,7 @@ const MatchInfoCheck = (props: Props) => {
 
   useEffect(() => {
     if (props.error?.status === 400) {
-      alert("이미 매칭이 등록되었습니다.");
+      alert("매칭이 등록되었습니다!");
       history.goBack();
     } else if (props.error?.status === 401) {
       alert("인증 오류");

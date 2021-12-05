@@ -26,20 +26,22 @@ const ChattingContent = () => {
     myMessage.push(message);
     setMessage("");
   };
+
   const checkEnter = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key !== "Enter") {
       return;
     }
     sendMessage();
   };
+
   return (
     <>
       <S.ChattingContentContainer>
         <S.DayInfo>2021년 11월 30일</S.DayInfo>
         <S.MessageContainer>
-          <S.OtherProfile />
+          <S.OtherProfile src="https://imgnews.pstatic.net/image/421/2021/02/19/0005176866_001_20210219182837487.jpg?type=w647" />
           <S.MessageBox>
-            <span>님 존나 못하는뎈ㅋㅋㅋㅋ</span>
+            <span>안녕하세요! 게임 합시다!</span>
           </S.MessageBox>
           <S.MessageTime>PM 10:00</S.MessageTime>
         </S.MessageContainer>
@@ -53,6 +55,7 @@ const ChattingContent = () => {
           </S.MyMessageContainer>
         ))}
       </S.ChattingContentContainer>
+
       <S.InputContainer>
         <input value={message} onChange={onChange} onKeyPress={checkEnter} />
         <span>보내기</span>
