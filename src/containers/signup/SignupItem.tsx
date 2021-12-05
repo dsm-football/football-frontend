@@ -8,10 +8,11 @@ import {
   Area,
 } from "../../components";
 import React, { FC, useEffect } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { reducerType } from "../../modules/redux/reducer";
 import { useHistory } from "react-router";
 import { postSignup } from "../../util/api/login";
+import { setCode } from "../../modules/redux/action/signup";
 interface pageIndexType {
   code: string;
   name: string;
@@ -24,6 +25,7 @@ interface pageIndexType {
   pageIndex?: number;
 }
 const SignupItem: FC = () => {
+  const dispatch = useDispatch();
   const userInfo: pageIndexType = useSelector(
     (state: reducerType) => state.userSignupreducer
   );
@@ -34,6 +36,23 @@ const SignupItem: FC = () => {
       history.push("/");
     }
   });
+  function searchParam(key: string) {
+    // eslint-disable-next-line no-restricted-globals
+    return new URLSearchParams(location.search).get(key);
+  }
+  useEffect(() => {
+    if (userInfo.pageIndex === 1) {
+      const urlLink = searchParam("code");
+      if (urlLink === "") {
+        alert("잘못된 경로입니다.");
+        history.push("/login");
+      }
+      if (urlLink !== null) {
+        console.log(urlLink);
+        dispatch(setCode(urlLink));
+      }
+    }
+  }, [userInfo.pageIndex, dispatch, history]);
   const postUserInfo = () => {
     signupUserRequest(userInfo);
   };
