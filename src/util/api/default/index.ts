@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const BASE_URL = "http://3.36.133.79:8080/api";
+export const BASE_URL = "http://52.78.58.63:8080/api";
 
 export const getRequest = () => {
   const request = axios.create({
